@@ -14,14 +14,10 @@ platform, and marketplace concepts belong somewhere else.
 
 ## Source Material Used
 
-- `../09_SAMPLE_LIBRARY/books/the_self_sufficient_immigrant_in_the_age_of_ai/source/The_Self-Sufficient_Immigrant_in_the_Age_of_AI_SAMPLE.pdf`
-- `../09_SAMPLE_LIBRARY/books/the_self_sufficient_immigrant_in_the_age_of_ai/SAMPLE_BOOK_CARD.md`
-- `/Users/froghsediqi/Desktop/SSF I AI Book /Atta Arghandiwal/Arghadiwal feedbak for website /Atta Arghandiwal attamoves.com.docx`
-- `/Users/froghsediqi/Desktop/SSF I AI Book /Atta Arghandiwal/Arghadiwal feedbak for website /1 LD.png`
-- `/Users/froghsediqi/Desktop/SSF I AI Book /Atta Arghandiwal/Arghadiwal feedbak for website /3 SSGC cover.jpg`
-- `/Users/froghsediqi/Desktop/SSF I AI Book /Atta Arghandiwal/Arghadiwal feedbak for website /Arghandiwal 1.jpeg`
-- `/Users/froghsediqi/Desktop/SSF I AI Book /Atta Arghandiwal/Arghadiwal feedbak for website /Arghandiwal 3.jpeg`
-- `/Users/froghsediqi/Desktop/SSF I AI Book /Atta Arghandiwal/Arghadiwal feedbak for website /S3.jpg`
+- Founder-provided website brief
+- Atta Arghandiwal author portraits
+- Book-cover artwork and book descriptions
+- Approved sample-book notes from local research materials
 
 ## Files
 
@@ -47,7 +43,7 @@ platform, and marketplace concepts belong somewhere else.
 - Press Kit
 - Contact
 
-## Current Prototype Limits
+## Current Limits
 
 - Contact form is front-end only.
 - No real mailing list or event booking integration yet.
