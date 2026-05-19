@@ -30,9 +30,12 @@ if (readingLight && window.matchMedia("(pointer: fine)").matches) {
 
 const scrollProgress = document.querySelector(".scroll-progress");
 const quickDockLinks = document.querySelectorAll(".quick-dock a");
-const dockTargets = [...quickDockLinks]
+const primaryNavLinks = document.querySelectorAll(".nav-links a");
+const sectionLinks = [...quickDockLinks, ...primaryNavLinks];
+const dockTargets = [...sectionLinks]
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
+let lastActiveId = "";
 
 function updateScrollUi() {
   const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -50,9 +53,20 @@ function updateScrollUi() {
     }
   });
 
-  quickDockLinks.forEach((link) => {
+  sectionLinks.forEach((link) => {
     link.classList.toggle("is-active", link.getAttribute("href") === `#${activeId}`);
   });
+
+  if (activeId && activeId !== lastActiveId) {
+    const activeNavLink = document.querySelector(`.nav-links a[href="#${activeId}"]`);
+    const navRail = activeNavLink?.closest(".nav-links");
+
+    if (navRail && navRail.scrollWidth > navRail.clientWidth) {
+      activeNavLink.scrollIntoView({ block: "nearest", inline: "center" });
+    }
+
+    lastActiveId = activeId;
+  }
 }
 
 window.addEventListener("scroll", updateScrollUi, { passive: true });

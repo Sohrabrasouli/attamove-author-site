@@ -1315,11 +1315,69 @@ h1 em {
 
 @media (max-width: 1040px) {
   .site-header {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "brand action"
+      "nav nav";
+    row-gap: 0.5rem;
+  }
+
+  .brand {
+    grid-area: brand;
   }
 
   .nav-links {
+    grid-area: nav;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.4rem;
+    min-width: 0;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--line);
+    scroll-padding-inline: 0.5rem;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 30px), transparent 100%);
+  }
+
+  .nav-links::-webkit-scrollbar {
     display: none;
+  }
+
+  .nav-links a {
+    flex: 0 0 auto;
+    min-height: 38px;
+    padding: 0.55rem 0.78rem;
+    border-color: rgba(216, 226, 242, 0.12);
+    background: rgba(245, 248, 255, 0.055);
+    color: var(--bone);
+    scroll-snap-align: start;
+    white-space: nowrap;
+  }
+
+  .nav-links a.is-active {
+    border-color: rgba(240, 195, 106, 0.62);
+    background: rgba(240, 195, 106, 0.14);
+    color: var(--smoke);
+  }
+
+  .header-action {
+    grid-area: action;
+  }
+
+  .hero {
+    padding-top: 132px;
+  }
+
+  .section {
+    scroll-margin-top: 130px;
+  }
+
+  #top {
+    scroll-margin-top: 0;
   }
 
   .hero-portrait {
@@ -1415,8 +1473,8 @@ h1 em {
   .site-header {
     top: 10px;
     width: min(calc(100% - 20px), var(--max));
-    min-height: 58px;
-    padding: 0.45rem;
+    min-height: 0;
+    padding: 0.45rem 0.45rem 0.52rem;
   }
 
   .brand-mark {
@@ -1434,10 +1492,21 @@ h1 em {
     font-size: 0.78rem;
   }
 
+  .nav-links {
+    gap: 0.35rem;
+    padding-top: 0.45rem;
+  }
+
+  .nav-links a {
+    min-height: 36px;
+    padding: 0.5rem 0.68rem;
+    font-size: 0.78rem;
+  }
+
   .hero {
     grid-template-columns: 16px 1fr 16px;
     min-height: 100svh;
-    padding-top: 80px;
+    padding-top: 124px;
   }
 
   .hero-portrait img {
