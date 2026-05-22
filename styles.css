@@ -1301,6 +1301,11 @@ h1 em {
 }
 
 [data-reveal] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.reveal-ready [data-reveal] {
   opacity: 0;
   transform: translateY(18px);
   transition:
@@ -1308,7 +1313,7 @@ h1 em {
     transform 700ms ease;
 }
 
-[data-reveal].is-visible {
+body.reveal-ready [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
 }

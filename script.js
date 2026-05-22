@@ -1,3 +1,5 @@
+document.body.classList.add("reveal-ready");
+
 const revealItems = document.querySelectorAll("[data-reveal]");
 
 if ("IntersectionObserver" in window) {
@@ -14,6 +16,10 @@ if ("IntersectionObserver" in window) {
   );
 
   revealItems.forEach((item) => observer.observe(item));
+
+  window.setTimeout(() => {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  }, 1200);
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
