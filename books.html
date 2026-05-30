@@ -62,39 +62,44 @@
         <div class="container books-hero__head">
           <p class="eyebrow">A library that turns</p>
           <h1 id="books-title" class="books-hero__title">Books by Atta Arghandiwal.</h1>
-          <p class="books-hero__lead">Choose the work that fits your moment: Afghanistan and exile, immigrant self-sufficiency, family planning, or the forthcoming Age of AI guide.</p>
+          <p class="books-hero__lead">Every few seconds, one book steps forward with its message. Open the details when a title speaks to the moment you are in.</p>
         </div>
         
-      <section class="books-carousel" aria-roledescription="carousel" aria-label="Books by Atta Arghandiwal — rotating featured book" id="booksCarousel" tabindex="0">
+      <section class="books-carousel" data-accent="ai" aria-roledescription="carousel" aria-label="Books by Atta Arghandiwal — rotating featured book" id="booksCarousel" tabindex="0">
+        <div class="books-carousel__voice" aria-live="polite" aria-atomic="true">
+          <span class="books-carousel__voice-label" data-voice-label>Age of AI protocol</span>
+          <h2 class="books-carousel__voice-title" data-voice-title>Integration is not just finding a job. It is building a system.</h2>
+          <p class="books-carousel__voice-blurb" data-voice-blurb>AI can level the playing field when you know how to give it the right instructions. This guide is a protocol for standing in the new era.</p>
+        </div>
         <div class="books-carousel__stage" data-active-slug="self-sufficient-immigrant-age-of-ai">
           <div class="books-carousel__orbit" aria-hidden="true"></div>
           <ol class="books-carousel__track">
             <li class="books-carousel__slot" data-slot-index="0" data-offset="0" data-position="0">
-              <button type="button" class="books-carousel__card" data-active="true" data-detail-href="#details-self-sufficient-immigrant-age-of-ai" aria-label="Read details for The Self-Sufficient Immigrant in the Age of AI" tabindex="0">
+              <button type="button" class="books-carousel__card" data-active="true" data-accent="ai" data-detail-href="#details-self-sufficient-immigrant-age-of-ai" aria-label="Read details for The Self-Sufficient Immigrant in the Age of AI" tabindex="0">
                 <img src="images/self-sufficient-immigrant-age-ai-cover.png" alt="" loading="eager" />
                 <span class="books-carousel__card-shadow" aria-hidden="true"></span>
               </button>
             </li>
             <li class="books-carousel__slot" data-slot-index="1" data-offset="1" data-position="1" aria-hidden="true">
-              <button type="button" class="books-carousel__card" data-active="false" data-detail-href="#details-lost-decency-gilded-cages" aria-label="Show Lost Decency: The Gilded Cages and the Search for Home" tabindex="-1">
+              <button type="button" class="books-carousel__card" data-active="false" data-accent="memoir" data-detail-href="#details-lost-decency-gilded-cages" aria-label="Show Lost Decency: The Gilded Cages and the Search for Home" tabindex="-1">
                 <img src="images/lost-decency-gilded-cover.jpg" alt="" loading="eager" />
                 <span class="books-carousel__card-shadow" aria-hidden="true"></span>
               </button>
             </li>
             <li class="books-carousel__slot" data-slot-index="2" data-offset="2" data-position="2" aria-hidden="true">
-              <button type="button" class="books-carousel__card" data-active="false" data-detail-href="#details-lost-decency-untold" aria-label="Show Lost Decency: The Untold Afghan Story" tabindex="-1">
+              <button type="button" class="books-carousel__card" data-active="false" data-accent="memoir" data-detail-href="#details-lost-decency-untold" aria-label="Show Lost Decency: The Untold Afghan Story" tabindex="-1">
                 <img src="images/lost-decency-cover.png" alt="" loading="lazy" />
                 <span class="books-carousel__card-shadow" aria-hidden="true"></span>
               </button>
             </li>
             <li class="books-carousel__slot" data-slot-index="3" data-offset="-2" data-position="-2" aria-hidden="true">
-              <button type="button" class="books-carousel__card" data-active="false" data-detail-href="#details-self-sufficient-global-citizen" aria-label="Show The Self-Sufficient Global Citizen" tabindex="-1">
+              <button type="button" class="books-carousel__card" data-active="false" data-accent="guide" data-detail-href="#details-self-sufficient-global-citizen" aria-label="Show The Self-Sufficient Global Citizen" tabindex="-1">
                 <img src="images/global-citizen-cover.jpg" alt="" loading="lazy" />
                 <span class="books-carousel__card-shadow" aria-hidden="true"></span>
               </button>
             </li>
             <li class="books-carousel__slot" data-slot-index="4" data-offset="-1" data-position="-1" aria-hidden="true">
-              <button type="button" class="books-carousel__card" data-active="false" data-detail-href="#details-immigrant-success-planning" aria-label="Show Immigrant Success Planning" tabindex="-1">
+              <button type="button" class="books-carousel__card" data-active="false" data-accent="guide" data-detail-href="#details-immigrant-success-planning" aria-label="Show Immigrant Success Planning" tabindex="-1">
                 <img src="images/immigrant-success-planning-cover.jpg" alt="" loading="eager" />
                 <span class="books-carousel__card-shadow" aria-hidden="true"></span>
               </button>
@@ -142,13 +147,16 @@
         var counterEl = root.querySelector('[data-counter]');
         var hintLink = root.querySelector('[data-hint-link]');
         var captionRegion = root.querySelector('[data-caption]');
+        var voiceLabel = root.querySelector('[data-voice-label]');
+        var voiceTitle = root.querySelector('[data-voice-title]');
+        var voiceBlurb = root.querySelector('[data-voice-blurb]');
         var total = slots.length;
         var active = 0;
         var paused = false;
         var timerId = null;
-        var AUTO = 6500;
+        var AUTO = 3600;
 
-        var bookData = [{"slug":"self-sufficient-immigrant-age-of-ai","title":"The Self-Sufficient Immigrant in the Age of AI","subtitle":"A field manual for the work of standing again.","status":"Coming soon","detailHref":"#details-self-sufficient-immigrant-age-of-ai"},{"slug":"lost-decency-gilded-cages","title":"Lost Decency: The Gilded Cages and the Search for Home","subtitle":"Afghanistan, exile, and the search for home.","status":"Available","detailHref":"#details-lost-decency-gilded-cages"},{"slug":"lost-decency-untold","title":"Lost Decency: The Untold Afghan Story","subtitle":"Atta's award-winning memoir and the journey through memory, displacement, and dignity.","status":"Legacy edition","detailHref":"#details-lost-decency-untold"},{"slug":"self-sufficient-global-citizen","title":"The Self-Sufficient Global Citizen","subtitle":"A self-sufficiency guide for families and communities starting fresh.","status":"Available","detailHref":"#details-self-sufficient-global-citizen"},{"slug":"immigrant-success-planning","title":"Immigrant Success Planning","subtitle":"A planning resource for immigrant families and support organizations.","status":"Available","detailHref":"#details-immigrant-success-planning"}];
+        var bookData = [{"slug":"self-sufficient-immigrant-age-of-ai","title":"The Self-Sufficient Immigrant in the Age of AI","subtitle":"A field manual for the work of standing again.","status":"Coming soon","accent":"ai","voiceLabel":"Age of AI protocol","voiceHeadline":"Integration is not just finding a job. It is building a system.","voiceBlurb":"AI can level the playing field when you know how to give it the right instructions. This guide is a protocol for standing in the new era.","detailHref":"#details-self-sufficient-immigrant-age-of-ai"},{"slug":"lost-decency-gilded-cages","title":"Lost Decency: The Gilded Cages and the Search for Home","subtitle":"Afghanistan, exile, and the search for home.","status":"Available","accent":"memoir","voiceLabel":"Moral reckoning","voiceHeadline":"Safety is a roof. Respect is a home.","voiceBlurb":"Lost Decency asks what happens when exile becomes a statistic and the human need for dignity, memory, and responsibility is forgotten.","detailHref":"#details-lost-decency-gilded-cages"},{"slug":"lost-decency-untold","title":"Lost Decency: The Untold Afghan Story","subtitle":"Atta's award-winning memoir and the journey through memory, displacement, and dignity.","status":"Legacy edition","accent":"memoir","voiceLabel":"Original memoir","voiceHeadline":"If a nation loses its decency, what do its people fight to keep?","voiceBlurb":"The original award-recognized memoir carries Atta's journey through exile, memory, displacement, and the lifelong search for home.","detailHref":"#details-lost-decency-untold"},{"slug":"self-sufficient-global-citizen","title":"The Self-Sufficient Global Citizen","subtitle":"A self-sufficiency guide for families and communities starting fresh.","status":"Available","accent":"guide","voiceLabel":"Self-sufficiency guide","voiceHeadline":"Dignity is earned through self-sufficiency, not assistance.","voiceBlurb":"A guidebook for responsible refugees, migrants, families, and communities starting fresh with work, citizenship, planning, and responsibility.","detailHref":"#details-self-sufficient-global-citizen"},{"slug":"immigrant-success-planning","title":"Immigrant Success Planning","subtitle":"A planning resource for immigrant families and support organizations.","status":"Available","accent":"guide","voiceLabel":"Family planning tool","voiceHeadline":"Systems feel cold when they process people instead of serving them.","voiceBlurb":"This resource helps families navigate documents, work, citizenship, and daily structure without losing their soul.","detailHref":"#details-immigrant-success-planning"}];
 
         function setPosition(slot, off) {
           var pos;
@@ -203,6 +211,10 @@
           counterEl.textContent = String(active + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
           hintLink.setAttribute('href', b.detailHref);
           stage.setAttribute('data-active-slug', b.slug);
+          root.setAttribute('data-accent', b.accent);
+          if (voiceLabel) voiceLabel.textContent = b.voiceLabel;
+          if (voiceTitle) voiceTitle.textContent = b.voiceHeadline;
+          if (voiceBlurb) voiceBlurb.textContent = b.voiceBlurb;
         }
 
         function go(delta) { active = (active + delta + total) % total; render(); }
