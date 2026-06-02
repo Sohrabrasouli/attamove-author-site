@@ -8391,3 +8391,1582 @@ body::before {
     letter-spacing: 0.05em !important;
   }
 }
+
+/* =====================================================================
+   v14 — BRAND-FIRST HERO, MEMORY MOVED INTO STORY (June 2026)
+   The merry-go-round no longer carries the hero. The first screen now
+   presents Atta as the guide; the merry-go-round becomes a contextual
+   memory feature in the journey section.
+   ===================================================================== */
+
+.cover-hero {
+  min-height: 760px !important;
+  height: 100svh !important;
+  background:
+    radial-gradient(900px 620px at 74% 30%, rgba(231, 200, 117, 0.13), transparent 62%),
+    radial-gradient(760px 520px at 15% 70%, rgba(127, 183, 173, 0.13), transparent 64%),
+    linear-gradient(180deg, #08172b 0%, #061225 52%, #030b16 100%) !important;
+}
+
+.cover-hero__memory-img {
+  display: none !important;
+}
+
+.cover-hero__atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(108deg, transparent 0 42%, rgba(255, 249, 236, 0.06) 42.1% 42.25%, transparent 42.35%),
+    linear-gradient(21deg, transparent 0 64%, rgba(214, 168, 74, 0.12) 64.05% 64.2%, transparent 64.3%),
+    repeating-linear-gradient(90deg, rgba(251, 243, 227, 0.035) 0 1px, transparent 1px 86px);
+  opacity: 0.58;
+  animation: heroMemorySweep 20s ease-in-out infinite alternate;
+}
+
+.cover-hero::before {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(242, 216, 141, 0.16), transparent 24%),
+    radial-gradient(ellipse 70% 54% at 58% 52%, rgba(127, 183, 173, 0.10), transparent 70%) !important;
+  opacity: 0.72 !important;
+}
+
+.cover-hero::after {
+  background:
+    linear-gradient(90deg, rgba(3, 11, 22, 0.82) 0%, rgba(3, 11, 22, 0.56) 34%, rgba(3, 11, 22, 0.20) 62%, rgba(3, 11, 22, 0.56) 100%),
+    radial-gradient(ellipse 100% 64% at 50% 100%, rgba(3, 11, 22, 0.88), transparent 62%) !important;
+}
+
+.cover-hero__veil {
+  background:
+    linear-gradient(96deg, rgba(4, 12, 24, 0.78) 0%, rgba(5, 18, 36, 0.36) 42%, rgba(5, 18, 36, 0.02) 70%, rgba(5, 18, 36, 0.30) 100%) !important;
+}
+
+.cover-hero__floor {
+  height: 44% !important;
+  background:
+    radial-gradient(ellipse 80% 55% at 72% 54%, rgba(231, 200, 117, 0.12), transparent 64%),
+    linear-gradient(180deg, transparent 0%, rgba(4, 12, 24, 0.18) 38%, rgba(2, 8, 18, 0.90) 100%) !important;
+}
+
+.cover-hero__content {
+  position: relative;
+  z-index: 4;
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.95fr) minmax(300px, 0.72fr) !important;
+  align-items: end !important;
+  gap: clamp(2rem, 5vw, 5.5rem);
+  width: min(1280px, calc(100% - clamp(2rem, 6vw, 7rem)));
+  margin: 0 auto;
+  padding: clamp(8.5rem, 14vh, 11rem) 0 clamp(5rem, 9vh, 7rem) !important;
+}
+
+.cover-hero__copy {
+  align-self: end;
+  max-width: 720px !important;
+  gap: 1.08rem !important;
+  padding-top: 0 !important;
+}
+
+.cover-hero__title {
+  color: var(--gold-400) !important;
+  font-size: clamp(4rem, 7.2vw, 7.4rem) !important;
+  line-height: 0.92 !important;
+  text-shadow:
+    0 0 26px rgba(214, 168, 74, 0.18),
+    0 26px 72px rgba(0, 0, 0, 0.72) !important;
+}
+
+.cover-hero__support {
+  display: block !important;
+  max-width: 590px !important;
+  margin: 0 !important;
+  color: rgba(255, 249, 236, 0.88) !important;
+  font-size: clamp(0.98rem, 1.05vw, 1.12rem) !important;
+  line-height: 1.62 !important;
+}
+
+.cover-hero__portrait-showcase {
+  position: relative;
+  z-index: 4;
+  justify-self: end;
+  align-self: end;
+  width: min(34vw, 390px);
+  min-width: 280px;
+  margin: 0;
+  filter:
+    drop-shadow(0 34px 58px rgba(0, 0, 0, 0.52))
+    drop-shadow(0 0 34px rgba(231, 200, 117, 0.12));
+}
+
+.cover-hero__portrait-showcase::before {
+  content: "";
+  position: absolute;
+  inset: 5% -14% 4% -14%;
+  z-index: -1;
+  border-radius: 999px;
+  background:
+    radial-gradient(ellipse at 56% 42%, rgba(242, 216, 141, 0.26), transparent 56%),
+    radial-gradient(ellipse at 44% 76%, rgba(127, 183, 173, 0.14), transparent 62%);
+  filter: blur(22px);
+  opacity: 0.78;
+}
+
+.cover-hero__portrait-showcase img {
+  width: 100%;
+  aspect-ratio: 0.74 / 1;
+  height: auto;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 34px;
+  border: 1px solid rgba(251, 243, 227, 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 249, 236, 0.12),
+    0 0 0 1px rgba(214, 168, 74, 0.08);
+  filter: brightness(1.06) contrast(1.05) saturate(1.02);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 78%, rgba(0, 0, 0, 0.55) 90%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 78%, rgba(0, 0, 0, 0.55) 90%, transparent 100%);
+}
+
+.cover-hero__memory-screen {
+  width: min(100%, 540px) !important;
+  min-height: 172px !important;
+  background:
+    linear-gradient(135deg, rgba(251, 243, 227, 0.10), rgba(127, 183, 173, 0.08)),
+    rgba(4, 14, 29, 0.54) !important;
+}
+
+.cover-hero__screen-stage {
+  min-height: 122px !important;
+}
+
+.cover-hero__screen-card p {
+  max-width: 37ch !important;
+}
+
+.cover-hero__rail {
+  bottom: clamp(1rem, 2.4vh, 1.8rem) !important;
+}
+
+.life-story__memory-feature {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(280px, 0.7fr);
+  gap: clamp(1.25rem, 4vw, 3.5rem);
+  align-items: center;
+  max-width: 1660px;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  padding: clamp(1rem, 2vw, 1.35rem);
+  border: 1px solid rgba(8, 19, 36, 0.12);
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(255, 252, 245, 0.86), rgba(255, 248, 234, 0.68)),
+    radial-gradient(640px 360px at 15% 15%, rgba(214, 168, 74, 0.16), transparent 68%);
+  box-shadow: 0 28px 90px rgba(8, 19, 36, 0.12);
+}
+
+.life-story {
+  scroll-margin-top: 112px;
+}
+
+.life-story__memory-feature figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #caa76d;
+  box-shadow: 0 20px 54px rgba(8, 19, 36, 0.16);
+}
+
+.life-story__memory-feature img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.52 / 1;
+  object-fit: cover;
+  filter: sepia(0.05) saturate(1.04) contrast(0.98) brightness(1.08);
+}
+
+.life-story__memory-feature div {
+  display: grid;
+  gap: 0.75rem;
+  padding: clamp(0.25rem, 1.2vw, 1rem);
+}
+
+.life-story__memory-feature span {
+  color: var(--gold-deep);
+  font-size: 0.75rem;
+  font-weight: 850;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.life-story__memory-feature h3 {
+  max-width: 12ch;
+  margin: 0;
+  color: #071323;
+  font-size: clamp(2rem, 4vw, 4.8rem);
+  line-height: 0.94;
+}
+
+.life-story__memory-feature p {
+  max-width: 54ch;
+  margin: 0;
+  color: rgba(8, 19, 36, 0.74);
+  font-size: clamp(1rem, 1.14vw, 1.18rem);
+  line-height: 1.65;
+}
+
+@media (max-width: 980px) {
+  .cover-hero {
+    min-height: 820px !important;
+    height: auto !important;
+  }
+
+  .cover-hero__content {
+    grid-template-columns: 1fr !important;
+    align-items: start !important;
+    gap: 1.25rem;
+    padding: 7.5rem 0 5.6rem !important;
+  }
+
+  .cover-hero__portrait-showcase {
+    display: none;
+  }
+
+  .cover-hero__title {
+    font-size: clamp(3.2rem, 12vw, 5rem) !important;
+  }
+
+  .cover-hero__memory-screen {
+    width: 100% !important;
+  }
+
+  .life-story__memory-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .life-story__memory-feature h3 {
+    max-width: 16ch;
+  }
+}
+
+@media (max-width: 560px) {
+  .cover-hero {
+    min-height: 760px !important;
+  }
+
+  .cover-hero__content {
+    width: min(100% - 1.4rem, 1280px);
+    padding-top: 6.7rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  .cover-hero__support {
+    font-size: 0.92rem !important;
+  }
+
+  .cover-hero__cta .btn {
+    flex: 1 1 100%;
+  }
+
+  .cover-hero__rail-caption {
+    font-size: 0.58rem !important;
+  }
+
+  .life-story__memory-feature {
+    padding: 0.75rem;
+    border-radius: 18px;
+  }
+
+  .life-story__memory-feature figure {
+    border-radius: 13px;
+  }
+}
+
+/* =====================================================================
+   v15 — BLUE-SUIT PORTRAIT AS CINEMATIC BACKGROUND (June 2026)
+   Atta's navy suit portrait becomes the hero background image itself.
+   The portrait is large and atmospheric, not a card or pasted photo block.
+   ===================================================================== */
+
+.cover-hero {
+  background:
+    radial-gradient(760px 520px at 78% 24%, rgba(242, 216, 141, 0.12), transparent 62%),
+    radial-gradient(920px 620px at 74% 66%, rgba(21, 54, 82, 0.38), transparent 70%),
+    linear-gradient(180deg, #08172d 0%, #061225 54%, #030b16 100%) !important;
+}
+
+.cover-hero__profile-bg {
+  position: absolute;
+  z-index: 3;
+  right: clamp(0.5rem, 5.5vw, 6rem);
+  bottom: clamp(-2rem, -3vh, -0.5rem);
+  width: min(47vw, 620px);
+  height: min(88svh, 850px);
+  object-fit: contain;
+  object-position: center bottom;
+  pointer-events: none;
+  opacity: 0.98;
+  filter:
+    brightness(1.22)
+    contrast(1.08)
+    saturate(1.08)
+    drop-shadow(0 34px 68px rgba(0, 0, 0, 0.54))
+    drop-shadow(0 0 42px rgba(231, 200, 117, 0.18));
+  -webkit-mask-image: radial-gradient(ellipse 58% 73% at 51% 48%, #000 0%, #000 49%, rgba(0, 0, 0, 0.84) 62%, rgba(0, 0, 0, 0.36) 76%, transparent 92%);
+  mask-image: radial-gradient(ellipse 58% 73% at 51% 48%, #000 0%, #000 49%, rgba(0, 0, 0, 0.84) 62%, rgba(0, 0, 0, 0.36) 76%, transparent 92%);
+  animation: heroProfileDrift 18s ease-in-out infinite alternate;
+}
+
+.cover-hero__profile-bg::selection {
+  background: transparent;
+}
+
+.cover-hero__atmosphere {
+  z-index: 0 !important;
+  opacity: 0.48 !important;
+}
+
+.cover-hero::before {
+  z-index: 2;
+  background:
+    linear-gradient(112deg, transparent 0 38%, rgba(255, 249, 236, 0.07) 47%, rgba(214, 168, 74, 0.10) 51%, transparent 63%),
+    radial-gradient(ellipse 42% 42% at 79% 31%, rgba(242, 216, 141, 0.17), transparent 66%) !important;
+  mix-blend-mode: screen;
+}
+
+.cover-hero::after {
+  z-index: 2;
+  background:
+    linear-gradient(90deg, rgba(3, 11, 22, 0.93) 0%, rgba(3, 11, 22, 0.72) 38%, rgba(3, 11, 22, 0.05) 66%, rgba(3, 11, 22, 0.18) 100%),
+    radial-gradient(ellipse 106% 70% at 52% 105%, rgba(2, 8, 18, 0.92), transparent 64%) !important;
+}
+
+.cover-hero__veil,
+.cover-hero__floor {
+  z-index: 2 !important;
+}
+
+.cover-hero__light {
+  z-index: 2 !important;
+  right: clamp(2rem, 8vw, 9rem) !important;
+  top: clamp(6rem, 13vh, 10rem) !important;
+  opacity: 0.76 !important;
+}
+
+.cover-hero__portrait-showcase {
+  display: none !important;
+}
+
+.cover-hero__content {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+.cover-hero__copy {
+  max-width: min(54vw, 790px) !important;
+}
+
+.cover-hero__title {
+  font-size: clamp(3.7rem, 6.5vw, 6.7rem) !important;
+}
+
+@keyframes heroProfileDrift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(-10px, -8px, 0) scale(1.025);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover-hero__profile-bg {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .cover-hero__profile-bg {
+    display: block !important;
+    z-index: 1;
+    right: -14vw;
+    top: 5.4rem;
+    bottom: auto;
+    width: min(88vw, 430px);
+    height: min(54svh, 470px);
+    opacity: 0.22;
+    filter:
+      brightness(1.08)
+      contrast(1.04)
+      saturate(1.02)
+      blur(0.35px);
+    -webkit-mask-image: radial-gradient(ellipse 72% 78% at 56% 44%, #000 0%, rgba(0, 0, 0, 0.84) 48%, transparent 86%);
+    mask-image: radial-gradient(ellipse 72% 78% at 56% 44%, #000 0%, rgba(0, 0, 0, 0.84) 48%, transparent 86%);
+  }
+
+  .cover-hero::after {
+    background:
+      linear-gradient(180deg, rgba(3, 11, 22, 0.72) 0%, rgba(3, 11, 22, 0.62) 36%, rgba(3, 11, 22, 0.88) 100%),
+      radial-gradient(ellipse 100% 52% at 88% 16%, rgba(242, 216, 141, 0.08), transparent 70%) !important;
+  }
+
+  .cover-hero__copy {
+    max-width: 100% !important;
+  }
+
+  .cover-hero__title {
+    font-size: clamp(3rem, 11vw, 4.35rem) !important;
+    line-height: 0.96 !important;
+  }
+
+  .cover-hero__memory-screen {
+    min-height: 0 !important;
+  }
+
+  .cover-hero__screen-stage {
+    min-height: 0 !important;
+    padding-bottom: 0.85rem !important;
+  }
+
+  .cover-hero__screen-card strong {
+    font-size: clamp(1rem, 5.4vw, 1.35rem) !important;
+  }
+
+  .cover-hero__screen-card p {
+    font-size: 0.88rem !important;
+    line-height: 1.42 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .cover-hero__profile-bg {
+    top: 6.3rem;
+    right: -34vw;
+    width: 106vw;
+    height: 420px;
+    opacity: 0.18;
+  }
+
+  .cover-hero__title {
+    text-shadow:
+      0 0 18px rgba(214, 168, 74, 0.18),
+      0 18px 44px rgba(0, 0, 0, 0.82) !important;
+  }
+}
+
+/* =====================================================================
+   v16 — REFLECTIVE LANDSCAPE HERO OPTION (June 2026)
+   Uses Atta's outdoor reflection photo as the full cinematic background.
+   The left side stays navy and readable; the right side carries the human
+   landscape signal.
+   ===================================================================== */
+
+.cover-hero {
+  background: #04101f !important;
+}
+
+.cover-hero__profile-bg {
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: 58% 55% !important;
+  opacity: 1 !important;
+  filter:
+    brightness(0.94)
+    contrast(1.08)
+    saturate(1.05)
+    sepia(0.05) !important;
+  transform: none !important;
+  animation: heroLandscapeDrift 24s ease-in-out infinite alternate !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+.cover-hero__atmosphere {
+  z-index: 2 !important;
+  opacity: 0.34 !important;
+  background:
+    linear-gradient(108deg, transparent 0 42%, rgba(255, 249, 236, 0.05) 49%, transparent 60%),
+    repeating-linear-gradient(90deg, rgba(251, 243, 227, 0.026) 0 1px, transparent 1px 92px) !important;
+}
+
+.cover-hero::before {
+  z-index: 2;
+  background:
+    radial-gradient(ellipse 48% 40% at 82% 35%, rgba(242, 216, 141, 0.14), transparent 70%),
+    radial-gradient(ellipse 70% 58% at 62% 75%, rgba(127, 183, 173, 0.13), transparent 72%) !important;
+  mix-blend-mode: screen;
+  opacity: 0.72 !important;
+}
+
+.cover-hero::after {
+  z-index: 2;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 11, 22, 0.99) 0%,
+      rgba(3, 11, 22, 0.96) 32%,
+      rgba(3, 11, 22, 0.68) 53%,
+      rgba(3, 11, 22, 0.28) 76%,
+      rgba(3, 11, 22, 0.46) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 11, 22, 0.48) 0%,
+      rgba(3, 11, 22, 0.08) 28%,
+      rgba(3, 11, 22, 0.76) 100%
+    ) !important;
+}
+
+.cover-hero__veil {
+  background:
+    radial-gradient(ellipse 72% 66% at 22% 52%, rgba(4, 12, 24, 0.72), transparent 72%),
+    linear-gradient(90deg, rgba(4, 12, 24, 0.78), transparent 68%) !important;
+}
+
+.cover-hero__floor {
+  height: 46% !important;
+  background:
+    radial-gradient(ellipse 72% 46% at 72% 70%, rgba(214, 168, 74, 0.10), transparent 66%),
+    linear-gradient(180deg, transparent 0%, rgba(2, 8, 18, 0.82) 100%) !important;
+}
+
+.cover-hero__content {
+  grid-template-columns: 1fr !important;
+}
+
+.cover-hero__copy {
+  max-width: min(56vw, 820px) !important;
+}
+
+.cover-hero__title {
+  font-size: clamp(3.8rem, 6.2vw, 6.4rem) !important;
+  line-height: 0.94 !important;
+  color: #f3d783 !important;
+  text-shadow:
+    0 0 18px rgba(214, 168, 74, 0.18),
+    0 18px 50px rgba(0, 0, 0, 0.84) !important;
+}
+
+.cover-hero__title span {
+  white-space: nowrap;
+}
+
+.cover-hero__support {
+  max-width: 610px !important;
+  text-shadow: 0 18px 44px rgba(0, 0, 0, 0.78);
+}
+
+.cover-hero__memory-screen {
+  background:
+    linear-gradient(135deg, rgba(251, 243, 227, 0.11), rgba(127, 183, 173, 0.08)),
+    rgba(3, 13, 27, 0.66) !important;
+  backdrop-filter: blur(18px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(140%) !important;
+}
+
+@keyframes heroLandscapeDrift {
+  from {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.07) translate3d(-18px, -8px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover-hero__profile-bg {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .cover-hero__profile-bg {
+    display: block !important;
+    object-position: 60% 50% !important;
+    opacity: 0.72 !important;
+    filter:
+      brightness(0.82)
+      contrast(1.06)
+      saturate(1.02)
+      sepia(0.06) !important;
+  }
+
+  .cover-hero::after {
+    background:
+      linear-gradient(180deg, rgba(3, 11, 22, 0.78) 0%, rgba(3, 11, 22, 0.72) 36%, rgba(3, 11, 22, 0.94) 100%),
+      linear-gradient(90deg, rgba(3, 11, 22, 0.92), rgba(3, 11, 22, 0.58) 62%, rgba(3, 11, 22, 0.76)) !important;
+  }
+
+  .cover-hero__copy {
+    max-width: 100% !important;
+  }
+
+  .cover-hero__title {
+    font-size: clamp(3rem, 10.6vw, 4.2rem) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .cover-hero__profile-bg {
+    object-position: 63% 43% !important;
+    opacity: 0.58 !important;
+  }
+
+  .cover-hero__title {
+    font-size: clamp(2.8rem, 10.2vw, 3.75rem) !important;
+  }
+
+  .cover-hero__support {
+    max-width: 31ch !important;
+  }
+}
+
+/* =====================================================================
+   v17 — HERO READABILITY + TV REEL POLISH (June 2026)
+   Removes the duplicate post-hero reel from markup and makes the hero's
+   left-side text/TV area feel tuned to the reflective landscape image.
+   ===================================================================== */
+
+.cover-hero::after {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 9, 19, 0.995) 0%,
+      rgba(3, 12, 25, 0.965) 34%,
+      rgba(5, 18, 34, 0.70) 54%,
+      rgba(5, 18, 34, 0.24) 76%,
+      rgba(3, 11, 22, 0.40) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2, 9, 19, 0.34) 0%,
+      rgba(2, 9, 19, 0.08) 28%,
+      rgba(2, 9, 19, 0.84) 100%
+    ) !important;
+}
+
+.cover-hero__veil {
+  background:
+    radial-gradient(ellipse 56% 60% at 24% 51%, rgba(3, 12, 25, 0.64), transparent 74%),
+    linear-gradient(90deg, rgba(3, 12, 25, 0.82), rgba(3, 12, 25, 0.18) 68%, transparent) !important;
+}
+
+.cover-hero__copy {
+  max-width: min(54vw, 760px) !important;
+  gap: 1rem !important;
+}
+
+.cover-hero__title {
+  color: #e9c96f !important;
+  font-size: clamp(3.7rem, 5.85vw, 6.05rem) !important;
+  font-weight: 560 !important;
+  line-height: 0.96 !important;
+  text-shadow:
+    0 2px 0 rgba(255, 249, 236, 0.06),
+    0 0 20px rgba(233, 201, 111, 0.18),
+    0 22px 58px rgba(0, 0, 0, 0.88) !important;
+}
+
+.cover-hero__support {
+  max-width: 57ch !important;
+  color: rgba(244, 236, 219, 0.92) !important;
+  font-size: clamp(0.98rem, 1.02vw, 1.08rem) !important;
+  line-height: 1.58 !important;
+  text-shadow: 0 16px 38px rgba(0, 0, 0, 0.86) !important;
+}
+
+.cover-hero__memory-screen {
+  width: min(100%, 555px) !important;
+  min-height: 158px !important;
+  margin-top: 0.1rem !important;
+  border-color: rgba(219, 181, 102, 0.34) !important;
+  background:
+    linear-gradient(135deg, rgba(14, 34, 52, 0.86), rgba(5, 16, 30, 0.78)),
+    radial-gradient(460px 220px at 78% 0%, rgba(219, 181, 102, 0.13), transparent 68%) !important;
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 249, 236, 0.11),
+    inset 0 -1px 0 rgba(219, 181, 102, 0.18) !important;
+}
+
+.cover-hero__memory-screen::before {
+  opacity: 0.55;
+}
+
+.cover-hero__screen-top {
+  color: rgba(232, 222, 201, 0.76) !important;
+}
+
+.cover-hero__screen-top span:first-child,
+.cover-hero__screen-card[data-tone="ai"] > span,
+.cover-hero__screen-card[data-tone="guide"] > span {
+  color: #91d0c8 !important;
+}
+
+.cover-hero__screen-card[data-tone="memoir"] > span {
+  color: #d99572 !important;
+}
+
+.cover-hero__screen-stage {
+  min-height: 108px !important;
+  padding: 0.7rem 5.6rem 0.82rem 0.95rem !important;
+}
+
+.cover-hero__screen-card {
+  gap: 0.32rem !important;
+}
+
+.cover-hero__screen-card strong {
+  color: #fff5df !important;
+  font-size: clamp(1.06rem, 1.28vw, 1.32rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+  text-shadow: 0 14px 34px rgba(0, 0, 0, 0.72);
+}
+
+.cover-hero__screen-card p {
+  max-width: 38ch !important;
+  color: rgba(240, 231, 211, 0.88) !important;
+  font-size: 0.82rem !important;
+  line-height: 1.45 !important;
+}
+
+.cover-hero__screen-card img {
+  right: 0.95rem !important;
+  width: 3.75rem !important;
+  height: 5.2rem !important;
+  border-color: rgba(233, 201, 111, 0.42) !important;
+}
+
+.cover-hero__screen-pips {
+  padding-bottom: 0.74rem !important;
+}
+
+.cover-hero__screen-pips span {
+  width: 1.8rem !important;
+  background: rgba(232, 222, 201, 0.24) !important;
+}
+
+.cover-hero__cta {
+  margin-top: 0.05rem !important;
+}
+
+.cover-hero__cta .btn--ghost {
+  background: rgba(6, 18, 32, 0.58) !important;
+  border-color: rgba(219, 181, 102, 0.38) !important;
+  color: rgba(245, 238, 224, 0.90) !important;
+}
+
+@media (max-width: 980px) {
+  .cover-hero__title span {
+    white-space: normal;
+  }
+
+  .cover-hero__support {
+    max-width: 37ch !important;
+  }
+
+  .cover-hero__memory-screen {
+    width: min(100%, 620px) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .cover-hero__title {
+    font-size: clamp(2.82rem, 9.6vw, 3.58rem) !important;
+    line-height: 0.98 !important;
+  }
+
+  .cover-hero__support {
+    font-size: 0.91rem !important;
+    max-width: 30ch !important;
+  }
+
+  .cover-hero__memory-screen {
+    border-radius: 18px !important;
+    min-height: 0 !important;
+  }
+
+  .cover-hero__screen-stage {
+    padding: 0.85rem 0.95rem 0.95rem !important;
+  }
+
+  .cover-hero__screen-card strong {
+    font-size: clamp(1.02rem, 5vw, 1.25rem) !important;
+  }
+
+  .cover-hero__screen-card p {
+    max-width: 100% !important;
+    font-size: 0.84rem !important;
+  }
+}
+
+/* =====================================================================
+   v18 — HERO LEFT-SIDE VISIBILITY + COMPACT GUIDANCE TV (June 2026)
+   Final polish for the landscape hero: warmer human gold, softer ivory body
+   text, and a less bulky reel card that stays readable on mobile.
+   ===================================================================== */
+
+.cover-hero::after {
+  background:
+    radial-gradient(ellipse 58% 72% at 18% 42%, rgba(2, 9, 18, 0.96) 0%, rgba(2, 9, 18, 0.82) 42%, rgba(2, 9, 18, 0.22) 76%, transparent 100%),
+    linear-gradient(
+      90deg,
+      rgba(2, 9, 18, 0.98) 0%,
+      rgba(4, 14, 27, 0.94) 31%,
+      rgba(7, 22, 38, 0.57) 53%,
+      rgba(7, 22, 38, 0.16) 74%,
+      rgba(2, 9, 18, 0.28) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2, 9, 18, 0.18) 0%,
+      rgba(2, 9, 18, 0.06) 34%,
+      rgba(2, 9, 18, 0.72) 100%
+    ) !important;
+}
+
+.cover-hero__veil {
+  background:
+    radial-gradient(ellipse 44% 54% at 28% 46%, rgba(233, 199, 111, 0.10), transparent 68%),
+    radial-gradient(ellipse 54% 62% at 25% 52%, rgba(2, 9, 18, 0.72), transparent 76%),
+    linear-gradient(90deg, rgba(2, 9, 18, 0.78), rgba(4, 14, 27, 0.30) 66%, transparent) !important;
+}
+
+.cover-hero__copy {
+  isolation: isolate;
+  max-width: min(52vw, 690px) !important;
+  padding: clamp(0.45rem, 0.8vw, 0.9rem) 0 !important;
+  position: relative;
+}
+
+.cover-hero__copy::before {
+  background:
+    radial-gradient(ellipse 78% 68% at 25% 44%, rgba(2, 9, 18, 0.66), rgba(2, 9, 18, 0.34) 50%, transparent 78%);
+  content: "";
+  filter: blur(18px);
+  inset: -1.4rem -2.2rem -1.7rem -1.3rem;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+}
+
+.cover-hero__title {
+  color: #e7c46f !important;
+  font-family: var(--font-serif), Georgia, serif !important;
+  font-size: clamp(3.45rem, 5.35vw, 5.72rem) !important;
+  font-weight: 540 !important;
+  letter-spacing: 0 !important;
+  line-height: 0.98 !important;
+  text-shadow:
+    0 1px 0 rgba(255, 248, 225, 0.11),
+    0 0 24px rgba(231, 196, 111, 0.22),
+    0 20px 58px rgba(0, 0, 0, 0.92) !important;
+}
+
+.cover-hero__support {
+  color: rgba(245, 236, 218, 0.87) !important;
+  font-size: clamp(0.98rem, 0.98vw, 1.07rem) !important;
+  font-weight: 440 !important;
+  line-height: 1.56 !important;
+  max-width: 52ch !important;
+}
+
+.cover-hero__memory-screen {
+  border-color: rgba(231, 196, 111, 0.36) !important;
+  border-radius: 18px !important;
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.46),
+    0 0 0 1px rgba(255, 244, 216, 0.05),
+    inset 0 1px 0 rgba(255, 244, 216, 0.13),
+    inset 0 -1px 0 rgba(231, 196, 111, 0.20) !important;
+  margin-top: 0 !important;
+  min-height: 142px !important;
+  overflow: hidden !important;
+  width: min(100%, 520px) !important;
+}
+
+.cover-hero__memory-screen::before {
+  background:
+    linear-gradient(90deg, rgba(231, 196, 111, 0.16), transparent 34%, rgba(139, 203, 195, 0.16));
+  opacity: 0.68 !important;
+}
+
+.cover-hero__screen-top {
+  color: rgba(231, 222, 204, 0.70) !important;
+  font-size: 0.62rem !important;
+  letter-spacing: 0.18em !important;
+  padding: 0.68rem 0.82rem 0 !important;
+}
+
+.cover-hero__screen-stage {
+  min-height: 96px !important;
+  padding: 0.62rem 5.05rem 0.66rem 0.86rem !important;
+}
+
+.cover-hero__screen-card > span {
+  color: #d7956f !important;
+  font-size: 0.58rem !important;
+  letter-spacing: 0.20em !important;
+}
+
+.cover-hero__screen-card[data-tone="ai"] > span,
+.cover-hero__screen-card[data-tone="guide"] > span {
+  color: #9fd7ce !important;
+}
+
+.cover-hero__screen-card strong {
+  color: #fff1d3 !important;
+  font-size: clamp(1rem, 1.08vw, 1.18rem) !important;
+  font-weight: 560 !important;
+  line-height: 1.12 !important;
+}
+
+.cover-hero__screen-card p {
+  color: rgba(237, 228, 210, 0.82) !important;
+  font-size: 0.78rem !important;
+  line-height: 1.42 !important;
+  max-width: 39ch !important;
+}
+
+.cover-hero__screen-card img {
+  border-color: rgba(231, 196, 111, 0.36) !important;
+  border-radius: 8px !important;
+  height: 4.65rem !important;
+  right: 0.88rem !important;
+  width: 3.35rem !important;
+}
+
+.cover-hero__screen-pips {
+  padding: 0 0.86rem 0.64rem !important;
+}
+
+.cover-hero__screen-pips span {
+  background: rgba(231, 222, 204, 0.24) !important;
+  height: 0.18rem !important;
+  width: 1.55rem !important;
+}
+
+.cover-hero__cta .btn {
+  min-height: 46px !important;
+}
+
+@media (max-width: 980px) {
+  .cover-hero::after {
+    background:
+      linear-gradient(180deg, rgba(2, 9, 18, 0.70) 0%, rgba(2, 9, 18, 0.52) 34%, rgba(2, 9, 18, 0.90) 100%),
+      radial-gradient(ellipse 92% 68% at 38% 42%, rgba(2, 9, 18, 0.78), rgba(2, 9, 18, 0.28) 74%, transparent 100%) !important;
+  }
+
+  .cover-hero__copy {
+    max-width: min(100%, 620px) !important;
+  }
+
+  .cover-hero__title {
+    font-size: clamp(3.15rem, 10vw, 4.18rem) !important;
+  }
+
+  .cover-hero__memory-screen {
+    width: min(100%, 520px) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .cover-hero__content {
+    padding-bottom: 4rem !important;
+    padding-top: 6.15rem !important;
+  }
+
+  .cover-hero__copy {
+    gap: 0.78rem !important;
+  }
+
+  .cover-hero__copy::before {
+    inset: -0.8rem -0.7rem -1rem;
+  }
+
+  .cover-hero__title {
+    font-size: clamp(2.48rem, 11.2vw, 3.05rem) !important;
+    line-height: 1.02 !important;
+    max-width: 9ch !important;
+  }
+
+  .cover-hero__support {
+    color: rgba(246, 237, 220, 0.86) !important;
+    font-size: 0.86rem !important;
+    line-height: 1.46 !important;
+    max-width: 29ch !important;
+  }
+
+  .cover-hero__memory-screen {
+    border-radius: 15px !important;
+    max-width: 352px !important;
+    min-height: 0 !important;
+    width: 100% !important;
+  }
+
+  .cover-hero__screen-top {
+    font-size: 0.5rem !important;
+    padding: 0.56rem 0.68rem 0 !important;
+  }
+
+  .cover-hero__screen-stage {
+    min-height: 0 !important;
+    padding: 0.66rem 0.72rem 0.62rem !important;
+  }
+
+  .cover-hero__screen-card {
+    gap: 0.26rem !important;
+  }
+
+  .cover-hero__screen-card > span {
+    font-size: 0.5rem !important;
+  }
+
+  .cover-hero__screen-card strong {
+    font-size: clamp(0.94rem, 4.7vw, 1.08rem) !important;
+    line-height: 1.14 !important;
+  }
+
+  .cover-hero__screen-card p {
+    display: -webkit-box !important;
+    font-size: 0.74rem !important;
+    line-height: 1.34 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 3 !important;
+  }
+
+  .cover-hero__screen-card img {
+    display: none !important;
+  }
+
+  .cover-hero__screen-pips {
+    padding-bottom: 0.55rem !important;
+  }
+
+  .cover-hero__cta {
+    gap: 0.6rem !important;
+  }
+
+  .cover-hero__cta .btn {
+    min-height: 42px !important;
+  }
+}
+
+/* =====================================================================
+   v19 — GUIDANCE TV BOOK COVER LANE (June 2026)
+   Book covers now live in their own column so they cannot sit on top of
+   the message text as the reel rotates.
+   ===================================================================== */
+
+.cover-hero__screen-stage {
+  padding: 0.68rem 0.88rem 0.7rem !important;
+}
+
+.cover-hero__screen-card {
+  align-items: center !important;
+  column-gap: 0.88rem !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 3.35rem !important;
+  grid-template-rows: auto auto auto !important;
+}
+
+.cover-hero__screen-card > span,
+.cover-hero__screen-card strong,
+.cover-hero__screen-card p {
+  grid-column: 1 !important;
+  min-width: 0 !important;
+}
+
+.cover-hero__screen-card strong,
+.cover-hero__screen-card p {
+  max-width: 100% !important;
+}
+
+.cover-hero__screen-card img {
+  align-self: center !important;
+  grid-column: 2 !important;
+  grid-row: 1 / 4 !important;
+  height: 4.75rem !important;
+  justify-self: end !important;
+  position: static !important;
+  right: auto !important;
+  top: auto !important;
+  transform: none !important;
+  width: 3.35rem !important;
+}
+
+@media (max-width: 760px) {
+  .cover-hero__screen-card {
+    grid-template-columns: minmax(0, 1fr) 2.65rem !important;
+    column-gap: 0.68rem !important;
+  }
+
+  .cover-hero__screen-card img {
+    height: 3.85rem !important;
+    width: 2.65rem !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .cover-hero__screen-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cover-hero__screen-card img {
+    display: none !important;
+  }
+}
+
+/* =====================================================================
+   v20 — APPLE-LIKE HERO FINISH (June 2026)
+   Wider composition, softer editorial gold, cleaner body copy, and a
+   product-like cover lane inside the rotating TV panel.
+   ===================================================================== */
+
+.cover-hero__profile-bg {
+  filter:
+    brightness(0.94)
+    contrast(1.03)
+    saturate(1.04)
+    sepia(0.035) !important;
+}
+
+.cover-hero__content {
+  width: min(1640px, calc(100% - clamp(3rem, 7vw, 8rem))) !important;
+}
+
+.cover-hero__copy {
+  gap: 0.92rem !important;
+  max-width: 705px !important;
+}
+
+.cover-hero__title {
+  color: #e8c779 !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(3.75rem, 5.45vw, 5.9rem) !important;
+  font-weight: 560 !important;
+  line-height: 0.965 !important;
+  text-shadow:
+    0 1px 0 rgba(255, 250, 235, 0.10),
+    0 0 18px rgba(232, 199, 121, 0.18),
+    0 20px 54px rgba(0, 0, 0, 0.82) !important;
+}
+
+.cover-hero__title span:nth-child(2) {
+  color: #efd58f !important;
+}
+
+.cover-hero__support {
+  color: rgba(247, 239, 222, 0.84) !important;
+  font-size: clamp(0.96rem, 0.98vw, 1.06rem) !important;
+  font-weight: 450 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.54 !important;
+  max-width: 46ch !important;
+}
+
+.cover-hero__memory-screen {
+  background:
+    linear-gradient(145deg, rgba(9, 23, 39, 0.82), rgba(4, 13, 25, 0.66)),
+    radial-gradient(320px 180px at 94% 18%, rgba(232, 199, 121, 0.16), transparent 66%),
+    radial-gradient(420px 230px at 2% 0%, rgba(118, 182, 176, 0.14), transparent 70%) !important;
+  border-color: rgba(232, 199, 121, 0.32) !important;
+  border-radius: 17px !important;
+  box-shadow:
+    0 26px 74px rgba(0, 0, 0, 0.44),
+    0 1px 0 rgba(255, 246, 222, 0.08),
+    inset 0 1px 0 rgba(255, 246, 222, 0.16),
+    inset 0 -1px 0 rgba(232, 199, 121, 0.16) !important;
+  margin-top: 0.08rem !important;
+  min-height: 148px !important;
+  width: min(100%, 535px) !important;
+}
+
+.cover-hero__screen-top {
+  color: rgba(242, 232, 213, 0.64) !important;
+  font-size: 0.59rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.18em !important;
+  padding: 0.66rem 0.86rem 0 !important;
+}
+
+.cover-hero__screen-top span:first-child {
+  color: #9ccfc8 !important;
+}
+
+.cover-hero__screen-stage {
+  min-height: 102px !important;
+  padding: 0.62rem 0.9rem 0.68rem !important;
+}
+
+.cover-hero__screen-card {
+  column-gap: 0.95rem !important;
+  grid-template-columns: minmax(0, 1fr) 3.7rem !important;
+}
+
+.cover-hero__screen-card > span {
+  color: #d99a76 !important;
+  font-size: 0.55rem !important;
+  font-weight: 850 !important;
+}
+
+.cover-hero__screen-card[data-tone="ai"] > span,
+.cover-hero__screen-card[data-tone="guide"] > span {
+  color: #9ccfc8 !important;
+}
+
+.cover-hero__screen-card strong {
+  color: #fff3db !important;
+  font-size: clamp(1rem, 1.02vw, 1.16rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.12 !important;
+}
+
+.cover-hero__screen-card p {
+  color: rgba(239, 229, 209, 0.82) !important;
+  font-size: 0.765rem !important;
+  line-height: 1.42 !important;
+}
+
+.cover-hero__screen-card img {
+  background: rgba(255, 246, 222, 0.035) !important;
+  border-color: rgba(232, 199, 121, 0.32) !important;
+  border-radius: 7px !important;
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.42),
+    0 0 24px rgba(232, 199, 121, 0.14) !important;
+  height: 5.1rem !important;
+  object-fit: contain !important;
+  padding: 0 !important;
+  width: 3.7rem !important;
+}
+
+.cover-hero__screen-pips {
+  gap: 0.38rem !important;
+  padding: 0 0.9rem 0.62rem !important;
+}
+
+.cover-hero__screen-pips span {
+  background: rgba(242, 232, 213, 0.22) !important;
+  border-radius: 999px !important;
+  height: 0.16rem !important;
+  width: 1.62rem !important;
+}
+
+.cover-hero__cta {
+  gap: 0.76rem !important;
+  margin-top: 0.08rem !important;
+}
+
+.cover-hero__cta .btn {
+  border-radius: 13px !important;
+  font-size: 0.94rem !important;
+  font-weight: 700 !important;
+  min-height: 44px !important;
+  padding-inline: 1.35rem !important;
+}
+
+.cover-hero__cta .btn--primary {
+  background: linear-gradient(135deg, #d0a347, #ad7d2d) !important;
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 244, 214, 0.24) !important;
+}
+
+.cover-hero__cta .btn--ghost {
+  background: rgba(6, 17, 31, 0.46) !important;
+  border-color: rgba(232, 199, 121, 0.30) !important;
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.20),
+    inset 0 1px 0 rgba(255, 246, 222, 0.08) !important;
+}
+
+@media (max-width: 980px) {
+  .cover-hero__content {
+    width: min(100% - 2.4rem, 720px) !important;
+  }
+
+  .cover-hero__copy {
+    max-width: 620px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .cover-hero__memory-screen {
+    width: min(100%, 500px) !important;
+  }
+
+  .cover-hero__screen-card {
+    grid-template-columns: minmax(0, 1fr) 3rem !important;
+  }
+
+  .cover-hero__screen-card img {
+    height: 4.3rem !important;
+    width: 3rem !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .cover-hero__content {
+    padding-top: 5.9rem !important;
+    width: min(100% - 2rem, 380px) !important;
+  }
+
+  .cover-hero__title {
+    font-size: clamp(2.42rem, 10.7vw, 3rem) !important;
+    max-width: 10ch !important;
+  }
+
+  .cover-hero__support {
+    font-size: 0.84rem !important;
+    line-height: 1.44 !important;
+    max-width: 30ch !important;
+  }
+
+  .cover-hero__memory-screen {
+    border-radius: 15px !important;
+    width: 100% !important;
+  }
+
+  .cover-hero__screen-stage {
+    padding: 0.64rem 0.74rem 0.58rem !important;
+  }
+
+  .cover-hero__screen-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cover-hero__screen-card strong {
+    font-size: 0.98rem !important;
+  }
+
+  .cover-hero__screen-card p {
+    font-size: 0.72rem !important;
+    -webkit-line-clamp: 3 !important;
+  }
+
+  .cover-hero__screen-card img {
+    display: none !important;
+  }
+
+  .cover-hero__cta .btn {
+    min-height: 41px !important;
+  }
+}
+
+/* =====================================================================
+   v21 — BOOKS CAROUSEL 3-SECOND STAGE POLISH (June 2026)
+   The library now advances every 3 seconds and the covers use clearer,
+   more premium stage positions so the stack feels intentional.
+   ===================================================================== */
+
+.books-carousel {
+  width: min(1260px, calc(100% - 2.5rem)) !important;
+}
+
+.books-carousel__voice,
+.books-carousel__caption {
+  animation: booksTextEnter 0.58s cubic-bezier(0.2, 0.82, 0.22, 1) both;
+}
+
+.books-carousel__voice {
+  border-color: color-mix(in srgb, var(--carousel-accent), transparent 36%) !important;
+  border-radius: 20px !important;
+  background:
+    radial-gradient(120% 150% at 50% -25%, var(--carousel-accent-soft), transparent 60%),
+    linear-gradient(160deg, rgba(255, 249, 236, 0.09), rgba(7, 20, 37, 0.74) 44%, rgba(3, 10, 22, 0.92)) !important;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.34),
+    0 0 54px color-mix(in srgb, var(--carousel-accent), transparent 76%),
+    inset 0 1px 0 rgba(255, 249, 236, 0.18) !important;
+  max-width: 880px !important;
+}
+
+.books-carousel__voice-title {
+  color: #fff3dd !important;
+  font-size: clamp(1.55rem, 2.45vw, 2.35rem) !important;
+  letter-spacing: 0 !important;
+}
+
+.books-carousel__voice-blurb {
+  color: rgba(247, 241, 227, 0.82) !important;
+}
+
+.books-carousel__stage {
+  height: clamp(300px, 37vw, 430px) !important;
+  perspective: 1200px;
+}
+
+.books-carousel__slot {
+  --slot-w: clamp(150px, 16.2vw, 212px) !important;
+  transition:
+    transform 0.78s cubic-bezier(0.2, 0.82, 0.22, 1),
+    opacity 0.58s ease,
+    filter 0.58s ease !important;
+  will-change: transform, opacity, filter;
+}
+
+.books-carousel__slot[data-position="-2"] {
+  transform: translate3d(calc(var(--slot-w) * -2.05), 28px, -80px) rotateY(18deg) scale(0.56) !important;
+  opacity: 0.30 !important;
+  filter: brightness(0.52) saturate(0.70) blur(0.5px) !important;
+  z-index: 1 !important;
+}
+
+.books-carousel__slot[data-position="-1"] {
+  transform: translate3d(calc(var(--slot-w) * -1.08), 12px, -34px) rotateY(10deg) scale(0.78) !important;
+  opacity: 0.64 !important;
+  filter: brightness(0.76) saturate(0.86) !important;
+  z-index: 2 !important;
+}
+
+.books-carousel__slot[data-position="0"] {
+  transform: translate3d(0, -16px, 0) scale(1.08) !important;
+  opacity: 1 !important;
+  filter: brightness(1.08) saturate(1.06) !important;
+  z-index: 5 !important;
+}
+
+.books-carousel__slot[data-position="1"] {
+  transform: translate3d(calc(var(--slot-w) * 1.08), 12px, -34px) rotateY(-10deg) scale(0.78) !important;
+  opacity: 0.64 !important;
+  filter: brightness(0.76) saturate(0.86) !important;
+  z-index: 2 !important;
+}
+
+.books-carousel__slot[data-position="2"] {
+  transform: translate3d(calc(var(--slot-w) * 2.05), 28px, -80px) rotateY(-18deg) scale(0.56) !important;
+  opacity: 0.30 !important;
+  filter: brightness(0.52) saturate(0.70) blur(0.5px) !important;
+  z-index: 1 !important;
+}
+
+.books-carousel__card {
+  border-radius: 8px !important;
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.48),
+    0 0 0 1px rgba(255, 249, 236, 0.06) !important;
+}
+
+.books-carousel__card[data-active="true"] {
+  box-shadow:
+    0 0 0 1.5px color-mix(in srgb, var(--carousel-accent), #fff 18%),
+    0 34px 74px rgba(0, 0, 0, 0.68),
+    0 0 66px var(--carousel-accent-glow) !important;
+}
+
+.books-carousel__card img {
+  object-fit: cover !important;
+}
+
+.books-carousel__caption {
+  margin-top: clamp(1.1rem, 2.3vw, 1.8rem) !important;
+}
+
+.books-carousel__title {
+  color: #fff2df !important;
+}
+
+.books-carousel__sub {
+  color: color-mix(in srgb, var(--carousel-accent), #f8e5b2 38%) !important;
+}
+
+@keyframes booksTextEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.99);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@media (max-width: 880px) {
+  .books-carousel__slot {
+    --slot-w: clamp(122px, 34vw, 170px) !important;
+  }
+
+  .books-carousel__slot[data-position="-1"] {
+    transform: translate3d(calc(var(--slot-w) * -0.98), 6px, 0) scale(0.76) !important;
+  }
+
+  .books-carousel__slot[data-position="1"] {
+    transform: translate3d(calc(var(--slot-w) * 0.98), 6px, 0) scale(0.76) !important;
+  }
+
+  .books-carousel__slot[data-position="0"] {
+    transform: translate3d(0, -10px, 0) scale(1.06) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .books-carousel__voice {
+    min-height: 164px !important;
+  }
+
+  .books-carousel__stage {
+    height: clamp(245px, 74vw, 320px) !important;
+  }
+}
+
+/* v22 — BOOKS HERO VIEWPORT FIT */
+.books-hero--carousel {
+  padding: clamp(2.75rem, 5vw, 4rem) 0 clamp(1.5rem, 3vw, 2.4rem) !important;
+}
+
+.books-hero__head {
+  gap: 0.55rem !important;
+  margin-bottom: clamp(0.6rem, 1.5vw, 1rem) !important;
+}
+
+.books-hero--carousel .books-hero__title {
+  font-size: clamp(2rem, 3vw, 2.75rem) !important;
+}
+
+.books-hero--carousel .books-hero__lead {
+  font-size: clamp(0.94rem, 1.02vw, 1.04rem) !important;
+  line-height: 1.55 !important;
+}
+
+.books-carousel {
+  padding-top: clamp(1.4rem, 2.6vw, 2.4rem) !important;
+}
+
+.books-carousel__voice {
+  margin-bottom: clamp(0.8rem, 1.8vw, 1.35rem) !important;
+  min-height: 126px !important;
+  padding-block: clamp(0.85rem, 1.6vw, 1.14rem) !important;
+}
+
+.books-carousel__stage {
+  height: clamp(260px, 31vw, 360px) !important;
+}
+
+.books-carousel__slot {
+  --slot-w: clamp(136px, 14.5vw, 190px) !important;
+}
+
+@media (max-width: 880px) {
+  .books-hero--carousel {
+    padding-top: 2.1rem !important;
+  }
+
+  .books-carousel__voice {
+    min-height: 152px !important;
+  }
+
+  .books-carousel__stage {
+    height: clamp(240px, 50vw, 330px) !important;
+  }
+}

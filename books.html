@@ -62,7 +62,7 @@
         <div class="container books-hero__head">
           <p class="eyebrow">A library that turns</p>
           <h1 id="books-title" class="books-hero__title">Books by Atta Arghandiwal.</h1>
-          <p class="books-hero__lead">Every few seconds, one book steps forward with its message. Open the details when a title speaks to the moment you are in.</p>
+          <p class="books-hero__lead">Every 3 seconds, one book steps forward with its message. Open the details when a title speaks to the moment you are in.</p>
         </div>
         
       <section class="books-carousel" data-accent="ai" aria-roledescription="carousel" aria-label="Books by Atta Arghandiwal — rotating featured book" id="booksCarousel" tabindex="0">
@@ -147,6 +147,7 @@
         var counterEl = root.querySelector('[data-counter]');
         var hintLink = root.querySelector('[data-hint-link]');
         var captionRegion = root.querySelector('[data-caption]');
+        var voiceRegion = root.querySelector('.books-carousel__voice');
         var voiceLabel = root.querySelector('[data-voice-label]');
         var voiceTitle = root.querySelector('[data-voice-title]');
         var voiceBlurb = root.querySelector('[data-voice-blurb]');
@@ -154,7 +155,7 @@
         var active = 0;
         var paused = false;
         var timerId = null;
-        var AUTO = 3600;
+        var AUTO = 3000;
 
         var bookData = [{"slug":"self-sufficient-immigrant-age-of-ai","title":"The Self-Sufficient Immigrant in the Age of AI","subtitle":"A field manual for the work of standing again.","status":"Coming soon","accent":"ai","voiceLabel":"Age of AI protocol","voiceHeadline":"Integration is not just finding a job. It is building a system.","voiceBlurb":"AI can level the playing field when you know how to give it the right instructions. This guide is a protocol for standing in the new era.","detailHref":"#details-self-sufficient-immigrant-age-of-ai"},{"slug":"lost-decency-gilded-cages","title":"Lost Decency: The Gilded Cages and the Search for Home","subtitle":"Afghanistan, exile, and the search for home.","status":"Available","accent":"memoir","voiceLabel":"Moral reckoning","voiceHeadline":"Safety is a roof. Respect is a home.","voiceBlurb":"Lost Decency asks what happens when exile becomes a statistic and the human need for dignity, memory, and responsibility is forgotten.","detailHref":"#details-lost-decency-gilded-cages"},{"slug":"lost-decency-untold","title":"Lost Decency: The Untold Afghan Story","subtitle":"Atta's award-winning memoir and the journey through memory, displacement, and dignity.","status":"Legacy edition","accent":"memoir","voiceLabel":"Original memoir","voiceHeadline":"If a nation loses its decency, what do its people fight to keep?","voiceBlurb":"The original award-recognized memoir carries Atta's journey through exile, memory, displacement, and the lifelong search for home.","detailHref":"#details-lost-decency-untold"},{"slug":"self-sufficient-global-citizen","title":"The Self-Sufficient Global Citizen","subtitle":"A self-sufficiency guide for families and communities starting fresh.","status":"Available","accent":"guide","voiceLabel":"Self-sufficiency guide","voiceHeadline":"Dignity is earned through self-sufficiency, not assistance.","voiceBlurb":"A guidebook for responsible refugees, migrants, families, and communities starting fresh with work, citizenship, planning, and responsibility.","detailHref":"#details-self-sufficient-global-citizen"},{"slug":"immigrant-success-planning","title":"Immigrant Success Planning","subtitle":"A planning resource for immigrant families and support organizations.","status":"Available","accent":"guide","voiceLabel":"Family planning tool","voiceHeadline":"Systems feel cold when they process people instead of serving them.","voiceBlurb":"This resource helps families navigate documents, work, citizenship, and daily structure without losing their soul.","detailHref":"#details-immigrant-success-planning"}];
 
@@ -215,6 +216,14 @@
           if (voiceLabel) voiceLabel.textContent = b.voiceLabel;
           if (voiceTitle) voiceTitle.textContent = b.voiceHeadline;
           if (voiceBlurb) voiceBlurb.textContent = b.voiceBlurb;
+          [voiceRegion, captionRegion].forEach(function (region) {
+            if (!region) return;
+            region.classList.remove('is-entering');
+            region.style.animation = 'none';
+            void region.offsetWidth;
+            region.style.animation = '';
+            region.classList.add('is-entering');
+          });
         }
 
         function go(delta) { active = (active + delta + total) % total; render(); }
@@ -259,11 +268,6 @@
           if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
           else if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
         });
-        root.addEventListener('mouseenter', function(){ stopTimer(); });
-        root.addEventListener('mouseleave', function(){ if (!paused) startTimer(); });
-        root.addEventListener('focusin', function(){ stopTimer(); });
-        root.addEventListener('focusout', function(){ if (!paused) startTimer(); });
-
         startTimer();
       })();
       </script>

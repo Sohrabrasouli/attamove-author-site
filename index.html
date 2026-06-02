@@ -60,7 +60,8 @@
 
       
       <section class="cover-hero" aria-labelledby="hero-title">
-        <img class="cover-hero__memory-img" src="images/merry-go-round-kabul.jpg" alt="" aria-hidden="true" loading="eager" />
+        <img class="cover-hero__profile-bg" src="images/atta-landscape-reflection.jpeg" alt="" aria-hidden="true" loading="eager" />
+        <div class="cover-hero__atmosphere" aria-hidden="true"></div>
         <div class="cover-hero__veil" aria-hidden="true"></div>
         <div class="cover-hero__floor" aria-hidden="true"></div>
         <div class="cover-hero__light" aria-hidden="true"></div>
@@ -71,19 +72,14 @@
               <span>Stop surviving.</span>
               <span>Start standing.</span>
             </h1>
+            <p class="cover-hero__support">Atta writes where memory, dignity, responsibility, and self-sufficiency meet.</p>
             <div class="cover-hero__memory-screen" aria-label="Atta memory and book message reel">
               <div class="cover-hero__screen-top" aria-hidden="true">
-                <span>Live memory reel</span>
-                <span>05 signals</span>
+                <span>Message reel</span>
+                <span>04 messages</span>
               </div>
               <div class="cover-hero__screen-stage">
-                <article class="cover-hero__screen-card" data-tone="memory">
-                  <span>Memory of Kabul</span>
-                  <strong>The wheel turns. The story continues.</strong>
-                  <p>The merry-go-round becomes a living memory: children, motion, dignity, and the responsibility to help the next generation stand.</p>
-                  
-                </article>
-<article class="cover-hero__screen-card" data-tone="ai">
+                <article class="cover-hero__screen-card" data-tone="ai">
                   <span>Age of AI protocol</span>
                   <strong>Integration is not just finding a job. It is building a system.</strong>
                   <p>AI can level the playing field when you know how to give it the right instructions. This guide is a protocol for standing in the new era.</p>
@@ -109,8 +105,7 @@
                 </article>
               </div>
               <div class="cover-hero__screen-pips" aria-hidden="true">
-                <span data-tone="memory"></span>
-<span data-tone="ai"></span>
+                <span data-tone="ai"></span>
 <span data-tone="memoir"></span>
 <span data-tone="guide"></span>
 <span data-tone="guide"></span>
@@ -123,92 +118,12 @@
           </div>
         </div>
 
-        <a class="cover-hero__rail" href="#about-atta" aria-label="Continue reading. Charkh-e-Falak: the wheel turns.">
-          <span class="cover-hero__rail-caption" lang="fa-Latn" aria-hidden="true">Charkh-e-Falak <span aria-hidden="true">·</span> the wheel turns</span>
+        <a class="cover-hero__rail" href="#my-journey" aria-label="Continue to the memory and journey section.">
+          <span class="cover-hero__rail-caption" aria-hidden="true">From memory to mission <span aria-hidden="true">·</span> the story continues</span>
           <span class="cover-hero__rail-line" aria-hidden="true"><span></span></span>
-          <span class="cover-hero__rail-label">Read his story</span>
+          <span class="cover-hero__rail-label">See the memory</span>
         </a>
       </section>
-      
-      <section class="message-reel" data-tone="ai" id="message-reel" aria-labelledby="message-reel-title">
-        <div class="message-reel__inner">
-          <header class="message-reel__head">
-            <p class="eyebrow">Featured</p>
-            <h2 id="message-reel-title" class="message-reel__title">The books are speaking. Choose the message that meets you now.</h2>
-            <span class="message-reel__counter" data-counter aria-live="polite" aria-atomic="true">01 / 05</span>
-          </header>
-          <div class="message-reel__stage" data-stage>
-            <article class="message-reel-card message-reel-card--book is-active" data-tone="ai" data-card-index="0">
-              <img src="images/self-sufficient-immigrant-age-ai-cover.png" alt="" />
-              <span class="message-reel-card__eyebrow">Age of AI protocol</span>
-              <strong>Integration is not just finding a job. It is building a system.</strong>
-              <p>AI can level the playing field when you know how to give it the right instructions. This guide is a protocol for standing in the new era.</p>
-            </article><article class="message-reel-card message-reel-card--book" data-tone="memoir" data-card-index="1" aria-hidden="true">
-              <img src="images/lost-decency-gilded-cover.jpg" alt="" />
-              <span class="message-reel-card__eyebrow">Moral reckoning</span>
-              <strong>Safety is a roof. Respect is a home.</strong>
-              <p>Lost Decency asks what happens when exile becomes a statistic and the human need for dignity, memory, and responsibility is forgotten.</p>
-            </article><article class="message-reel-card message-reel-card--book" data-tone="memoir" data-card-index="2" aria-hidden="true">
-              <img src="images/lost-decency-cover.png" alt="" />
-              <span class="message-reel-card__eyebrow">Original memoir</span>
-              <strong>If a nation loses its decency, what do its people fight to keep?</strong>
-              <p>The original award-recognized memoir carries Atta's journey through exile, memory, displacement, and the lifelong search for home.</p>
-            </article><article class="message-reel-card message-reel-card--book" data-tone="guide" data-card-index="3" aria-hidden="true">
-              <img src="images/global-citizen-cover.jpg" alt="" />
-              <span class="message-reel-card__eyebrow">Self-sufficiency guide</span>
-              <strong>Dignity is earned through self-sufficiency, not assistance.</strong>
-              <p>A guidebook for responsible refugees, migrants, families, and communities starting fresh with work, citizenship, planning, and responsibility.</p>
-            </article><article class="message-reel-card message-reel-card--book" data-tone="guide" data-card-index="4" aria-hidden="true">
-              <img src="images/immigrant-success-planning-cover.jpg" alt="" />
-              <span class="message-reel-card__eyebrow">Family planning tool</span>
-              <strong>Systems feel cold when they process people instead of serving them.</strong>
-              <p>This resource helps families navigate documents, work, citizenship, and daily structure without losing their soul.</p>
-            </article>
-          </div>
-          <div class="message-reel__pips" role="tablist" aria-label="Message reel">
-            <button type="button" role="tab" aria-label="Show message 1" class="message-reel__pip is-active" aria-selected="true" data-pip-index="0"></button><button type="button" role="tab" aria-label="Show message 2" class="message-reel__pip" aria-selected="false" data-pip-index="1"></button><button type="button" role="tab" aria-label="Show message 3" class="message-reel__pip" aria-selected="false" data-pip-index="2"></button><button type="button" role="tab" aria-label="Show message 4" class="message-reel__pip" aria-selected="false" data-pip-index="3"></button><button type="button" role="tab" aria-label="Show message 5" class="message-reel__pip" aria-selected="false" data-pip-index="4"></button>
-          </div>
-        </div>
-      </section>
-      <script>
-        (function () {
-          var section = document.getElementById('message-reel');
-          if (!section) return;
-          var stage = section.querySelector('[data-stage]');
-          var pips = section.querySelectorAll('[data-pip-index]');
-          var counter = section.querySelector('[data-counter]');
-          var cards = stage ? stage.querySelectorAll('[data-card-index]') : [];
-          if (!cards.length) return;
-          var total = cards.length;
-          var idx = 0;
-          function show(next) {
-            idx = (next + total) % total;
-            cards.forEach(function (c, i) {
-              var active = i === idx;
-              c.classList.toggle('is-active', active);
-              if (active) c.removeAttribute('aria-hidden');
-              else c.setAttribute('aria-hidden', 'true');
-            });
-            pips.forEach(function (p, i) {
-              var active = i === idx;
-              p.classList.toggle('is-active', active);
-              p.setAttribute('aria-selected', active ? 'true' : 'false');
-            });
-            if (counter) {
-              counter.textContent = String(idx + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
-            }
-            var tone = cards[idx].getAttribute('data-tone') || 'default';
-            section.setAttribute('data-tone', tone);
-          }
-          pips.forEach(function (p, i) {
-            p.addEventListener('click', function () { show(i); });
-          });
-          var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-          if (!reduce) {
-            setInterval(function () { show(idx + 1); }, 4800);
-          }
-        })();
-      </script>
       
       <section class="about-atta" id="about-atta" aria-labelledby="about-atta-title">
         <div class="about-atta__inner">
@@ -232,6 +147,16 @@
           <h2 id="journey-title">From resilience to responsibility.</h2>
           <span>A life shaped by memory, duty, exile, service, and the responsibility to help others stand with dignity.</span>
         </div>
+        <article class="life-story__memory-feature">
+          <figure>
+            <img src="images/merry-go-round-kabul.jpg" alt="Children on a merry-go-round in Kabul, a memory image connected to Atta's mission." width="920" height="615" />
+          </figure>
+          <div>
+            <span>Memory Into Mission</span>
+            <h3>The memory that became a mission.</h3>
+            <p>A childhood image becomes part of Atta's larger work: remembering what displacement takes, honoring what dignity protects, and helping the next generation stand.</p>
+          </div>
+        </article>
         <div class="life-story__timeline" aria-label="Atta's story timeline">
           <article class="life-story__card" id="story-crossing">
             <figure>
