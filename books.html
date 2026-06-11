@@ -45,7 +45,7 @@
           <a class="nav__link" href="media.html" data-active="false">Media</a>
           <a class="nav__link" href="contact.html" data-active="false">Contact</a>
         </nav>
-        <a class="header-action" href="mailto:attamoves@gmail.com?subject=Invite%20Atta%20%E2%80%94%20speaking%2C%20interview%2C%20or%20conversation">Invite Atta</a>
+        <a class="header-action" href="contact.html#invite-atta">Invite Atta</a>
         <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" id="navToggle">Menu</button>
       </div>
       <nav id="mobile-nav" class="mobile-nav container" data-open="false" aria-label="Mobile primary">
@@ -53,23 +53,23 @@
         <a class="nav__link" href="books.html" data-active="true">Books</a>
         <a class="nav__link" href="media.html" data-active="false">Media</a>
         <a class="nav__link" href="contact.html" data-active="false">Contact</a>
-        <a class="nav__link mobile-nav__invite" href="mailto:attamoves@gmail.com?subject=Invite%20Atta%20%E2%80%94%20speaking%2C%20interview%2C%20or%20conversation">Invite Atta</a>
+        <a class="nav__link mobile-nav__invite" href="contact.html#invite-atta">Invite Atta</a>
       </nav>
     </header>
     <main id="main">
 
       <section class="books-hero books-hero--carousel" aria-labelledby="books-title">
         <div class="container books-hero__head">
-          <p class="eyebrow">A library that turns</p>
+          <p class="eyebrow">Books for rebuilding</p>
           <h1 id="books-title" class="books-hero__title">Books by Atta Arghandiwal.</h1>
-          <p class="books-hero__lead">Every 3 seconds, one book steps forward with its message. Open the details when a title speaks to the moment you are in.</p>
+          <p class="books-hero__lead">Choose the book that meets your moment: memory, responsibility, family stability, or the forthcoming Age of AI guide.</p>
         </div>
         
       <section class="books-carousel" data-accent="ai" aria-roledescription="carousel" aria-label="Books by Atta Arghandiwal — rotating featured book" id="booksCarousel" tabindex="0">
         <div class="books-carousel__voice" aria-live="polite" aria-atomic="true">
           <span class="books-carousel__voice-label" data-voice-label>Age of AI protocol</span>
-          <h2 class="books-carousel__voice-title" data-voice-title>Integration is not just finding a job. It is building a system.</h2>
-          <p class="books-carousel__voice-blurb" data-voice-blurb>Every year, millions are forced to start over. In the Age of AI, the path from survival to stability has been rewritten.</p>
+          <h2 class="books-carousel__voice-title" data-voice-title>Begin again with a system that protects dignity.</h2>
+          <p class="books-carousel__voice-blurb" data-voice-blurb>The forthcoming guide helps newcomers use judgment, structure, and AI-era tools without losing their human values.</p>
         </div>
         <div class="books-carousel__stage" data-active-slug="self-sufficient-immigrant-age-of-ai">
           <div class="books-carousel__orbit" aria-hidden="true"></div>
@@ -157,7 +157,7 @@
         var timerId = null;
         var AUTO = 3000;
 
-        var bookData = [{"slug":"self-sufficient-immigrant-age-of-ai","title":"The Self-Sufficient Immigrant in the Age of AI","subtitle":"A field manual for the work of standing again.","status":"Coming soon","accent":"ai","voiceLabel":"Age of AI protocol","voiceHeadline":"Integration is not just finding a job. It is building a system.","voiceBlurb":"Every year, millions are forced to start over. In the Age of AI, the path from survival to stability has been rewritten.","detailHref":"#details-self-sufficient-immigrant-age-of-ai"},{"slug":"lost-decency-gilded-cages","title":"Lost Decency: The Gilded Cages and the Search for Home","subtitle":"Afghanistan, exile, and the search for home.","status":"Available","accent":"memoir","voiceLabel":"Moral reckoning","voiceHeadline":"What happens when decency is bartered for power?","voiceBlurb":"A memoir of Afghanistan, exile, and the human dignity that survives displacement.","detailHref":"#details-lost-decency-gilded-cages"},{"slug":"lost-decency-untold","title":"Lost Decency: The Untold Afghan Story","subtitle":"Atta's award-winning memoir and the journey through memory, displacement, and dignity.","status":"Legacy edition","accent":"memoir","voiceLabel":"Original memoir","voiceHeadline":"If a nation loses its decency, what do its people fight to keep?","voiceBlurb":"The original award-recognized memoir carries Atta's journey through exile, memory, displacement, and the lifelong search for home.","detailHref":"#details-lost-decency-untold"},{"slug":"self-sufficient-global-citizen","title":"The Self-Sufficient Global Citizen","subtitle":"A self-sufficiency guide for families and communities starting fresh.","status":"Available","accent":"guide","voiceLabel":"Self-sufficiency guide","voiceHeadline":"Dignity is earned through self-sufficiency, not assistance.","voiceBlurb":"A guidebook for responsible refugees, migrants, families, and communities starting fresh with work, citizenship, planning, and responsibility.","detailHref":"#details-self-sufficient-global-citizen"},{"slug":"immigrant-success-planning","title":"Immigrant Success Planning","subtitle":"A planning resource for immigrant families and support organizations.","status":"Available","accent":"guide","voiceLabel":"Family planning tool","voiceHeadline":"Systems feel cold when they process people instead of serving them.","voiceBlurb":"This resource helps families navigate documents, work, citizenship, and daily structure without losing their soul.","detailHref":"#details-immigrant-success-planning"}];
+        var bookData = [{"slug":"self-sufficient-immigrant-age-of-ai","title":"The Self-Sufficient Immigrant in the Age of AI","subtitle":"A field manual for the work of standing again.","status":"Coming soon","accent":"ai","voiceLabel":"Age of AI protocol","voiceHeadline":"Begin again with a system that protects dignity.","voiceBlurb":"The forthcoming guide helps newcomers use judgment, structure, and AI-era tools without losing their human values.","detailHref":"#details-self-sufficient-immigrant-age-of-ai"},{"slug":"lost-decency-gilded-cages","title":"Lost Decency: The Gilded Cages and the Search for Home","subtitle":"Afghanistan, exile, and the search for home.","status":"Available","accent":"memoir","voiceLabel":"Moral reckoning","voiceHeadline":"What happens when decency is bartered for power?","voiceBlurb":"A memoir of Afghanistan, exile, and the human dignity that survives displacement.","detailHref":"#details-lost-decency-gilded-cages"},{"slug":"lost-decency-untold","title":"Lost Decency: The Untold Afghan Story","subtitle":"Atta's award-winning memoir and the journey through memory, displacement, and dignity.","status":"Legacy edition","accent":"memoir","voiceLabel":"Original memoir","voiceHeadline":"If a nation loses its decency, what do its people fight to keep?","voiceBlurb":"The original award-recognized memoir carries Atta's journey through exile, memory, displacement, and the lifelong search for home.","detailHref":"#details-lost-decency-untold"},{"slug":"self-sufficient-global-citizen","title":"The Self-Sufficient Global Citizen","subtitle":"A self-sufficiency guide for families and communities starting fresh.","status":"Available","accent":"guide","voiceLabel":"Self-sufficiency guide","voiceHeadline":"Dignity is earned through self-sufficiency, not assistance.","voiceBlurb":"A guidebook for responsible refugees, migrants, families, and communities starting fresh with work, citizenship, planning, and responsibility.","detailHref":"#details-self-sufficient-global-citizen"},{"slug":"immigrant-success-planning","title":"Immigrant Success Planning","subtitle":"A planning resource for immigrant families and support organizations.","status":"Available","accent":"guide","voiceLabel":"Family planning tool","voiceHeadline":"Systems feel cold when they process people instead of serving them.","voiceBlurb":"This resource helps families navigate documents, work, citizenship, and daily structure without losing their soul.","detailHref":"#details-immigrant-success-planning"}];
 
         function setPosition(slot, off) {
           var pos;
@@ -277,8 +277,8 @@
         <div class="container">
           
           <div class="section-heading">
-            <p class="eyebrow">Coming Soon</p>
-            <h2 id="featured-title" class="section-heading__title">The next guide carries the mission forward.</h2>
+            <p class="eyebrow">First Readers List</p>
+            <h2 id="featured-title" class="section-heading__title">The next guide begins with an invitation.</h2>
             <p class="section-heading__lede">The upcoming Age of AI book brings Atta's self-sufficiency work into a future shaped by technology, work, family responsibility, and human dignity.</p>
           </div>
           <article class="book-feature" id="self-sufficient-immigrant-age-of-ai" data-accent="ai">
@@ -307,7 +307,8 @@
           </article>
         </div>
               <div class="book-card__actions">
-                <a class="btn btn--primary" href="#details-self-sufficient-immigrant-age-of-ai">Open book details</a>
+                <a class="btn btn--primary" href="stand.html">Join the launch list</a>
+                <a class="btn btn--ghost" href="#details-self-sufficient-immigrant-age-of-ai">Read book details</a>
               </div>
             </div>
           </article>
@@ -318,9 +319,9 @@
         <div class="container">
           
           <div class="section-heading">
-            <p class="eyebrow">Book Library</p>
-            <h2 id="available-title" class="section-heading__title">Available books and active reader paths.</h2>
-            <p class="section-heading__lede">Memoir, practical guides, and request paths for readers, families, classrooms, libraries, and organizations.</p>
+            <p class="eyebrow">Available Now</p>
+            <h2 id="available-title" class="section-heading__title">Start with the book that fits your moment.</h2>
+            <p class="section-heading__lede">Memoir, practical guides, and reader paths for families, classrooms, libraries, and organizations.</p>
           </div>
           <div class="book-grid">
             
@@ -337,7 +338,7 @@
                 <p class="book-card__sub">Afghanistan, exile, and the search for home.</p>
                 <p class="book-card__desc">More than a historical account, this is a searing memoir of exile, the search for home, and the triumph of dignity over displacement.</p>
                 <div class="book-card__actions">
-                  <a class="btn btn--ghost btn--small" href="#details-lost-decency-gilded-cages">Open book details</a>
+                  <a class="btn btn--ghost btn--small" href="#details-lost-decency-gilded-cages">View buying options</a>
                 </div>
               </div>
             </article>
@@ -355,7 +356,7 @@
                 <p class="book-card__sub">A self-sufficiency guide for families and communities starting fresh.</p>
                 <p class="book-card__desc">A guidebook for responsible refugees and migrants to become self-sufficient global citizens starting fresh in the Western world.</p>
                 <div class="book-card__actions">
-                  <a class="btn btn--ghost btn--small" href="#details-self-sufficient-global-citizen">Open book details</a>
+                  <a class="btn btn--ghost btn--small" href="#details-self-sufficient-global-citizen">View buying options</a>
                 </div>
               </div>
             </article>
@@ -373,7 +374,7 @@
                 <p class="book-card__sub">A planning resource for immigrant families and support organizations.</p>
                 <p class="book-card__desc">A structured family tool for documents, work, citizenship, and daily stability.</p>
                 <div class="book-card__actions">
-                  <a class="btn btn--ghost btn--small" href="#details-immigrant-success-planning">Open book details</a>
+                  <a class="btn btn--ghost btn--small" href="#details-immigrant-success-planning">View buying options</a>
                 </div>
               </div>
             </article>
@@ -393,27 +394,27 @@
           <div class="reader-responses__grid">
             <article class="reader-response-card">
               <span>On-the-ground history</span>
-              <p>Readers point to the book's ground-level view of Afghanistan from the 1950s through the 1980s.</p>
+              <p>Readers value the ground-level view of Afghanistan from the 1950s through the 1980s, including the years that shaped the modern country.</p>
               <small>Verified reader review, Dec. 27, 2012</small>
             </article><article class="reader-response-card">
               <span>Resilience in exile</span>
-              <p>A later reader highlighted the dignity, hardship, and determination of ordinary Afghans rebuilding after displacement.</p>
+              <p>Readers return to the dignity, hardship, and determination of ordinary Afghans whose dreams were interrupted by turmoil and exile.</p>
               <small>Reader review, Dec. 28, 2024</small>
             </article><article class="reader-response-card">
               <span>Glimpse for Western eyes</span>
-              <p>The memoir is valued for showing family, hope, and the human world behind the headlines.</p>
+              <p>The memoir gives readers outside Afghanistan a human view of family, hope, and everyday life behind the headlines.</p>
               <small>Reader review, Jun. 9, 2013</small>
             </article><article class="reader-response-card">
               <span>Hard to put down</span>
-              <p>Readers repeatedly describe the account as informative, absorbing, and told from a perspective rarely found in media.</p>
+              <p>Readers describe the account as informative, absorbing, and told from a perspective rarely found in media coverage.</p>
               <small>Reader review, Aug. 7, 2018</small>
             </article><article class="reader-response-card">
               <span>Survival through invasion</span>
-              <p>One response called the story a firsthand account of survival through the Russian invasion and exile.</p>
+              <p>One response highlights the force of a firsthand account of survival through the Russian invasion, flight, and exile.</p>
               <small>Reader review, Dec. 14, 2014</small>
             </article><article class="reader-response-card">
               <span>A personal history</span>
-              <p>Readers connect with the childhood, refugee experience, political history, and search for belonging.</p>
+              <p>Readers connect with the childhood memories, political history, refugee chapters, and search for belonging.</p>
               <small>Reader review, Apr. 11, 2013</small>
             </article>
           </div>
@@ -442,10 +443,10 @@
           <div class="stay-connected__inner">
             <img class="stay-connected__motif" src="images/carousel-motif.svg" alt="" aria-hidden="true" />
             <p class="eyebrow">Stay Connected</p>
-            <h2 id="stay-connected-title" class="stay-connected__title">Tell us where to send book news.</h2>
-            <p class="stay-connected__body lede">Get a note when new editions, retail links, and the Age of AI book are publicly available.</p>
+            <h2 id="stay-connected-title" class="stay-connected__title">Join the first readers list for the Age of AI guide.</h2>
+            <p class="stay-connected__body lede">For the new book launch, use the first readers form so Atta has both your email and phone number for updates.</p>
             <div class="stay-connected__cta">
-              <a class="btn btn--primary" href="mailto:attamoves@gmail.com?subject=Stay%20connected%20-%20book%20and%20speaking%20updates&body=Hi%20Atta%2C%0A%0APlease%20keep%20me%20posted%20on%20new%20books%2C%20talks%2C%20and%20future%20self-sufficiency%20programs.%0A%0AName%3A%0ACity%20%2F%20Country%3A%0AReason%20for%20interest%3A%0A%0AThank%20you.">Email to stay connected</a>
+              <a class="btn btn--primary" href="stand.html">Join the first readers list</a>
               <a class="btn btn--ghost" href="contact.html">Other ways to reach Atta</a>
             </div>
           </div>
@@ -492,8 +493,8 @@
           </div>
         </div>
             <div class="book-detail__actions">
-              <a class="btn btn--primary" href="mailto:attamoves@gmail.com?subject=Book%20update%20-%20The%20Self-Sufficient%20Immigrant%20in%20the%20Age%20of%20AI">Get launch updates</a>
-              <a class="btn btn--ghost" href="#available-now">Explore available guides</a>
+              <a class="btn btn--primary" href="stand.html">Join the first readers list</a>
+              <a class="btn btn--ghost" href="books.html#available-now">Explore available guides</a>
             </div>
             
             <div class="book-detail__facts">
@@ -553,12 +554,12 @@
             <div class="book-detail__retail">
         <span>Retail links</span>
         <div>
-          <a href="https://amzn.to/4bXBaed" target="_blank" rel="noopener noreferrer">Amazon</a><a href="https://bit.ly/4x76UHE" target="_blank" rel="noopener noreferrer">Barnes &amp; Noble</a><a href="https://bit.ly/3Rw94QP" target="_blank" rel="noopener noreferrer">Bookshop.org</a><a href="https://books2read.com/b/4AZMle" target="_blank" rel="noopener noreferrer">Books2Read</a><a href="https://bit.ly/3QcitAE" target="_blank" rel="noopener noreferrer">Draft2Digital</a><a href="https://bit.ly/49y9Jau" target="_blank" rel="noopener noreferrer">Smashwords</a><a href="https://bit.ly/3RGMCV1" target="_blank" rel="noopener noreferrer">Thalia</a><a href="https://bit.ly/439PI6v" target="_blank" rel="noopener noreferrer">Vivlio</a>
+          <a href="https://amzn.to/4bXBaed" target="_blank" rel="noopener noreferrer">Amazon</a><a href="https://bit.ly/3Rw94QP" target="_blank" rel="noopener noreferrer">Bookshop.org</a><a href="https://bit.ly/49y9Jau" target="_blank" rel="noopener noreferrer">Smashwords</a><a href="https://bit.ly/3RGMCV1" target="_blank" rel="noopener noreferrer">Thalia</a><a href="https://bit.ly/439PI6v" target="_blank" rel="noopener noreferrer">Vivlio</a>
         </div>
       </div>
             <div class="book-detail__facts">
               <span>Book details</span>
-              <p><strong>ISBN:</strong> 9780997887099</p><p><strong>Ebook:</strong> ISBN 9798994857731</p><p><strong>Publisher:</strong> Ketaab Press Publishing</p><p><strong>Publication date:</strong> February 22, 2025</p><p><strong>Recognition:</strong> Benjamin Franklin Silver Medal</p>
+              <p><strong>ISBN:</strong> 9780997887099</p><p><strong>Digital edition:</strong> ISBN 9798235460041</p><p><strong>Publisher:</strong> Ketaab Press Publishing</p><p><strong>Edition:</strong> 2025 current edition</p><p><strong>Recognition:</strong> Benjamin Franklin Book Award recognition</p>
             </div>
           </div>
         </div>
