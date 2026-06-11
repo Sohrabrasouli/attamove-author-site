@@ -10702,3 +10702,100 @@ body::before {
     justify-content: center;
   }
 }
+
+/* v26 — BRIGHT SOURCE-IMAGE HOMEPAGE HERO TEST */
+.cover-hero {
+  background: #e8dfcf !important;
+}
+
+.cover-hero__profile-bg {
+  inset: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 57% 51% !important;
+  opacity: 1 !important;
+  filter:
+    brightness(1.18)
+    contrast(1.04)
+    saturate(1.1)
+    sepia(0.02) !important;
+  transform: none !important;
+  animation: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+.cover-hero::before,
+.cover-hero::after,
+.cover-hero__atmosphere,
+.cover-hero__veil,
+.cover-hero__floor,
+.cover-hero__light {
+  display: none !important;
+  opacity: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.cover-hero__copy::before {
+  display: none !important;
+}
+
+.cover-hero__title,
+.cover-hero__support,
+.cover-hero__rail-caption,
+.cover-hero__rail-label {
+  text-shadow: none !important;
+}
+
+.cover-hero__title {
+  max-width: 10.8ch !important;
+  color: #ca963e !important;
+}
+
+.cover-hero__title span:nth-child(2) {
+  color: #ca963e !important;
+}
+
+.cover-hero__support {
+  color: rgba(18, 29, 42, 0.92) !important;
+  font-weight: 680 !important;
+}
+
+.cover-hero__memory-screen {
+  background:
+    linear-gradient(135deg, rgba(9, 18, 29, 0.58), rgba(9, 18, 29, 0.42)),
+    rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(233, 209, 138, 0.4) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(6px) saturate(1.02) !important;
+}
+
+@media (max-width: 720px) {
+  .cover-hero__profile-bg {
+    object-position: 62% 50% !important;
+    filter:
+      brightness(1.16)
+      contrast(1.02)
+      saturate(1.12)
+      sepia(0.02) !important;
+  }
+
+  .cover-hero__title {
+    max-width: 9.5ch !important;
+    color: #bd8632 !important;
+    font-size: clamp(3rem, 13vw, 4.1rem) !important;
+  }
+
+  .cover-hero__title span:nth-child(2) {
+    color: #bd8632 !important;
+  }
+
+  .cover-hero__support {
+    color: rgba(18, 29, 42, 0.9) !important;
+  }
+}
