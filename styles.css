@@ -10754,11 +10754,14 @@ body::before {
 
 .cover-hero__title {
   max-width: 12.6ch !important;
-  color: #ca963e !important;
+  color: #10243a !important;
+  text-shadow:
+    0 1px 0 rgba(255, 250, 238, 0.48),
+    0 18px 48px rgba(255, 250, 238, 0.22) !important;
 }
 
 .cover-hero__title span:nth-child(2) {
-  color: #ca963e !important;
+  color: #10243a !important;
 }
 
 .cover-hero__support {
@@ -10794,13 +10797,14 @@ body::before {
     background:
       linear-gradient(135deg, rgba(251, 243, 222, 0.72), rgba(251, 243, 222, 0.46)) !important;
     backdrop-filter: blur(4px) saturate(1.04) !important;
-    color: #bd8632 !important;
+    color: #10243a !important;
     font-size: clamp(2.28rem, 10.3vw, 3.25rem) !important;
     line-height: 0.92 !important;
+    text-shadow: none !important;
   }
 
   .cover-hero__title span:nth-child(2) {
-    color: #bd8632 !important;
+    color: #10243a !important;
   }
 
   .cover-hero__support {
