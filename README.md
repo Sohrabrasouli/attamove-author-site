@@ -1,49 +1,33 @@
 # AttaMove Author Site
 
-Standalone 2026 author website for Atta Arghandiwal.
+Static GitHub Pages deploy for Atta Arghandiwal's public author website.
 
-## What This Is
+Live URL:
 
-AttaMove is treated here as Atta's author home: books, story, speaking, Circle,
-and contact.
+- https://sohrabrasouli.github.io/attamove-author-site/
 
-## Scope
+## Public Pages
 
-This folder is intentionally scoped to the public author presence only. Product,
-platform, and marketplace concepts belong somewhere else.
+- `index.html` — homepage
+- `books.html` — books and First Readers List path
+- `speaking.html` — speaking and event invitation page
+- `media.html` — media room and interview links
+- `contact.html` — contact paths
+- `stand.html` — First Readers List QR landing page
+- `privacy.html` / `terms.html` — legal pages
 
-## Source Material Used
+## Source of Truth
 
-- Founder-provided website brief
-- Atta Arghandiwal author portraits
-- Book-cover artwork and book descriptions
-- Approved sample-book notes from local research materials
+The editable source project is:
 
-## Files
+- `/Users/froghsediqi/Desktop/Aattamove.com`
 
-- `index.html` - the full author site
-- `styles.css` - visual system and responsive layout
-- `script.js` - interaction layer
-- `assets/self-sufficient-immigrant-cover.png` - rendered from the sample PDF
-- `assets/lost-decency-cover.png` - supplied book cover
-- `assets/global-citizen-cover.jpg` - supplied book cover
-- `assets/atta-portrait-black.jpeg` - supplied author portrait
-- `assets/atta-portrait-blue.jpeg` - supplied author portrait
-- `assets/atta-formal-portrait.jpg` - supplied author portrait
+The static files in this deploy folder are generated from:
 
-## Current Sections
-
-- Home hero
-- Start Here visitor chooser
-- Bio
-- Books
-- Speaking
-- Circle
-- Media
-- Press Kit
-- Contact
+- `/Users/froghsediqi/Desktop/Aattamove.com/scripts/prerender.ts`
 
 ## Current Limits
 
-- Contact form is front-end only.
-- No real mailing list or event booking integration yet.
+- First Readers List and contact flows use `mailto:` as the current fallback.
+- A real form backend is still recommended before event-scale QR collection.
+- QR cards currently point to the GitHub Pages `stand.html` URL until `attamoves.com` is connected and approved for print.
