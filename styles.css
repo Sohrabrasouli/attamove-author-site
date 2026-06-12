@@ -11532,3 +11532,222 @@ body:has(.cover-hero) .header-action::after {
     display: inline-flex !important;
   }
 }
+
+/* v29 — MOBILE LAUNCH QA: FEATURE BAND + BOOK DETAIL READINESS */
+@media (max-width: 760px) {
+  .home-featured-book {
+    padding: clamp(2rem, 8vw, 3rem) 0;
+  }
+
+  .home-featured-book__inner {
+    grid-template-columns: 1fr !important;
+    gap: 1.15rem !important;
+    width: min(calc(100% - 1.5rem), 520px);
+    padding: 1rem !important;
+    border-radius: 16px !important;
+    background:
+      radial-gradient(88% 72% at 76% 0%, rgba(98, 199, 216, 0.14), transparent 64%),
+      linear-gradient(180deg, rgba(12, 29, 53, 0.88), rgba(6, 18, 37, 0.94)) !important;
+  }
+
+  .home-featured-book__copy {
+    max-width: none !important;
+  }
+
+  .home-featured-book__copy h2 {
+    max-width: 10.5ch;
+    font-size: clamp(2.2rem, 11vw, 3.15rem) !important;
+    line-height: 0.96 !important;
+    overflow-wrap: normal;
+  }
+
+  .home-featured-book__copy p {
+    max-width: none !important;
+    font-size: 0.98rem !important;
+    line-height: 1.58 !important;
+  }
+
+  .home-featured-book__actions {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 0.65rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .home-featured-book__actions .btn {
+    justify-content: center;
+    width: 100%;
+    min-height: 3rem;
+  }
+
+  .home-featured-book__cover {
+    justify-self: center;
+    width: min(58vw, 190px);
+    margin-top: 0.2rem;
+  }
+
+  .home-featured-book__cover img {
+    width: 100% !important;
+    max-width: 190px !important;
+  }
+
+  .book-card {
+    border-radius: 10px;
+  }
+
+  .book-card__cover {
+    aspect-ratio: 3 / 2 !important;
+    max-height: 250px !important;
+    padding: 1rem !important;
+  }
+
+  .book-card__cover img {
+    padding: 0.55rem !important;
+  }
+
+  .book-card__body {
+    padding: 1rem !important;
+  }
+
+  .book-card__title {
+    font-size: 1.18rem !important;
+    line-height: 1.26 !important;
+  }
+
+  .book-card__authors {
+    line-height: 1.35 !important;
+  }
+
+  .book-card__actions .btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .book-detail__panel {
+    gap: 0.8rem !important;
+    border-radius: 14px !important;
+  }
+
+  .book-detail__artwork {
+    width: min(58vw, 210px) !important;
+    max-width: 210px !important;
+  }
+
+  .book-detail__body h2 {
+    font-size: clamp(1.85rem, 9.5vw, 2.75rem) !important;
+    line-height: 1.02 !important;
+    padding-right: 3.6rem;
+  }
+
+  .book-detail__grid {
+    gap: 0.65rem !important;
+  }
+
+  .book-detail__retail > div {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem !important;
+  }
+
+  .book-detail__retail a {
+    justify-content: center;
+    min-height: 42px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-featured-book__copy h2 {
+    max-width: 11ch;
+  }
+
+  .book-detail__retail > div {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .books-hero--carousel {
+    padding-top: 5.45rem !important;
+    padding-bottom: 1.8rem !important;
+  }
+
+  .books-hero__head {
+    margin-bottom: 0.45rem !important;
+  }
+
+  .books-hero--carousel .eyebrow {
+    font-size: 0.68rem !important;
+    letter-spacing: 0.18em !important;
+  }
+
+  .books-hero--carousel .books-hero__title {
+    font-size: clamp(2.25rem, 12vw, 3rem) !important;
+    line-height: 0.98 !important;
+  }
+
+  .books-hero--carousel .books-hero__lead {
+    font-size: 0.98rem !important;
+    line-height: 1.46 !important;
+  }
+
+  .books-carousel {
+    width: min(100% - 1.1rem, 430px) !important;
+    padding-top: 0.9rem !important;
+  }
+
+  .books-carousel__voice {
+    min-height: 0 !important;
+    padding: 1rem 0.95rem !important;
+    border-radius: 16px !important;
+  }
+
+  .books-carousel__voice-label {
+    font-size: 0.64rem !important;
+    letter-spacing: 0.18em !important;
+  }
+
+  .books-carousel__voice-title {
+    font-size: clamp(1.42rem, 7.2vw, 2rem) !important;
+    line-height: 1.04 !important;
+  }
+
+  .books-carousel__voice-blurb {
+    font-size: 0.92rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .books-carousel__stage {
+    height: clamp(210px, 58vw, 260px) !important;
+  }
+
+  .books-carousel__slot {
+    --slot-w: clamp(116px, 32vw, 148px) !important;
+  }
+
+  .books-carousel__caption {
+    margin-top: 0.45rem !important;
+  }
+
+  .books-carousel__title {
+    font-size: clamp(1.65rem, 8vw, 2.25rem) !important;
+    line-height: 1.03 !important;
+  }
+
+  .books-carousel__sub {
+    font-size: 0.92rem !important;
+  }
+
+  .books-carousel__controls {
+    margin-top: 0.85rem !important;
+  }
+
+  .book-detail__panel {
+    padding-top: 4.35rem !important;
+  }
+
+  .book-detail__close {
+    top: 0.8rem !important;
+    right: 0.8rem !important;
+  }
+}
