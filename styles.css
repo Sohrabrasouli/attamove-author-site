@@ -11751,3 +11751,9 @@ body:has(.cover-hero) .header-action::after {
     right: 0.8rem !important;
   }
 }
+
+/* v30 — HERO CLEANUP: remove redundant scroll cue and scan-style orb */
+.cover-hero__rail,
+.cover-hero__quick-orb {
+  display: none !important;
+}
