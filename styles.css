@@ -11757,3 +11757,38 @@ body:has(.cover-hero) .header-action::after {
 .cover-hero__quick-orb {
   display: none !important;
 }
+
+/* v30 — MOBILE HERO FOCAL CORRECTION
+   Keep the outdoor portrait human on phones: Atta should remain present in the
+   frame instead of the crop drifting into only branches and background texture. */
+@media (max-width: 560px) {
+  .cover-hero__profile-bg {
+    animation: none !important;
+    filter:
+      brightness(1.1)
+      contrast(1.02)
+      saturate(1.08)
+      sepia(0.025) !important;
+    object-position: 45% 0% !important;
+    transform: scale(1.24) translateY(-130px) !important;
+    transform-origin: top right !important;
+  }
+
+  .cover-hero__memory-screen {
+    max-width: 310px !important;
+    width: 80% !important;
+  }
+
+  .cover-hero__screen-top {
+    font-size: 0.5rem !important;
+    gap: 0.55rem !important;
+    letter-spacing: 0.05em !important;
+    white-space: nowrap !important;
+  }
+
+  .cover-hero::after {
+    background:
+      linear-gradient(90deg, rgba(5, 17, 33, 0.78) 0%, rgba(5, 17, 33, 0.56) 48%, rgba(5, 17, 33, 0.12) 100%),
+      linear-gradient(180deg, rgba(5, 17, 33, 0.08) 0%, rgba(5, 17, 33, 0.16) 42%, rgba(5, 17, 33, 0.72) 100%) !important;
+  }
+}

@@ -96,13 +96,16 @@
           <form class="waitlist-form" id="waitlistForm" aria-label="First readers list form">
             <div class="waitlist-form__note">
               <span>Atta's note</span>
-              <p>I am preparing this guide for people rebuilding in a world that has changed. If this work speaks to you, leave your email so I can send the launch note when it is ready. Add a phone number only if a text reminder would help.</p>
+              <p>I am preparing this guide for people rebuilding in a world that has changed. If this work speaks to you, leave your email so I can send the launch note when it is ready. Share your phone too, so my team can follow up carefully if a reader preview or event opens.</p>
             </div>
             <label>What should I call you?
               <input type="text" name="name" autocomplete="name" required placeholder="Your name" />
             </label>
             <label>Where should I send the launch note?
               <input type="email" name="email" autocomplete="email" required placeholder="you@example.com" />
+            </label>
+            <label>What is the best phone number for reader updates?
+              <input type="tel" name="phone" autocomplete="tel" required placeholder="+1 555 000 0000" />
             </label>
             <label>What are you rebuilding or studying right now?
               <select name="focus">
@@ -115,10 +118,7 @@
               </select>
             </label>
             <details class="waitlist-form__optional">
-              <summary>Want a text reminder or personal note? Optional</summary>
-              <label>Phone for an optional text reminder
-                <input type="tel" name="phone" autocomplete="tel" placeholder="+1 555 000 0000" />
-              </label>
+              <summary>Want to add a personal note? Optional</summary>
               <label>Optional note for Atta
                 <textarea name="note" placeholder="A sentence about why this book matters to you."></textarea>
               </label>
@@ -145,9 +145,7 @@
           var data = new FormData(e.target);
           var subject = 'First readers list - The Self-Sufficient Immigrant in the Age of AI';
           var phone = data.get('phone') || '';
-          var consentLine = phone
-            ? 'Consent: I agree to receive email updates and optional text reminders about this book launch and related Attamoves updates. I understand I can unsubscribe or ask to be removed.'
-            : 'Consent: I agree to receive email updates about this book launch and related Attamoves updates. I understand I can unsubscribe or ask to be removed.';
+          var consentLine = 'Consent: I agree to receive email updates and optional text reminders about this book launch and related Attamoves updates. I understand I can unsubscribe or ask to be removed.';
           var body = [
             'Hi Atta,',
             '',
@@ -155,7 +153,7 @@
             '',
             'Name: ' + (data.get('name') || ''),
             'Email: ' + (data.get('email') || ''),
-            phone ? 'Phone for optional text reminder: ' + phone : '',
+            'Phone: ' + phone,
             'What I am rebuilding / interested in: ' + (data.get('focus') || ''),
             data.get('note') ? 'Note: ' + data.get('note') : '',
             '',
