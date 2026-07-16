@@ -94,19 +94,31 @@
   .stmt h2{font-size:clamp(2.35rem,5.4vw,4.1rem);line-height:1.05;max-width:24ch;margin:0 auto}
   .stmt p{margin:1.35rem auto 0;max-width:62ch;font-size:clamp(1.05rem,1.7vw,1.23rem);color:var(--body)}
 
-  .split{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
-  .split h2{font-size:clamp(2.05rem,4.4vw,3.25rem);line-height:1.08;margin:.2rem 0 0}
-  .split p{margin-top:1.25rem}
-  .book{display:flex;justify-content:center}
-  .book-card{position:relative;width:min(330px,80%);padding:1rem;background:#fff;border:1px solid var(--line);
-    border-radius:12px;box-shadow:0 38px 80px -34px rgba(6,18,37,.55),0 10px 30px rgba(6,18,37,.12)}
-  .book-card img{border-radius:7px;box-shadow:0 20px 42px rgba(6,18,37,.20)}
+  .why-copy{max-width:900px}
+  .why-copy h2{font-size:clamp(2.05rem,4.4vw,3.25rem);line-height:1.08;margin:.2rem 0 0;max-width:26ch}
+  .why-copy p{margin-top:1.25rem}
 
-  .creator-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:var(--space-md)}
+  .origin-grid{display:grid;grid-template-columns:minmax(280px,.82fr) minmax(0,1.35fr);
+    gap:clamp(1.25rem,4vw,3rem);align-items:start;margin-top:var(--space-md)}
+  .book-feature{background:var(--navy);color:#c7d2e0;border:1px solid var(--line-dark);border-radius:12px;
+    padding:clamp(1.25rem,3vw,2rem);box-shadow:0 26px 60px -30px rgba(6,18,37,.6)}
+  .book-feature__cover{width:min(230px,78%);margin:0 auto 1.75rem;padding:.65rem;background:#fff;
+    border-radius:9px;box-shadow:0 22px 44px rgba(0,0,0,.28)}
+  .book-feature__cover img{border-radius:5px}
+  .book-feature span{display:block;color:var(--gold-bright);font-size:.72rem;font-weight:800;
+    letter-spacing:.16em;text-transform:uppercase;margin-bottom:.7rem}
+  .book-feature h3{color:#fff;font-size:clamp(1.8rem,3vw,2.35rem);line-height:1.05}
+  .book-feature p{margin-top:1rem;color:#c7d2e0;font-size:.98rem;line-height:1.65}
+  .book-feature em{color:#fff9ec}
+
+  .creator-grid{display:grid;grid-template-columns:1fr;gap:1rem}
   .creator-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:clamp(1.25rem,3vw,2rem);
     box-shadow:0 18px 44px rgba(6,18,37,.06)}
+  .creator-card--featured{border-top:3px solid var(--teal)}
   .creator-card span{display:block;color:var(--gold);font-size:.75rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.65rem}
-  .creator-card h3{font-size:clamp(1.55rem,3vw,2rem);line-height:1.1;margin-bottom:.65rem}
+  .creator-card h3{font-size:clamp(1.85rem,3vw,2.4rem);line-height:1.08;margin-bottom:.8rem}
+  .creator-card p{font-size:1rem;line-height:1.72}
+  .creator-card em{font-family:var(--serif);font-size:1.08em;color:var(--ink)}
 
   .dark{background:var(--navy);color:#eaf0f7}
   .dark h2{color:#fff;font-size:clamp(2.1rem,4.8vw,3.5rem);line-height:1.08;max-width:28ch}
@@ -168,9 +180,8 @@
     .hero{text-align:left}
     .hero h1,.hero .lead,.byline{margin-left:0;margin-right:0;text-align:left}
     .hero .cta{justify-content:flex-start}
-    .hero-proof,.split,.creator-grid,.cols,.measure-grid{grid-template-columns:1fr}
-    .book{order:-1;justify-content:flex-start}
-    .book-card{width:min(250px,72%)}
+    .hero-proof,.origin-grid,.cols,.measure-grid{grid-template-columns:1fr}
+    .book-feature__cover{width:min(210px,70%)}
     .stats{grid-template-columns:1fr;gap:1.75rem}
     .stat{padding:0}.stat+.stat{border-left:0;border-top:1px solid var(--line-dark);padding-top:1.75rem}
   }
@@ -228,18 +239,11 @@
   </section>
 
   <section class="sec sand">
-    <div class="wrap split">
-      <div>
-        <p class="eyebrow">Why the Lab exists</p>
-        <h2>Practical AI learning for people navigating real career transitions.</h2>
-        <p class="lead">As entry-level pathways disappear and the organizations that support newcomers face growing demand and shrinking resources, the people with the fewest resources to adapt are encountering these changes first.</p>
-        <p>The Self-Sufficiency Lab was created to help close that gap. Rather than teaching AI for its own sake, it helps immigrants, refugees, and others navigating career transitions use AI as a practical tool to rebuild careers, access meaningful work, and achieve greater economic self-sufficiency.</p>
-      </div>
-      <div class="book">
-        <div class="book-card">
-          <img src="https://attamoves.com/images/self-sufficient-immigrant-age-ai-cover.png" alt="Cover of The Self-Sufficient Immigrant in the Age of AI">
-        </div>
-      </div>
+    <div class="wrap why-copy">
+      <p class="eyebrow">Why the Lab exists</p>
+      <h2>Practical AI learning for people navigating real career transitions.</h2>
+      <p class="lead">As entry-level pathways disappear and the organizations that support newcomers face growing demand and shrinking resources, the people with the fewest resources to adapt are encountering these changes first.</p>
+      <p>The Self-Sufficiency Lab was created to help close that gap. Rather than teaching AI for its own sake, it helps immigrants, refugees, and others navigating career transitions use AI as a practical tool to rebuild careers, access meaningful work, and achieve greater economic self-sufficiency.</p>
     </div>
   </section>
 
@@ -247,19 +251,29 @@
     <div class="wrap">
       <div class="head-max">
         <p class="eyebrow">Grounded experience</p>
-        <h2>Built from lived experience, workforce practice, and community trust.</h2>
+        <h2>The co-authors and the book behind the Lab.</h2>
       </div>
-      <div class="creator-grid">
-        <article class="creator-card">
-          <span>Atta Arghandiwal</span>
-          <h3>Refugee experience, banking leadership, and immigrant self-sufficiency.</h3>
-          <p>Atta rebuilt his own life after fleeing Afghanistan as a refugee, went on to a 28-year banking career, and has spent years writing about immigrant success and self-sufficiency.</p>
+      <div class="origin-grid">
+        <article class="book-feature">
+          <div class="book-feature__cover">
+            <img src="https://attamoves.com/images/self-sufficient-immigrant-age-ai-cover.png" alt="Cover of The Self-Sufficient Immigrant in the Age of AI">
+          </div>
+          <span>The book behind the Lab</span>
+          <h3><em>The Self-Sufficient Immigrant in the Age of AI</em></h3>
+          <p>Co-authored by Atta Arghandiwal and Sohrab Rasouli. The Lab brings the book's ideas into trusted community settings through practical, hands-on learning.</p>
         </article>
-        <article class="creator-card">
-          <span>Sohrab Rasouli</span>
-          <h3>AI tools for employment systems and newcomer communities.</h3>
-          <p>Sohrab builds practical technology for employment systems, translating personal and professional experience into tools that support, not replace, human judgment.</p>
-        </article>
+        <div class="creator-grid">
+          <article class="creator-card creator-card--featured">
+            <span>Co-author &middot; Founder of Noura</span>
+            <h3>Sohrab Rasouli</h3>
+            <p>Sohrab Rasouli is an Afghan immigrant, the founder of Noura, and co-author of <em>The Self-Sufficient Immigrant in the Age of AI</em>. His path has taken him from a farming village in northern Afghanistan to the United Kingdom, Kabul, and the United States. After working as an educator, founding the Creative Academy, and serving newcomers as an Employment Specialist, he created Noura&mdash;a supervised AI work partner for employment-support teams. His work focuses on building practical tools that solve real problems while preserving human judgment and dignity.</p>
+          </article>
+          <article class="creator-card">
+            <span>Co-author &middot; Author and speaker</span>
+            <h3>Atta Arghandiwal</h3>
+            <p>Atta rebuilt his own life after fleeing Afghanistan as a refugee, went on to a 28-year banking career, and has spent years writing about immigrant success and self-sufficiency.</p>
+          </article>
+        </div>
       </div>
     </div>
   </section>
