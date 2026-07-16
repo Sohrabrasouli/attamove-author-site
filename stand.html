@@ -43,6 +43,7 @@
           <a class="nav__link" href="index.html" data-active="false">Home</a>
           <a class="nav__link" href="books.html" data-active="true">Books</a>
           <a class="nav__link" href="speaking.html" data-active="false">Speaking</a>
+          <a class="nav__link" href="lab.html" data-active="false">The Lab</a>
           <a class="nav__link" href="media.html" data-active="false">Media</a>
           <a class="nav__link" href="contact.html" data-active="false">Contact</a>
         </nav>
@@ -53,6 +54,7 @@
         <a class="nav__link" href="index.html" data-active="false">Home</a>
         <a class="nav__link" href="books.html" data-active="true">Books</a>
         <a class="nav__link" href="speaking.html" data-active="false">Speaking</a>
+        <a class="nav__link" href="lab.html" data-active="false">The Lab</a>
         <a class="nav__link" href="media.html" data-active="false">Media</a>
         <a class="nav__link" href="contact.html" data-active="false">Contact</a>
         <a class="nav__link mobile-nav__invite" href="speaking.html">Invite Atta</a>
@@ -131,7 +133,7 @@
               <button class="btn btn--primary" type="submit">Hold my place</button>
               <a class="btn btn--ghost" href="books.html">See the books</a>
             </div>
-            <p class="waitlist-form__small">This preview prepares a direct message to attamoves@gmail.com. Send that message to complete your place on the list.</p>
+            <p class="waitlist-form__small">This preview prepares a direct message to atta@attamoves.com. Send that message to complete your place on the list.</p>
             <div class="waitlist-form__success" id="waitlistSuccess" role="status" hidden>
               <p>Almost done: your email app should open now. Press Send there to complete your place on the First Readers List.</p>
               <a id="waitlistFallback" href="#">If nothing opened, tap here to send the message.</a>
@@ -161,7 +163,7 @@
             '',
             'Thank you.'
           ].filter(Boolean).join('\n');
-          var href = 'mailto:attamoves@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+          var href = 'mailto:atta@attamoves.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
           var success = document.getElementById('waitlistSuccess');
           var fallback = document.getElementById('waitlistFallback');
           if (fallback) fallback.setAttribute('href', href);
@@ -177,11 +179,12 @@
           <span class="site-footer__sep" aria-hidden="true">·</span>
           <span class="site-footer__tagline">Author | Humanitarian | Mentor</span>
         </div>
-        <a class="site-footer__email" href="mailto:attamoves@gmail.com">attamoves@gmail.com</a>
+        <a class="site-footer__email" href="mailto:atta@attamoves.com">atta@attamoves.com</a>
         <nav class="site-footer__nav" aria-label="Footer navigation">
           <span class="site-footer__nav-item"><a href="index.html">Home</a></span>
           <span class="site-footer__nav-item"><span class="site-footer__sep" aria-hidden="true">·</span><a href="books.html">Books</a></span>
           <span class="site-footer__nav-item"><span class="site-footer__sep" aria-hidden="true">·</span><a href="speaking.html">Speaking</a></span>
+          <span class="site-footer__nav-item"><span class="site-footer__sep" aria-hidden="true">·</span><a href="lab.html">The Lab</a></span>
           <span class="site-footer__nav-item"><span class="site-footer__sep" aria-hidden="true">·</span><a href="media.html">Media</a></span>
           <span class="site-footer__nav-item"><span class="site-footer__sep" aria-hidden="true">·</span><a href="contact.html">Contact</a></span>
         </nav>
