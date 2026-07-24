@@ -23,7 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=books-release-20260723-2" />
+    <link rel="stylesheet" href="styles.css?v=editorial-light-20260723" />
   </head>
   <body class="book-page">
     <div class="grain" aria-hidden="true"></div>
@@ -64,14 +64,14 @@
 
       <section class="books-hero books-hero--carousel" aria-labelledby="books-title">
         <div class="container books-hero__head">
-          <p class="eyebrow">Books for rebuilding</p>
-          <h1 id="books-title" class="books-hero__title">Books by Atta Arghandiwal.</h1>
-          <p class="books-hero__lead">Two current books connect the work: one looks back through Afghanistan, exile, and memory; the other looks forward to self-sufficiency in the age of AI.</p>
+          <p class="eyebrow">Books by Atta Arghandiwal</p>
+          <h1 id="books-title" class="books-hero__title">Books about memory, dignity, and building a life.</h1>
+          <p class="books-hero__lead">Begin with the newly published AI guide or Atta's memoir of Afghanistan, exile, family, and home.</p>
         </div>
         
       <section class="books-carousel" data-accent="ai" aria-roledescription="carousel" aria-label="Books by Atta Arghandiwal — rotating featured book" id="booksCarousel" tabindex="0" hidden aria-hidden="true">
         <div class="books-carousel__voice" aria-live="polite" aria-atomic="true">
-          <span class="books-carousel__voice-label" data-voice-label>Age of AI protocol</span>
+          <span class="books-carousel__voice-label" data-voice-label>New Age of AI guide</span>
           <h2 class="books-carousel__voice-title" data-voice-title>Use new tools without losing your human values.</h2>
           <p class="books-carousel__voice-blurb" data-voice-blurb>The published guide helps newcomers use judgment, structure, and AI-era tools without losing their human values.</p>
         </div>
@@ -116,7 +116,7 @@
             <span class="books-carousel__counter" data-counter>01 / 05</span>
           </p>
           <h3 class="books-carousel__title" data-title>The Self-Sufficient Immigrant in the Age of AI</h3>
-          <p class="books-carousel__sub" data-sub>A field manual for the work of standing again.</p>
+          <p class="books-carousel__sub" data-sub>A practical guide to using AI with judgment, agency, and dignity.</p>
         </div>
         <div class="books-carousel__controls" role="group" aria-label="Carousel controls">
           <button type="button" class="books-carousel__nav" data-nav="prev" aria-label="Show previous book"><span aria-hidden="true">‹</span></button>
@@ -161,7 +161,7 @@
         var timerId = null;
         var AUTO = 3000;
 
-        var bookData = [{"slug":"self-sufficient-immigrant-age-of-ai","title":"The Self-Sufficient Immigrant in the Age of AI","subtitle":"A practical guide to using AI with judgment, agency, and dignity.","status":"Published","accent":"ai","voiceLabel":"Age of AI guide","voiceHeadline":"Use AI as a tool while keeping human judgment in charge.","voiceBlurb":"A practical guide for immigrants, families, mentors, and community organizations adapting to a changing world of work.","detailHref":"#details-self-sufficient-immigrant-age-of-ai"},{"slug":"lost-decency-gilded-cages","title":"Lost Decency: The Gilded Cages and the Search for Home","subtitle":"Afghanistan, exile, and the search for home.","status":"Available","accent":"memoir","voiceLabel":"Moral reckoning","voiceHeadline":"What happens when decency is bartered for power?","voiceBlurb":"A memoir of Afghanistan, exile, and the human dignity that survives displacement.","detailHref":"#details-lost-decency-gilded-cages"},{"slug":"lost-decency-untold","title":"Lost Decency: The Untold Afghan Story","subtitle":"Atta's original memoir and the journey through memory, displacement, and dignity.","status":"Legacy edition","accent":"memoir","voiceLabel":"Original memoir","voiceHeadline":"If a nation loses its decency, what do its people fight to keep?","voiceBlurb":"The original award-recognized memoir carries Atta's journey through exile, memory, displacement, and the lifelong search for home.","detailHref":"#details-lost-decency-untold"},{"slug":"self-sufficient-global-citizen","title":"The Self-Sufficient Global Citizen","subtitle":"A self-sufficiency guide for families and communities starting fresh.","status":"Available","accent":"guide","voiceLabel":"Self-sufficiency guide","voiceHeadline":"Build stability through work, planning, and responsibility.","voiceBlurb":"A guidebook for immigrants, families, and communities starting fresh with work, citizenship, planning, and responsibility.","detailHref":"#details-self-sufficient-global-citizen"},{"slug":"immigrant-success-planning","title":"Immigrant Success Planning","subtitle":"A planning resource for immigrant families and support organizations.","status":"Available","accent":"guide","voiceLabel":"Family planning tool","voiceHeadline":"Turn unfamiliar systems into a practical family plan.","voiceBlurb":"This resource helps families navigate documents, work, citizenship, and daily structure with greater clarity.","detailHref":"#details-immigrant-success-planning"}];
+        var bookData = [{"slug":"self-sufficient-immigrant-age-of-ai","title":"The Self-Sufficient Immigrant in the Age of AI","subtitle":"A practical guide to using AI with judgment, agency, and dignity.","status":"Published","accent":"ai","voiceLabel":"Age of AI guide","voiceHeadline":"Use AI as a tool while keeping human judgment in charge.","voiceBlurb":"A practical guide for immigrants, families, mentors, and community organizations adapting to a changing world of work.","detailHref":"#details-self-sufficient-immigrant-age-of-ai"},{"slug":"lost-decency-gilded-cages","title":"Lost Decency: The Gilded Cages and the Search for Home","subtitle":"Afghanistan, exile, and the search for home.","status":"Available","accent":"memoir","voiceLabel":"Memoir","voiceHeadline":"What happens when decency is bartered for power?","voiceBlurb":"A memoir of Afghanistan, exile, and the human dignity that survives displacement.","detailHref":"#details-lost-decency-gilded-cages"},{"slug":"lost-decency-untold","title":"Lost Decency: The Untold Afghan Story","subtitle":"Atta's original memoir and the journey through memory, displacement, and dignity.","status":"Legacy edition","accent":"memoir","voiceLabel":"Original memoir","voiceHeadline":"If a nation loses its decency, what do its people fight to keep?","voiceBlurb":"An earlier edition of Atta's memoir about exile, memory, displacement, and the search for home.","detailHref":"#details-lost-decency-untold"},{"slug":"self-sufficient-global-citizen","title":"The Self-Sufficient Global Citizen","subtitle":"A self-sufficiency guide for families and communities starting fresh.","status":"Available","accent":"guide","voiceLabel":"Self-sufficiency guide","voiceHeadline":"Build stability through work, planning, and responsibility.","voiceBlurb":"A guidebook for immigrants, families, and communities starting fresh with work, citizenship, planning, and responsibility.","detailHref":"#details-self-sufficient-global-citizen"},{"slug":"immigrant-success-planning","title":"Immigrant Success Planning","subtitle":"A planning resource for immigrant families and support organizations.","status":"Available","accent":"guide","voiceLabel":"Family planning tool","voiceHeadline":"Turn unfamiliar systems into a practical family plan.","voiceBlurb":"This resource helps families navigate documents, work, citizenship, and daily structure with greater clarity.","detailHref":"#details-immigrant-success-planning"}];
 
         function setPosition(slot, off) {
           var pos;
@@ -281,8 +281,8 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Current books</p>
-            <h2 id="featured-title" class="section-heading__title">Choose the book, format, and retailer that work for you.</h2>
-            <p class="section-heading__lede">Both current titles are now available. Start with the newly published practical guide or Atta's memoir of Afghanistan, exile, and home.</p>
+            <h2 id="featured-title" class="section-heading__title">Choose your book and preferred edition.</h2>
+            <p class="section-heading__lede">Both current titles are available in hardcover and ebook editions, with several retailers to choose from.</p>
           </div>
           <div class="current-books__list">
             <article class="purchase-book purchase-book--ai" id="self-sufficient-immigrant-age-of-ai">
@@ -372,7 +372,7 @@
                 <h3 class="book-card__title"><a href="#details-self-sufficient-global-citizen">The Self-Sufficient Global Citizen</a></h3>
                 <p class="book-card__authors">Atta Arghandiwal</p>
                 <p class="book-card__sub">A self-sufficiency guide for families and communities starting fresh.</p>
-                <p class="book-card__desc">A guidebook for responsible refugees and migrants to become self-sufficient global citizens starting fresh in the Western world.</p>
+                <p class="book-card__desc">A practical guide for immigrants and families building stability through work, planning, citizenship, and responsibility.</p>
                 <div class="book-card__actions">
                   <a class="btn btn--ghost btn--small" href="#details-self-sufficient-global-citizen">View buying options</a>
                 </div>
@@ -462,7 +462,7 @@
             <img class="stay-connected__motif" src="images/carousel-motif.svg" alt="" aria-hidden="true" />
             <p class="eyebrow">From the book to the community</p>
             <h2 id="stay-connected-title" class="stay-connected__title">The Self-Sufficiency Lab puts the book's ideas into practice.</h2>
-            <p class="stay-connected__body lede">Explore the proposed cohort model for immigrants, refugees, and others navigating career transitions in the age of AI.</p>
+            <p class="stay-connected__body lede">See how small, practical cohorts help people use AI safely for work, education, and everyday decisions.</p>
             <div class="stay-connected__cta">
               <a class="btn btn--primary" href="lab.html">Explore the Lab</a>
               <a class="btn btn--ghost" href="contact.html">Discuss a partnership</a>
@@ -681,7 +681,7 @@
             <span class="book-card__status" data-status="Legacy edition">Legacy edition</span>
             <h2 id="details-title-lost-decency-untold">Lost Decency: The Untold Afghan Story</h2>
             <p class="book-detail__authors">Atta Arghandiwal</p>
-            <p class="book-detail__sub">Atta's award-winning memoir and the journey through memory, displacement, and dignity.</p>
+            <p class="book-detail__sub">Atta's original memoir and the journey through memory, displacement, and dignity.</p>
             <p>Lost Decency shares Atta's and Afghanistan's turbulent journey through memory, displacement, and the search for dignity after rupture.</p>
             <div class="book-detail__grid">
               <div>

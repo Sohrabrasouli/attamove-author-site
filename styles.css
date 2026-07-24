@@ -12263,3 +12263,874 @@ body:has(.cover-hero) .cover-hero__screen-pips span {
     padding-inline: 0.65rem !important;
   }
 }
+
+/* =====================================================================
+   v32 - LIGHT EDITORIAL BOOKSTORE PASS (July 2026)
+   Keep the photographic home opening, then move the reading experience
+   onto paper, mist, and clay surfaces with authentic book presentation.
+   ===================================================================== */
+
+:root {
+  --paper: #fffdfa;
+  --paper-warm: #f8f3eb;
+  --mist: #eaf2f1;
+  --mist-strong: #dcebea;
+  --clay-soft: #f5e9e4;
+  --ink: #111927;
+  --ink-soft: #40505c;
+  --teal: #2f6f78;
+  --teal-deep: #24565d;
+  --clay: #a45236;
+  --line-light: #d7d9d2;
+  --shadow-book: 0 28px 52px -24px rgba(17, 25, 39, 0.42);
+}
+
+.btn {
+  border-radius: 6px;
+  letter-spacing: 0;
+}
+
+body:has(.page-hero),
+body:has(.books-hero),
+body:has(.release-hero),
+body:has(.cover-hero) {
+  background: var(--paper);
+}
+
+body:has(.page-hero)::before,
+body:has(.page-hero)::after,
+body:has(.books-hero)::before,
+body:has(.books-hero)::after,
+body:has(.release-hero)::before,
+body:has(.release-hero)::after,
+body:has(.cover-hero)::before,
+body:has(.cover-hero)::after {
+  display: none;
+}
+
+body:has(.page-hero) .grain,
+body:has(.books-hero) .grain,
+body:has(.release-hero) .grain,
+body:has(.cover-hero) .grain {
+  opacity: 0.025;
+}
+
+body:has(.page-hero) .section-heading__title,
+body:has(.books-hero) .section-heading__title,
+body:has(.release-hero) .section-heading__title,
+body:has(.cover-hero) .section-heading__title {
+  color: var(--ink);
+}
+
+body:has(.page-hero) .section-heading__lede,
+body:has(.books-hero) .section-heading__lede,
+body:has(.release-hero) .section-heading__lede,
+body:has(.cover-hero) .section-heading__lede {
+  color: var(--ink-soft);
+}
+
+body:has(.page-hero) main .eyebrow,
+body:has(.books-hero) main .eyebrow,
+body:has(.release-hero) main .eyebrow,
+body:has(.cover-hero) main > :not(.cover-hero) .eyebrow {
+  color: var(--clay) !important;
+}
+
+body:has(.page-hero) main .eyebrow::before,
+body:has(.books-hero) main .eyebrow::before,
+body:has(.release-hero) main .eyebrow::before,
+body:has(.cover-hero) main > :not(.cover-hero) .eyebrow::before {
+  background: var(--clay) !important;
+}
+
+body:has(.page-hero) main .btn--primary,
+body:has(.books-hero) main .btn--primary,
+body:has(.release-hero) main .btn--primary,
+body:has(.cover-hero) main > :not(.cover-hero) .btn--primary {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: #ffffff;
+  box-shadow: 0 14px 26px -16px rgba(47, 111, 120, 0.65);
+}
+
+body:has(.page-hero) main .btn--primary:hover,
+body:has(.page-hero) main .btn--primary:focus-visible,
+body:has(.books-hero) main .btn--primary:hover,
+body:has(.books-hero) main .btn--primary:focus-visible,
+body:has(.release-hero) main .btn--primary:hover,
+body:has(.release-hero) main .btn--primary:focus-visible,
+body:has(.cover-hero) main > :not(.cover-hero) .btn--primary:hover,
+body:has(.cover-hero) main > :not(.cover-hero) .btn--primary:focus-visible {
+  border-color: var(--teal-deep);
+  background: var(--teal-deep);
+  color: #ffffff;
+}
+
+body:has(.page-hero) main .btn--ghost,
+body:has(.books-hero) main .btn--ghost,
+body:has(.release-hero) main .btn--ghost,
+body:has(.cover-hero) main > :not(.cover-hero) .btn--ghost {
+  border-color: #9ba9a7;
+  background: rgba(255, 255, 255, 0.52);
+  color: var(--ink);
+}
+
+body:has(.page-hero) main .btn--ghost:hover,
+body:has(.page-hero) main .btn--ghost:focus-visible,
+body:has(.books-hero) main .btn--ghost:hover,
+body:has(.books-hero) main .btn--ghost:focus-visible,
+body:has(.release-hero) main .btn--ghost:hover,
+body:has(.release-hero) main .btn--ghost:focus-visible,
+body:has(.cover-hero) main > :not(.cover-hero) .btn--ghost:hover,
+body:has(.cover-hero) main > :not(.cover-hero) .btn--ghost:focus-visible {
+  border-color: var(--teal);
+  background: #ffffff;
+  color: var(--teal-deep);
+}
+
+/* Home: retain the cinematic opening, then enter a bright author world. */
+body:has(.cover-hero) .home-featured-book {
+  padding-block: clamp(4rem, 7vw, 6.5rem);
+  background: var(--paper);
+  color: var(--ink);
+  border-bottom: 1px solid var(--line-light);
+}
+
+body:has(.cover-hero) .home-featured-book::before {
+  display: none;
+}
+
+body:has(.cover-hero) .home-featured-book__inner {
+  grid-template-columns: minmax(0, 1fr) minmax(210px, 300px);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+body:has(.cover-hero) .home-featured-book__copy {
+  max-width: 720px;
+}
+
+body:has(.cover-hero) .home-featured-book__copy h2 {
+  max-width: 13ch;
+  color: var(--ink);
+  font-size: clamp(2.8rem, 5.3vw, 5.5rem);
+  line-height: 0.96;
+}
+
+body:has(.cover-hero) .home-featured-book__copy p {
+  color: var(--ink-soft);
+}
+
+body:has(.cover-hero) .home-featured-book__copy em {
+  color: var(--clay);
+}
+
+body:has(.cover-hero) .home-featured-book__cover {
+  position: relative;
+  align-self: center;
+  padding: 1.35rem 1.1rem 1.15rem;
+  border-bottom: 5px solid #cad7d4;
+  background: var(--mist);
+}
+
+body:has(.cover-hero) .home-featured-book__cover img {
+  width: min(100%, 245px);
+  border: 0;
+  border-radius: 3px;
+  box-shadow: var(--shadow-book);
+  transform: rotate(1deg);
+}
+
+body:has(.cover-hero) .home-featured-book__cover span {
+  color: var(--teal-deep);
+  letter-spacing: 0.13em;
+}
+
+body:has(.cover-hero) .about-atta {
+  background: var(--mist) !important;
+  border-color: #cadbd8 !important;
+  color: var(--ink);
+}
+
+body:has(.cover-hero) .about-atta::before {
+  background: var(--clay);
+  opacity: 0.7;
+}
+
+body:has(.cover-hero) .about-atta__portrait {
+  border-color: #b9c9c6;
+  box-shadow: 0 32px 60px -30px rgba(17, 25, 39, 0.45);
+}
+
+body:has(.cover-hero) .about-atta__title,
+body:has(.cover-hero) .about-atta__lede {
+  color: var(--ink);
+}
+
+body:has(.cover-hero) .about-atta__link {
+  color: var(--teal-deep);
+  border-bottom-color: rgba(47, 111, 120, 0.45);
+}
+
+body:has(.cover-hero) .life-story {
+  background: var(--clay-soft);
+}
+
+body:has(.cover-hero) .life-story::before {
+  display: none;
+}
+
+body:has(.cover-hero) .life-story__card {
+  border-radius: 6px;
+  background: var(--paper);
+  box-shadow: 0 22px 50px -34px rgba(17, 25, 39, 0.42);
+}
+
+body:has(.cover-hero) .life-story__memory-feature {
+  border-radius: 6px;
+}
+
+/* Shared interior pages: lighter heroes, alternating editorial bands. */
+body:has(.page-hero) main {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body:has(.page-hero) .page-hero {
+  padding-top: clamp(7.2rem, 10vw, 9rem);
+  border-bottom-color: #ded8cc;
+  background: var(--paper-warm);
+}
+
+body:has(.page-hero) .page-hero__title {
+  max-width: 860px;
+  color: var(--ink);
+}
+
+body:has(.page-hero) .page-hero__lead {
+  color: var(--ink-soft);
+}
+
+body:has(.page-hero) .section {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body:has(.page-hero) .section--alt {
+  background: var(--mist) !important;
+}
+
+body:has(.page-hero) main a:not(.btn):not(.media-row):not(.press-card):not(.contact-category) {
+  color: var(--teal-deep);
+}
+
+body:has(.page-hero) .topic-card,
+body:has(.page-hero) .card,
+body:has(.page-hero) .qa-item,
+body:has(.page-hero) .media-brief-grid article,
+body:has(.page-hero) .contact-path-card,
+body:has(.page-hero) .contact-card,
+body:has(.page-hero) .form {
+  border-color: #d5dad5;
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--ink);
+  box-shadow: 0 18px 46px -38px rgba(17, 25, 39, 0.48);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+body:has(.page-hero) .topic-card:nth-child(2n),
+body:has(.page-hero) .contact-path-card:nth-child(2n) {
+  border-top-color: #b5d1ce;
+}
+
+body:has(.page-hero) .topic-card__title,
+body:has(.page-hero) .topic-card__body,
+body:has(.page-hero) .card__title,
+body:has(.page-hero) .card__body,
+body:has(.page-hero) .qa-item h3,
+body:has(.page-hero) .qa-item p,
+body:has(.page-hero) .contact-path-card h2,
+body:has(.page-hero) .contact-path-card p,
+body:has(.page-hero) .contact-path-card li {
+  color: var(--ink);
+}
+
+body:has(.page-hero) .chip {
+  border-color: #bfcac7;
+  border-radius: 5px;
+  background: #ffffff;
+  color: var(--ink);
+}
+
+body:has(.page-hero) .media-brief-section,
+body:has(.page-hero) .contact-paths-section {
+  background: var(--mist);
+}
+
+body:has(.page-hero) .media-brief-grid article::before,
+body:has(.page-hero) .contact-path-card::before {
+  background: var(--clay);
+}
+
+body:has(.page-hero) .media-brief-grid span,
+body:has(.page-hero) .contact-path-card > span {
+  color: var(--clay);
+}
+
+body:has(.page-hero) .press-card {
+  border: 1px solid #d5dad5;
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--ink);
+  box-shadow: 0 18px 48px -36px rgba(17, 25, 39, 0.46);
+}
+
+body:has(.page-hero) .press-card__media {
+  background: var(--mist);
+}
+
+body:has(.page-hero) .press-card__title {
+  color: var(--ink);
+}
+
+body:has(.page-hero) .press-card__caption {
+  color: var(--teal-deep);
+}
+
+body:has(.page-hero) .media-row {
+  border-color: #d5dad5;
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--ink);
+  box-shadow: 0 12px 32px -30px rgba(17, 25, 39, 0.5);
+}
+
+body:has(.page-hero) .media-row:hover {
+  border-color: #9ebcb8;
+  color: var(--teal-deep);
+}
+
+body:has(.page-hero) .media-row__type {
+  border-color: #d9c2b8;
+  border-radius: 4px;
+  background: var(--clay-soft);
+  color: var(--clay);
+}
+
+body:has(.page-hero) .media-row__label {
+  color: var(--ink);
+}
+
+body:has(.page-hero) .media-row__platform,
+body:has(.page-hero) .media-row__topic,
+body:has(.page-hero) .muted {
+  color: var(--ink-soft);
+}
+
+body:has(.page-hero) .media-row__arrow {
+  color: var(--clay);
+}
+
+body:has(.page-hero) .contact-email,
+body:has(.page-hero) .contact-category__arrow {
+  color: var(--teal-deep);
+}
+
+body:has(.page-hero) .contact-category {
+  border-color: #d8ddd8;
+  background: var(--paper-warm);
+  color: var(--ink);
+}
+
+body:has(.page-hero) .contact-category:hover {
+  border-color: #9ebcb8;
+  background: var(--mist);
+  color: var(--teal-deep);
+}
+
+body:has(.page-hero) .contact-category strong[style],
+body:has(.page-hero) .form__note strong[style] {
+  color: var(--ink) !important;
+}
+
+body:has(.page-hero) .contact-category span[style] {
+  color: var(--ink-soft) !important;
+}
+
+body:has(.page-hero) .form label,
+body:has(.page-hero) .form__note {
+  color: var(--ink-soft);
+}
+
+body:has(.page-hero) .form input,
+body:has(.page-hero) .form select,
+body:has(.page-hero) .form textarea,
+body:has(.page-hero) .form input:focus,
+body:has(.page-hero) .form select:focus,
+body:has(.page-hero) .form textarea:focus {
+  border-color: #bcc9c6;
+  background: #ffffff;
+  color: var(--ink);
+  box-shadow: none;
+}
+
+body:has(.page-hero) .form input:focus,
+body:has(.page-hero) .form select:focus,
+body:has(.page-hero) .form textarea:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(47, 111, 120, 0.13);
+}
+
+body:has(.page-hero) .form input::placeholder,
+body:has(.page-hero) .form textarea::placeholder {
+  color: #7c898f;
+}
+
+body:has(.page-hero) .legal-copy {
+  border-color: #d5dad5;
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--ink);
+  box-shadow: 0 22px 56px -42px rgba(17, 25, 39, 0.48);
+}
+
+body:has(.page-hero) .legal-copy h2 {
+  color: var(--clay);
+}
+
+body:has(.page-hero) .legal-copy p {
+  color: var(--ink-soft);
+}
+
+/* Books: real covers, generous scale, and a quiet bookstore palette. */
+body:has(.books-hero) main {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body:has(.books-hero) .books-hero--carousel {
+  padding-top: clamp(7.2rem, 10vw, 9rem) !important;
+  padding-bottom: clamp(3rem, 6vw, 5rem) !important;
+  border-bottom-color: #ded8cc;
+  background: var(--paper-warm) !important;
+}
+
+body:has(.books-hero) .books-hero--carousel::before,
+body:has(.books-hero) .books-hero--carousel::after {
+  display: none;
+}
+
+body:has(.books-hero) .books-hero__head {
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+body:has(.books-hero) .books-hero--carousel .books-hero__title {
+  max-width: 930px;
+  color: var(--ink);
+  font-size: clamp(3.4rem, 7vw, 7rem);
+}
+
+body:has(.books-hero) .books-hero--carousel .books-hero__lead {
+  color: var(--ink-soft);
+}
+
+body:has(.books-hero) .books-carousel {
+  border-color: #385252;
+  border-radius: 6px;
+  background: #1d3334;
+  box-shadow: 0 32px 70px -46px rgba(17, 25, 39, 0.7);
+}
+
+body:has(.books-hero) .books-carousel::before {
+  opacity: 0.22;
+}
+
+body:has(.books-hero) .current-books {
+  background: var(--mist);
+  color: var(--ink);
+}
+
+body:has(.books-hero) .purchase-book {
+  position: relative;
+  grid-template-columns: minmax(220px, 0.64fr) minmax(0, 1.7fr);
+  border: 1px solid #cdd8d5;
+  border-left: 5px solid var(--teal);
+  border-radius: 6px;
+  background: var(--paper);
+  box-shadow: 0 26px 56px -42px rgba(17, 25, 39, 0.5);
+}
+
+body:has(.books-hero) .purchase-book--memoir {
+  border-color: #ddcec6;
+  border-left-color: var(--clay);
+  background: #fffaf7;
+}
+
+body:has(.books-hero) .purchase-book__cover {
+  align-self: stretch;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border-bottom: 5px solid #cbd8d5;
+  background: #eef4f2;
+}
+
+body:has(.books-hero) .purchase-book--memoir .purchase-book__cover {
+  border-bottom-color: #ddc3b7;
+  background: #f7ece7;
+}
+
+body:has(.books-hero) .purchase-book__cover img {
+  border-radius: 3px;
+  box-shadow: var(--shadow-book);
+  transform: rotate(-0.8deg);
+}
+
+body:has(.books-hero) .purchase-book--memoir .purchase-book__cover img {
+  transform: rotate(0.8deg);
+}
+
+body:has(.books-hero) .purchase-book__status {
+  color: var(--clay);
+}
+
+body:has(.books-hero) .purchase-book h3,
+body:has(.books-hero) .purchase-book__facts dd {
+  color: var(--ink);
+}
+
+body:has(.books-hero) .purchase-book__authors {
+  color: var(--teal-deep);
+}
+
+body:has(.books-hero) .purchase-book__summary,
+body:has(.books-hero) .purchase-book__facts dt,
+body:has(.books-hero) .purchase-book__retail > span {
+  color: var(--ink-soft);
+}
+
+body:has(.books-hero) .purchase-book__facts div,
+body:has(.books-hero) .purchase-book__retail {
+  border-color: #d8ddd8;
+}
+
+body:has(.books-hero) .purchase-book__retail a {
+  color: var(--teal-deep);
+}
+
+body:has(.books-hero) .purchase-book__retail a:hover {
+  color: var(--clay);
+}
+
+body:has(.books-hero) .section {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body:has(.books-hero) .section--alt {
+  background: var(--paper-warm) !important;
+}
+
+body:has(.books-hero) .book-card {
+  border: 1px solid #d5dad5;
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--ink);
+  box-shadow: 0 20px 48px -38px rgba(17, 25, 39, 0.48);
+}
+
+body:has(.books-hero) .book-card::before,
+body:has(.books-hero) .book-card::after {
+  display: none;
+}
+
+body:has(.books-hero) .book-card:hover,
+body:has(.books-hero) .book-card:focus-within {
+  border-color: #9ebcb8;
+  box-shadow: 0 26px 54px -38px rgba(17, 25, 39, 0.54);
+}
+
+body:has(.books-hero) .book-card__cover {
+  background: var(--mist);
+}
+
+body:has(.books-hero) .book-card__cover img {
+  border-radius: 2px;
+  box-shadow: var(--shadow-book);
+}
+
+body:has(.books-hero) .book-card__status {
+  color: var(--clay);
+}
+
+body:has(.books-hero) .book-card__title,
+body:has(.books-hero) .book-card__title a {
+  color: var(--ink);
+}
+
+body:has(.books-hero) .book-card__authors {
+  color: var(--teal-deep);
+}
+
+body:has(.books-hero) .book-card__sub,
+body:has(.books-hero) .book-card__desc {
+  color: var(--ink-soft);
+}
+
+body:has(.books-hero) .reader-responses {
+  background: var(--clay-soft);
+}
+
+body:has(.books-hero) .reader-response-card {
+  border-color: #dfcbc2;
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: none;
+}
+
+body:has(.books-hero) .reader-response-card span {
+  color: var(--clay);
+}
+
+body:has(.books-hero) .reader-response-card p {
+  color: var(--ink);
+}
+
+body:has(.books-hero) .reader-response-card small {
+  color: var(--ink-soft);
+}
+
+body:has(.books-hero) .book-cta-row + p,
+body:has(.books-hero) #bulk-orders p {
+  color: var(--ink-soft);
+}
+
+/* Dedicated release page follows the same bookshop language. */
+body:has(.release-hero) main {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body:has(.release-hero) .release-hero {
+  padding-top: clamp(7.2rem, 10vw, 9rem);
+  border-bottom-color: #ded8cc;
+  background: var(--paper-warm);
+}
+
+body:has(.release-hero) .release-hero__cover {
+  padding: 1.4rem;
+  border-bottom: 5px solid #cad7d4;
+  background: var(--mist);
+}
+
+body:has(.release-hero) .release-hero__cover img {
+  border-radius: 3px;
+  box-shadow: var(--shadow-book);
+  transform: rotate(-0.7deg);
+}
+
+body:has(.release-hero) .release-hero__copy h1 {
+  color: var(--ink);
+}
+
+body:has(.release-hero) .release-hero__authors {
+  color: var(--teal-deep);
+}
+
+body:has(.release-hero) .release-hero__lead,
+body:has(.release-hero) .release-retail > span,
+body:has(.release-hero) .release-next p:not(.eyebrow) {
+  color: var(--ink-soft);
+}
+
+body:has(.release-hero) .release-retail {
+  border-color: #d8ddd8;
+}
+
+body:has(.release-hero) .release-retail a {
+  color: var(--teal-deep);
+}
+
+body:has(.release-hero) .release-next {
+  background: var(--mist);
+}
+
+body:has(.release-hero) .release-next h2 {
+  color: var(--ink);
+}
+
+/* A brighter invitation and a calmer close across every shared page. */
+body:has(.cover-hero) .stay-connected,
+body:has(.page-hero) .stay-connected,
+body:has(.books-hero) .stay-connected,
+body:has(.release-hero) .stay-connected {
+  background: var(--mist);
+  color: var(--ink);
+}
+
+body:has(.cover-hero) .stay-connected::before,
+body:has(.page-hero) .stay-connected::before,
+body:has(.books-hero) .stay-connected::before,
+body:has(.release-hero) .stay-connected::before {
+  background: var(--teal);
+  opacity: 0.35;
+}
+
+body:has(.cover-hero) .stay-connected__inner,
+body:has(.page-hero) .stay-connected__inner,
+body:has(.books-hero) .stay-connected__inner,
+body:has(.release-hero) .stay-connected__inner {
+  border-color: #c4d5d2;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.74);
+}
+
+body:has(.cover-hero) .stay-connected__title,
+body:has(.page-hero) .stay-connected__title,
+body:has(.books-hero) .stay-connected__title,
+body:has(.release-hero) .stay-connected__title {
+  color: var(--ink);
+}
+
+body:has(.cover-hero) .stay-connected__body,
+body:has(.page-hero) .stay-connected__body,
+body:has(.books-hero) .stay-connected__body,
+body:has(.release-hero) .stay-connected__body {
+  color: var(--ink-soft);
+}
+
+body:has(.cover-hero) .stay-connected__motif,
+body:has(.page-hero) .stay-connected__motif,
+body:has(.books-hero) .stay-connected__motif,
+body:has(.release-hero) .stay-connected__motif {
+  opacity: 0.12;
+}
+
+body:has(.cover-hero) .site-footer,
+body:has(.page-hero) .site-footer,
+body:has(.books-hero) .site-footer,
+body:has(.release-hero) .site-footer {
+  margin-top: 0;
+  border-top-color: #c9d6d3;
+  background: #edf3f1;
+  color: var(--ink-soft);
+}
+
+body:has(.cover-hero) .site-footer__brand,
+body:has(.page-hero) .site-footer__brand,
+body:has(.books-hero) .site-footer__brand,
+body:has(.release-hero) .site-footer__brand {
+  color: var(--ink);
+}
+
+body:has(.cover-hero) .site-footer__tagline,
+body:has(.page-hero) .site-footer__tagline,
+body:has(.books-hero) .site-footer__tagline,
+body:has(.release-hero) .site-footer__tagline {
+  color: var(--clay);
+}
+
+body:has(.cover-hero) .site-footer__email,
+body:has(.cover-hero) .site-footer__nav a,
+body:has(.cover-hero) .site-footer__social a,
+body:has(.cover-hero) .site-footer__legal a,
+body:has(.page-hero) .site-footer__email,
+body:has(.page-hero) .site-footer__nav a,
+body:has(.page-hero) .site-footer__social a,
+body:has(.page-hero) .site-footer__legal a,
+body:has(.books-hero) .site-footer__email,
+body:has(.books-hero) .site-footer__nav a,
+body:has(.books-hero) .site-footer__social a,
+body:has(.books-hero) .site-footer__legal a,
+body:has(.release-hero) .site-footer__email,
+body:has(.release-hero) .site-footer__nav a,
+body:has(.release-hero) .site-footer__social a,
+body:has(.release-hero) .site-footer__legal a {
+  color: var(--teal-deep);
+}
+
+body:has(.cover-hero) .site-footer__nav a[href="lab.html"],
+body:has(.page-hero) .site-footer__nav a[href="lab.html"],
+body:has(.books-hero) .site-footer__nav a[href="lab.html"],
+body:has(.release-hero) .site-footer__nav a[href="lab.html"] {
+  color: var(--clay);
+}
+
+body:has(.cover-hero) .site-footer__social,
+body:has(.cover-hero) .site-footer__legal,
+body:has(.page-hero) .site-footer__social,
+body:has(.page-hero) .site-footer__legal,
+body:has(.books-hero) .site-footer__social,
+body:has(.books-hero) .site-footer__legal,
+body:has(.release-hero) .site-footer__social,
+body:has(.release-hero) .site-footer__legal {
+  border-color: #cedbd8;
+  color: var(--ink-soft);
+}
+
+body:has(.cover-hero) .site-footer__sep,
+body:has(.page-hero) .site-footer__sep,
+body:has(.books-hero) .site-footer__sep,
+body:has(.release-hero) .site-footer__sep {
+  color: #8fa09d;
+}
+
+@media (max-width: 760px) {
+  body:has(.cover-hero) .home-featured-book__inner,
+  body:has(.release-hero) .release-hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  body:has(.cover-hero) .home-featured-book__cover,
+  body:has(.release-hero) .release-hero__cover {
+    width: min(100%, 290px);
+    justify-self: start;
+  }
+
+  body:has(.books-hero) .purchase-book {
+    grid-template-columns: 1fr;
+  }
+
+  body:has(.books-hero) .purchase-book__cover {
+    width: min(100%, 310px);
+    justify-self: start;
+  }
+}
+
+@media (max-width: 560px) {
+  body:has(.page-hero) .page-hero,
+  body:has(.books-hero) .books-hero--carousel,
+  body:has(.release-hero) .release-hero {
+    padding-top: 6.5rem !important;
+  }
+
+  body:has(.books-hero) .books-hero--carousel .books-hero__title,
+  body:has(.page-hero) .page-hero__title {
+    font-size: clamp(2.55rem, 13vw, 4.2rem);
+    line-height: 0.98;
+  }
+
+  body:has(.cover-hero) .home-featured-book__copy h2 {
+    font-size: clamp(2.45rem, 12vw, 4rem);
+  }
+
+  body:has(.page-hero) .topic-card,
+  body:has(.page-hero) .card,
+  body:has(.page-hero) .qa-item,
+  body:has(.page-hero) .contact-card,
+  body:has(.page-hero) .form,
+  body:has(.books-hero) .purchase-book {
+    padding: 1.25rem;
+  }
+
+  body:has(.cover-hero) .stay-connected__inner,
+  body:has(.page-hero) .stay-connected__inner,
+  body:has(.books-hero) .stay-connected__inner,
+  body:has(.release-hero) .stay-connected__inner {
+    padding: 1.5rem;
+  }
+}
