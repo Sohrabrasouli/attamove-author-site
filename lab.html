@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Self-Sufficiency Lab | Atta Arghandiwal</title>
-<meta name="description" content="The Self-Sufficiency Lab helps immigrants and refugees rebuild careers in the age of AI through hands-on cohorts hosted by trusted community partners.">
+<meta name="description" content="The Self-Sufficiency Lab helps immigrants, refugees, and people changing careers use AI safely for real work, education, and career tasks.">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://attamoves.com/lab.html">
 <meta property="og:title" content="The Self-Sufficiency Lab">
-<meta property="og:description" content="Helping immigrants and refugees rebuild careers in the age of AI.">
+<meta property="og:description" content="Practical, human-guided AI learning for immigrants, refugees, and people moving their careers forward.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://attamoves.com/lab.html">
 <meta property="og:image" content="https://attamoves.com/images/self-sufficient-immigrant-age-ai-cover.png">
@@ -74,16 +74,16 @@
   .nav.open .burger span:nth-child(2){opacity:0}
   .nav.open .burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 
-  .hero{position:relative;overflow:hidden;text-align:center;padding-block:clamp(4.5rem,10vw,7.5rem) clamp(4rem,8vw,6.5rem)}
+  .hero{position:relative;overflow:hidden;text-align:center;padding-block:clamp(3rem,5vw,4rem) clamp(3.5rem,7vw,5rem)}
   .hero::before{content:"";position:absolute;inset:auto -12% -26% -12%;height:42%;
     background:radial-gradient(circle at 50% 0%,rgba(143,99,23,.16),transparent 62%);pointer-events:none}
   .hero__inner{position:relative;z-index:1}
-  .hero h1{font-size:clamp(3rem,7vw,5.8rem);line-height:.98;max-width:17ch;margin:.15rem auto 0}
-  .hero .lead{margin:1.55rem auto 0;text-align:center;max-width:66ch}
+  .hero h1{font-size:clamp(3rem,6vw,5.25rem);line-height:.98;max-width:17ch;margin:.15rem auto 0}
+  .hero .lead{margin:1.25rem auto 0;text-align:center;max-width:66ch}
   .byline{margin:1.15rem auto 0;color:#333f4f;font-weight:600;line-height:1.55;max-width:60ch}
   .byline em{font-family:var(--serif);font-size:1.18em;color:var(--ink)}
-  .hero .cta{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:2.35rem}
-  .hero-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:clamp(2.6rem,5vw,4rem) auto 0;max-width:920px;text-align:left}
+  .hero .cta{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem}
+  .hero-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:clamp(2rem,4vw,3rem) auto 0;max-width:920px;text-align:left}
   .hero-proof article{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.15rem 1.2rem;
     box-shadow:0 18px 40px rgba(6,18,37,.07)}
   .hero-proof b{display:block;font-family:var(--serif);font-size:1.8rem;line-height:1;color:var(--gold);font-weight:600}
@@ -105,11 +105,17 @@
   .book-feature__cover{width:min(230px,78%);margin:0 auto 1.75rem;padding:.65rem;background:#fff;
     border-radius:9px;box-shadow:0 22px 44px rgba(0,0,0,.28)}
   .book-feature__cover img{border-radius:5px}
-  .book-feature span{display:block;color:var(--gold-bright);font-size:.72rem;font-weight:800;
+  .book-feature > span{display:block;color:var(--gold-bright);font-size:.72rem;font-weight:800;
     letter-spacing:.16em;text-transform:uppercase;margin-bottom:.7rem}
   .book-feature h3{color:#fff;font-size:clamp(1.8rem,3vw,2.35rem);line-height:1.05}
   .book-feature p{margin-top:1rem;color:#c7d2e0;font-size:.98rem;line-height:1.65}
   .book-feature em{color:#fff9ec}
+  .book-feature__actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.35rem}
+  .book-feature__actions .btn{padding:.88rem 1.15rem;font-size:.88rem}
+  .book-feature__actions .btn--buy{background:var(--gold-bright);color:var(--ink)}
+  .book-feature__actions .btn--buy:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(0,0,0,.24)}
+  .book-feature__actions .btn--retail{background:transparent;color:#fff;border-color:var(--line-dark)}
+  .book-feature__actions .btn--retail:hover{border-color:var(--gold-bright);transform:translateY(-2px)}
 
   .creator-grid{display:grid;grid-template-columns:1fr;gap:1rem}
   .creator-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:clamp(1.25rem,3vw,2rem);
@@ -188,6 +194,7 @@
   @media (max-width:520px){
     .hero-proof article,.col,.creator-card,.measure-card{border-radius:10px}
     .btn{width:100%}
+    .book-feature__actions{display:grid}
   }
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -217,50 +224,54 @@
   <section class="hero wrap">
     <div class="hero__inner">
       <p class="eyebrow">The Self-Sufficiency Lab</p>
-      <h1>Helping immigrants and refugees rebuild careers in the age of AI.</h1>
-      <p class="byline">By Atta Arghandiwal and Sohrab Rasouli. Based on the book <em>The Self-Sufficient Immigrant in the Age of AI</em>.</p>
-      <p class="lead">At a time when AI is reshaping the workforce, millions of jobs remain unfilled while many work-authorized immigrants and refugees, including people with professional degrees and years of experience, are unemployed or working in jobs far below their qualifications.</p>
+      <h1>Use AI with confidence. Move your career forward.</h1>
+      <p class="byline">A practical learning program created by Atta Arghandiwal and Sohrab Rasouli, co-authors of <em>The Self-Sufficient Immigrant in the Age of AI</em>.</p>
+      <p class="lead">If you are new to the United States, returning to work, or trying to move into a role that better reflects your experience, the Lab helps you use AI for real career tasks without giving up your judgment, privacy, or voice.</p>
       <div class="cta">
-        <a class="btn btn--solid" href="#connect">Bring the Lab to your community</a>
-        <a class="btn btn--outline" href="#how">See how it works</a>
+        <a class="btn btn--solid" href="#connect">I am interested in the Lab</a>
+        <a class="btn btn--outline" href="#how">See what you will learn</a>
       </div>
-      <div class="hero-proof" aria-label="Program at a glance">
-        <article><b>15-25</b><span>hours of hands-on learning over a focused cohort.</span></article>
-        <article><b>5-8</b><span>weeks hosted with trusted community and adult education partners.</span></article>
-        <article><b>1</b><span>clear next step toward work, education, or career advancement.</span></article>
+      <div class="hero-proof" aria-label="The Lab at a glance">
+        <article><b>15-25</b><span>hours of guided practice with real career tasks.</span></article>
+        <article><b>5-8</b><span>weeks in a small, supportive learning group.</span></article>
+        <article><b>3</b><span>practical takeaways: a resume, an action plan, and a clear next step.</span></article>
       </div>
     </div>
   </section>
 
   <section class="sec stmt wrap">
     <hr class="rule">
-    <h2>AI is a tool, not an authority.</h2>
-    <p>The Lab helps participants use AI safely, confidently, and thoughtfully while building on the skills, experience, and judgment they already possess.</p>
+    <h2>AI is a tool. You stay in charge.</h2>
+    <p>You will learn how to use AI safely and thoughtfully while building on the skills, experience, and judgment you already have.</p>
   </section>
 
   <section class="sec sand">
     <div class="wrap why-copy">
-      <p class="eyebrow">Why the Lab exists</p>
-      <h2>Practical AI learning for people navigating real career transitions.</h2>
-      <p class="lead">As entry-level pathways disappear and the organizations that support newcomers face growing demand and shrinking resources, the people with the fewest resources to adapt are encountering these changes first.</p>
-      <p>The Self-Sufficiency Lab was created to help close that gap. Rather than teaching AI for its own sake, it helps immigrants, refugees, and others navigating career transitions use AI as a practical tool to rebuild careers, access meaningful work, and achieve greater economic self-sufficiency.</p>
+      <p class="eyebrow">Start with what you already know</p>
+      <h2>Your experience still matters. The Lab helps you use it.</h2>
+      <p class="lead">You do not need to become a technology expert. You need practical ways to use new tools for the work and decisions in front of you.</p>
+      <p>In the Lab, you practice using AI to strengthen a resume, prepare for job searches and interviews, write clear messages, compare options, and create a realistic plan for what comes next.</p>
     </div>
   </section>
 
   <section class="sec mist">
     <div class="wrap">
       <div class="head-max">
-        <p class="eyebrow">Grounded experience</p>
-        <h2>The co-authors and the book behind the Lab.</h2>
+        <p class="eyebrow">The people behind the Lab</p>
+        <h2>Built from lived experience and practical work.</h2>
       </div>
       <div class="origin-grid">
         <article class="book-feature">
           <div class="book-feature__cover">
             <img src="https://attamoves.com/images/self-sufficient-immigrant-age-ai-cover.png" alt="Cover of The Self-Sufficient Immigrant in the Age of AI">
           </div>
-          <span>The book behind the Lab</span>
+          <span>Now published &middot; The book behind the Lab</span>
           <h3><em>The Self-Sufficient Immigrant in the Age of AI</em></h3>
-          <p>Co-authored by Atta Arghandiwal and Sohrab Rasouli. The Lab brings the book's ideas into trusted community settings through practical, hands-on learning.</p>
+          <p>Co-authored by Atta Arghandiwal and Sohrab Rasouli. The Lab turns the book's ideas into guided practice you can use in your career and daily life.</p>
+          <div class="book-feature__actions">
+            <a class="btn btn--buy" href="https://bit.ly/4pr3TOU" target="_blank" rel="noopener noreferrer">Buy on Amazon <span aria-hidden="true">↗</span></a>
+            <a class="btn btn--retail" href="books.html#self-sufficient-immigrant-age-of-ai">See all retailers</a>
+          </div>
         </article>
         <div class="creator-grid">
           <article class="creator-card creator-card--featured">
@@ -280,46 +291,46 @@
 
   <section class="sec dark">
     <div class="wrap">
-      <p class="eyebrow">Who it serves</p>
-      <h2>Prioritizing the people facing the greatest barriers to economic mobility.</h2>
-      <p class="lead">The Lab is designed for recently arrived immigrants and refugees, skilled professionals working below their experience, transitional-aged youth navigating education and career pathways, and people re-entering the workforce as AI changes the jobs and opportunities they are pursuing.</p>
+      <p class="eyebrow">Is the Lab for you?</p>
+      <h2>The Lab meets you where you are.</h2>
+      <p class="lead">The Lab is for immigrants, refugees, young adults, and people returning to work who want practical support using AI for employment, education, or career advancement.</p>
       <div class="stats">
-        <div class="stat"><b>Skilled</b><span>Professionals whose current roles do not reflect their prior training, degrees, or years of experience.</span></div>
-        <div class="stat"><b>18-26</b><span>Transitional-aged youth building education, confidence, and first career pathways.</span></div>
-        <div class="stat"><b>Return</b><span>People re-entering the workforce and needing safe, practical ways to use new tools.</span></div>
+        <div class="stat"><b>Experienced</b><span>You have training, a degree, or years of experience, but your current role does not reflect what you can do.</span></div>
+        <div class="stat"><b>Ages 18-26</b><span>You are building confidence and choosing your first education or career path.</span></div>
+        <div class="stat"><b>Returning</b><span>You are coming back to the workforce and want a safe, practical way to use new tools.</span></div>
       </div>
     </div>
   </section>
 
   <section id="how" class="sec sand">
     <div class="wrap">
-      <div class="head-max"><p class="eyebrow">How it works</p><h2>Small cohorts, real tasks, and useful outcomes.</h2></div>
+      <div class="head-max"><p class="eyebrow">What you will do</p><h2>Learn in a small group. Practice with real career tasks.</h2></div>
       <div class="steps">
-        <div class="step"><b>01</b><p>Trusted community organizations and adult education partners host small cohorts.</p></div>
-        <div class="step"><b>02</b><p>Participants complete 15-25 hours of hands-on learning over 5-8 weeks.</p></div>
-        <div class="step"><b>03</b><p>Every session applies AI to practical career tasks: resumes, job searches, messages, action plans, and safer decision-making.</p></div>
-        <div class="step"><b>04</b><p>Participants leave with practical AI skills, a working resume, a personalized action plan, and a clear next step toward work, education, or career advancement.</p></div>
+        <div class="step"><b>01</b><p>Join a small group at a community organization or adult education program you know and trust.</p></div>
+        <div class="step"><b>02</b><p>Complete 15-25 hours of guided, hands-on learning over 5-8 weeks.</p></div>
+        <div class="step"><b>03</b><p>Use AI for resumes, job searches, interview preparation, messages, action plans, and everyday decisions.</p></div>
+        <div class="step"><b>04</b><p>Leave with practical AI skills, a working resume, a personal action plan, and a clear next step toward work or education.</p></div>
       </div>
-      <p class="leave">The goal is not to make AI the expert. The goal is to help each person use AI while keeping their own <em>judgment</em> in charge.</p>
+      <p class="leave">The goal is not to make AI the expert. The goal is to help you use AI while keeping your own <em>judgment</em> in charge.</p>
     </div>
   </section>
 
   <section class="sec">
     <div class="wrap">
-      <div class="head-max"><p class="eyebrow">Measuring success</p><h2>The first cohort will establish the baseline.</h2></div>
+      <div class="head-max"><p class="eyebrow">What you will leave with</p><h2>Useful work you can keep using after the Lab.</h2></div>
       <div class="measure-grid">
         <article class="measure-card">
-          <h3>What will be measured</h3>
+          <h3>Career tools you can use</h3>
           <ul>
-            <li>Completion rates.</li>
-            <li>Growth in AI confidence and practical skills.</li>
-            <li>Ability to apply AI safely to real-world tasks.</li>
-            <li>Concrete next steps toward work or education.</li>
+            <li>A working resume you can continue to improve.</li>
+            <li>Stronger job-search and interview preparation.</li>
+            <li>A safer way to ask AI for help and check its answers.</li>
+            <li>More confidence using AI for real-world tasks.</li>
           </ul>
         </article>
         <article class="measure-card">
-          <h3>Why the pilot matters</h3>
-          <p>The first cohort will generate the evidence needed to refine the curriculum, strengthen delivery, and understand what community partners need before the model expands.</p>
+          <h3>Your personal next-step plan</h3>
+          <p>You will identify the next action that makes sense for you, whether that is applying for work, improving a skill, continuing your education, or moving toward a role that better matches your experience.</p>
         </article>
       </div>
     </div>
@@ -328,36 +339,36 @@
   <section class="sec mist">
     <div class="wrap split">
       <div>
-        <p class="eyebrow">Cost and scalability</p>
-        <h2>Lean by design, built inside systems communities already trust.</h2>
-        <p class="lead">The Lab operates within existing community organizations and adult education programs rather than creating new infrastructure.</p>
-        <p>An initial cohort requires a modest investment, allowing a single sponsor or small group of partners to underwrite the pilot and clearly evaluate its outcomes. As the model matures, it can expand through workforce and adult education systems that already have the infrastructure and relationships to reach more learners.</p>
+        <p class="eyebrow">What makes the Lab different</p>
+        <h2>Human support comes first.</h2>
+        <p class="lead">You learn in a small group, with guidance, time to ask questions, and room to practice at your own pace.</p>
+        <p>The Lab is hosted by community organizations and adult education programs so you can learn in a familiar setting. Every activity begins with a real need, not with technology for its own sake.</p>
       </div>
       <div class="measure-card">
-        <h3>A pilot grounded in evidence</h3>
-        <p>The Self-Sufficiency Lab is informed by current workforce research, emerging AI literacy standards, and the practical framework developed in <em>The Self-Sufficient Immigrant in the Age of AI</em>.</p>
+        <h3>Built for real life</h3>
+        <p>The Lab draws on workforce research, practical AI literacy guidance, and the framework developed in <em>The Self-Sufficient Immigrant in the Age of AI</em>. You learn when AI can help, when to slow down, and when human judgment must come first.</p>
       </div>
     </div>
   </section>
 
   <section class="sec">
     <div class="wrap">
-      <div class="head-max"><p class="eyebrow">Get involved</p><h2>Three ways to build the first cohorts with us.</h2></div>
+      <div class="head-max"><p class="eyebrow">Choose your next step</p><h2>Join the Lab or help bring it to your community.</h2></div>
       <div class="cols">
-        <div class="col"><hr class="tick"><h3>Community partners</h3><p>Host a cohort for the people you serve. The Lab brings structured, hands-on AI learning into trusted community settings.</p></div>
-        <div class="col"><hr class="tick"><h3>Sponsors</h3><p>Underwrite an initial cohort and help create measurable evidence for a model that can grow through existing workforce and education systems.</p></div>
-        <div class="col"><hr class="tick"><h3>Learners</h3><p>Tell us if you or someone you know wants practical AI support for work, education, or career advancement.</p></div>
+        <div class="col"><hr class="tick"><h3>Join as a learner</h3><p>Tell us what you are working toward and where you are located. We will let you know when a suitable learning group is available.</p></div>
+        <div class="col"><hr class="tick"><h3>Host with your organization</h3><p>Bring practical, hands-on AI learning to the immigrants, refugees, young adults, or job seekers you already serve.</p></div>
+        <div class="col"><hr class="tick"><h3>Support a learning group</h3><p>Help cover the cost so learners can build useful skills in a trusted community setting.</p></div>
       </div>
     </div>
   </section>
 
   <section id="connect" class="sec sand final">
     <div class="wrap">
-      <p class="eyebrow">Start a conversation</p>
-      <h2>Bring The Self-Sufficiency Lab to your community.</h2>
-      <p class="lead" style="margin-left:auto;margin-right:auto">We are building the first cohort model with partners who care about employment, dignity, and practical AI literacy for newcomers and career-transitioning learners.</p>
+      <p class="eyebrow">Ready to take the next step?</p>
+      <h2>Tell us how the Lab could help you or your community.</h2>
+      <p class="lead" style="margin-left:auto;margin-right:auto">Whether you want to join as a learner, host a group, or support a learning group, send a short note and tell us what you have in mind.</p>
       <div class="cta">
-        <a class="btn btn--solid" href="mailto:atta@attamoves.com?subject=The%20Self-Sufficiency%20Lab&body=Hi%2C%0A%0AI%27d%20like%20to%20talk%20about%20The%20Self-Sufficiency%20Lab.%0A%0AName%3A%0AOrganization%20(if%20any)%3A%0AHow%20I%27d%20like%20to%20help%20or%20take%20part%3A%0A%0AThank%20you.">Email us about the Lab</a>
+        <a class="btn btn--solid" href="mailto:atta@attamoves.com?subject=The%20Self-Sufficiency%20Lab&body=Hi%2C%0A%0AI%27m%20interested%20in%20The%20Self-Sufficiency%20Lab.%0A%0AName%3A%0ALocation%3A%0AOrganization%20(if%20any)%3A%0AI%27m%20interested%20in%20joining%2C%20hosting%2C%20or%20supporting%3A%0A%0AThank%20you.">Ask about joining or hosting</a>
         <a class="btn btn--outline" href="contact.html">Other ways to reach us</a>
       </div>
       <p class="note">Based on the book <em>The Self-Sufficient Immigrant in the Age of AI</em> by Atta Arghandiwal and Sohrab Rasouli.</p>
