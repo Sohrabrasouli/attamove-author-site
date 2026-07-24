@@ -15,7 +15,7 @@
 <link rel="icon" href="https://attamoves.com/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#fffefa; --sand:#f5f1e8; --soft:#fbf8f1; --ink:#0b1526; --navy:#061225;
@@ -23,8 +23,9 @@
     --line:#e8e0d2; --line-dark:#25354d; --mist:#edf4f5;
     --space-sm:clamp(1.75rem,3vw,2.25rem); --space-md:clamp(2.25rem,4vw,3.5rem);
     --space-lg:clamp(4.5rem,10vw,8.5rem);
-    --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
     --sans:"Inter","Helvetica Neue",system-ui,-apple-system,Arial,sans-serif;
+    --serif:var(--sans);
+    --book:"Futura","Jost","Avenir Next","Century Gothic","Trebuchet MS",Arial,sans-serif;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth;scroll-padding-top:88px}
@@ -32,7 +33,7 @@
     font-size:17px;line-height:1.72;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   img{max-width:100%;display:block}
   a{color:inherit}
-  h1,h2,h3{font-family:var(--serif);color:var(--ink);font-weight:600;margin:0;text-wrap:balance;letter-spacing:0}
+  h1,h2,h3{font-family:var(--serif);color:var(--ink);font-weight:700;margin:0;text-wrap:balance;letter-spacing:0}
   p{margin:0;text-wrap:pretty}
   :where(a,button,[tabindex]):focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
   .dark :focus-visible,.foot :focus-visible{outline-color:var(--gold-bright)}
@@ -44,7 +45,7 @@
     text-transform:uppercase;color:var(--gold);margin:0 0 1.05rem}
   .lead{font-size:clamp(1.08rem,1.7vw,1.28rem);line-height:1.75;color:var(--body);max-width:62ch}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:var(--sans);
-    font-weight:700;font-size:1rem;line-height:1;border-radius:999px;padding:1.02rem 1.72rem;text-decoration:none;
+    font-weight:700;font-size:1rem;line-height:1;border-radius:6px;padding:1.02rem 1.72rem;text-decoration:none;
     border:1px solid transparent;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
   .btn--solid{background:var(--ink);color:#fff}
   .btn--solid:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(11,21,38,.22)}
@@ -78,14 +79,13 @@
   .hero::before{content:"";position:absolute;inset:auto -12% -26% -12%;height:42%;
     background:radial-gradient(circle at 50% 0%,rgba(143,99,23,.16),transparent 62%);pointer-events:none}
   .hero__inner{position:relative;z-index:1}
-  .hero h1{font-size:clamp(3rem,6vw,5.25rem);line-height:.98;max-width:17ch;margin:.15rem auto 0}
+  .hero h1{font-size:clamp(2.75rem,5.4vw,4.65rem);line-height:1.02;max-width:18ch;margin:.15rem auto 0}
   .hero .lead{margin:1.25rem auto 0;text-align:center;max-width:66ch}
   .byline{margin:1.15rem auto 0;color:#333f4f;font-weight:600;line-height:1.55;max-width:60ch}
-  .byline em{font-family:var(--serif);font-size:1.18em;color:var(--ink)}
+  .byline em{font-family:var(--book);font-size:1em;font-style:normal;font-weight:500;color:var(--ink)}
   .hero .cta{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem}
   .hero-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:clamp(2rem,4vw,3rem) auto 0;max-width:920px;text-align:left}
-  .hero-proof article{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.15rem 1.2rem;
-    box-shadow:0 18px 40px rgba(6,18,37,.07)}
+  .hero-proof article{background:#fff;border:1px solid var(--line);border-radius:6px;padding:1.15rem 1.2rem}
   .hero-proof b{display:block;font-family:var(--serif);font-size:1.8rem;line-height:1;color:var(--gold);font-weight:600}
   .hero-proof span{display:block;margin-top:.45rem;font-size:.9rem;line-height:1.45;color:var(--body)}
 
@@ -100,16 +100,17 @@
 
   .origin-grid{display:grid;grid-template-columns:minmax(280px,.82fr) minmax(0,1.35fr);
     gap:clamp(1.25rem,4vw,3rem);align-items:start;margin-top:var(--space-md)}
-  .book-feature{background:var(--navy);color:#c7d2e0;border:1px solid var(--line-dark);border-radius:12px;
+  .book-feature{background:var(--navy);color:#c7d2e0;border:1px solid var(--line-dark);border-radius:6px;
     padding:clamp(1.25rem,3vw,2rem);box-shadow:0 26px 60px -30px rgba(6,18,37,.6)}
-  .book-feature__cover{width:min(230px,78%);margin:0 auto 1.75rem;padding:.65rem;background:#fff;
-    border-radius:9px;box-shadow:0 22px 44px rgba(0,0,0,.28)}
-  .book-feature__cover img{border-radius:5px}
+  .book-feature__cover{width:min(230px,78%);margin:0 auto 1.75rem;padding:0;background:transparent;
+    border-radius:0;box-shadow:none}
+  .book-feature__cover img{border-radius:0}
   .book-feature > span{display:block;color:var(--gold-bright);font-size:.72rem;font-weight:800;
     letter-spacing:.16em;text-transform:uppercase;margin-bottom:.7rem}
   .book-feature h3{color:#fff;font-size:clamp(1.8rem,3vw,2.35rem);line-height:1.05}
   .book-feature p{margin-top:1rem;color:#c7d2e0;font-size:.98rem;line-height:1.65}
   .book-feature em{color:#fff9ec}
+  .ai-book-title{font-family:var(--book)!important;font-style:normal;font-weight:500!important;letter-spacing:0}
   .book-feature__actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.35rem}
   .book-feature__actions .btn{padding:.88rem 1.15rem;font-size:.88rem}
   .book-feature__actions .btn--buy{background:var(--gold-bright);color:var(--ink)}
@@ -118,8 +119,7 @@
   .book-feature__actions .btn--retail:hover{border-color:var(--gold-bright);transform:translateY(-2px)}
 
   .creator-grid{display:grid;grid-template-columns:1fr;gap:1rem}
-  .creator-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:clamp(1.25rem,3vw,2rem);
-    box-shadow:0 18px 44px rgba(6,18,37,.06)}
+  .creator-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:clamp(1.25rem,3vw,2rem)}
   .creator-card--featured{border-top:3px solid var(--teal)}
   .creator-card span{display:block;color:var(--gold);font-size:.75rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.65rem}
   .creator-card h3{font-size:clamp(1.85rem,3vw,2.4rem);line-height:1.08;margin-bottom:.8rem}
@@ -139,7 +139,7 @@
   .head-max{max-width:34ch}
   .head-max h2{font-size:clamp(2.05rem,4.4vw,3.25rem);line-height:1.08;margin:.2rem 0 0}
   .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.25rem,3vw,2.25rem);margin-top:var(--space-md)}
-  .col{background:#fff;border:1px solid var(--line);border-radius:12px;padding:clamp(1.15rem,2.6vw,1.75rem);box-shadow:0 16px 36px rgba(6,18,37,.055)}
+  .col{background:#fff;border:1px solid var(--line);border-radius:6px;padding:clamp(1.15rem,2.6vw,1.75rem)}
   .col .tick{width:34px;height:2px;background:var(--gold);border:0;margin:0 0 1.15rem}
   .col h3{font-size:1.5rem;line-height:1.15;margin:0 0 .55rem}
   .col p{font-size:1rem;line-height:1.65}
@@ -152,7 +152,7 @@
   .leave em{font-style:normal;color:var(--gold)}
 
   .measure-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.25rem,3vw,2rem);margin-top:var(--space-md)}
-  .measure-card{border:1px solid var(--line);border-radius:12px;padding:clamp(1.25rem,3vw,2rem);background:#fff}
+  .measure-card{border:1px solid var(--line);border-radius:6px;padding:clamp(1.25rem,3vw,2rem);background:#fff}
   .measure-card h3{font-size:clamp(1.65rem,3vw,2.2rem);margin-bottom:.7rem}
   .measure-card ul{margin:1rem 0 0;padding-left:1.15rem;color:var(--body)}
   .measure-card li+li{margin-top:.45rem}
@@ -171,8 +171,11 @@
   .foot a:hover{color:#9a552f}
   .foot .links{display:flex;flex-wrap:wrap;gap:.6rem 1.25rem;justify-content:center;font-size:.92rem}
   .foot .social{display:flex;flex-wrap:wrap;gap:.6rem 1.1rem;justify-content:center;font-size:.85rem;color:#61777c}
-  .foot .links a,.foot .social a{padding:.35rem .1rem;display:inline-block}
+  .foot .links a,.foot .social a{min-height:36px;padding:.35rem .1rem;display:inline-flex;align-items:center}
   .foot .legal{font-size:.8rem;color:#61777c;margin-top:.3rem}
+  .skip-link{position:fixed;left:1rem;top:1rem;z-index:100;padding:.75rem 1rem;background:var(--ink);color:#fff;
+    transform:translateY(-160%);transition:transform .2s;text-decoration:none;border-radius:6px}
+  .skip-link:focus{transform:translateY(0)}
 
   @media (max-width:820px){
     body{font-size:16px}
@@ -200,6 +203,7 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="nav" id="nav">
   <div class="wrap nav__in">
@@ -219,7 +223,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
 
   <section class="hero wrap">
     <div class="hero__inner">
@@ -266,21 +270,21 @@
             <img src="https://attamoves.com/images/self-sufficient-immigrant-age-ai-cover.png" alt="Cover of The Self-Sufficient Immigrant in the Age of AI">
           </div>
           <span>Now published &middot; The book behind the Lab</span>
-          <h3><em>The Self-Sufficient Immigrant in the Age of AI</em></h3>
+          <h3><em class="ai-book-title">The Self-Sufficient Immigrant in the Age of AI</em></h3>
           <p>Co-authored by Atta Arghandiwal and Sohrab Rasouli. The Lab turns the book's ideas into guided practice you can use in your career and daily life.</p>
           <div class="book-feature__actions">
             <a class="btn btn--buy" href="https://bit.ly/4pr3TOU" target="_blank" rel="noopener noreferrer">Buy on Amazon <span aria-hidden="true">↗</span></a>
-            <a class="btn btn--retail" href="books.html#self-sufficient-immigrant-age-of-ai">See all retailers</a>
+            <a class="btn btn--retail" href="stand.html">Explore the book</a>
           </div>
         </article>
         <div class="creator-grid">
           <article class="creator-card creator-card--featured">
-            <span>Co-author &middot; Founder of Noura</span>
+            <span>Co-author of the book &middot; Founder of Noura</span>
             <h3>Sohrab Rasouli</h3>
             <p>Sohrab Rasouli is an Afghan immigrant, the founder of Noura, and co-author of <em>The Self-Sufficient Immigrant in the Age of AI</em>. His path has taken him from a farming village in northern Afghanistan to the United Kingdom, Kabul, and the United States. After working as an educator, founding the Creative Academy, and serving newcomers as an Employment Specialist, he created Noura&mdash;a supervised AI work partner for employment-support teams. His work focuses on building practical tools that solve real problems while preserving human judgment and dignity.</p>
           </article>
           <article class="creator-card">
-            <span>Co-author &middot; Author and speaker</span>
+            <span>Co-author of the book &middot; Author and speaker</span>
             <h3>Atta Arghandiwal</h3>
             <p>Atta rebuilt his own life after fleeing Afghanistan as a refugee, went on to a 28-year banking career, and has spent years writing about immigrant success and self-sufficiency.</p>
           </article>
@@ -368,7 +372,7 @@
       <h2>Tell us how the Lab could help you or your community.</h2>
       <p class="lead" style="margin-left:auto;margin-right:auto">Whether you want to join as a learner, host a group, or support a learning group, send a short note and tell us what you have in mind.</p>
       <div class="cta">
-        <a class="btn btn--solid" href="mailto:atta@attamoves.com?subject=The%20Self-Sufficiency%20Lab&body=Hi%2C%0A%0AI%27m%20interested%20in%20The%20Self-Sufficiency%20Lab.%0A%0AName%3A%0ALocation%3A%0AOrganization%20(if%20any)%3A%0AI%27m%20interested%20in%20joining%2C%20hosting%2C%20or%20supporting%3A%0A%0AThank%20you.">Ask about joining or hosting</a>
+        <a class="btn btn--solid" href="mailto:atta@attamoves.com?subject=The%20Self-Sufficiency%20Lab&body=Hi%2C%0A%0AI%27m%20interested%20in%20The%20Self-Sufficiency%20Lab.%0A%0AName%3A%0ALocation%3A%0AOrganization%20(if%20any)%3A%0AI%27m%20interested%20in%20joining%2C%20hosting%2C%20or%20supporting%3A%0A%0AThank%20you.">Ask about joining, hosting, or supporting</a>
         <a class="btn btn--outline" href="contact.html">Other ways to reach us</a>
       </div>
       <p class="note">Based on the book <em>The Self-Sufficient Immigrant in the Age of AI</em> by Atta Arghandiwal and Sohrab Rasouli.</p>

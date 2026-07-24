@@ -20,12 +20,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Jost:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css?v=editorial-light-20260723" />
+    <link rel="stylesheet" href="refinements.css?v=20260723" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <div class="grain" aria-hidden="true"></div>
     <div class="reading-light" aria-hidden="true"></div>
     <header class="site-header">
@@ -78,40 +80,41 @@
             </h1>
             <p class="cover-hero__support">Books, talks, and practical tools for people building a life with dignity and self-sufficiency.</p>
             <div class="cover-hero__memory-screen" aria-label="Atta book reel">
-              <div class="cover-hero__screen-top" aria-hidden="true">
+              <div class="cover-hero__screen-top">
                 <span>Book reel</span>
-                <span>05 books</span>
+                <span>05 books &amp; editions</span>
+                <button type="button" class="cover-hero__screen-toggle" aria-pressed="false">Pause reel</button>
               </div>
               <div class="cover-hero__screen-stage">
                 <article class="cover-hero__screen-card" data-tone="ai">
                   <span>Now published</span>
-                  <strong>The Self-Sufficient Immigrant in the Age of AI</strong>
+                  <strong class="ai-book-title">The Self-Sufficient Immigrant in the Age of AI</strong>
                   <p>A practical guide to using AI for work and daily decisions without giving up judgment, privacy, or dignity.</p>
-                  <img src="images/self-sufficient-immigrant-age-ai-cover.png" alt="The Self-Sufficient Immigrant in the Age of AI book cover" />
+                  <img src="images/self-sufficient-immigrant-age-ai-cover.png" alt="The Self-Sufficient Immigrant in the Age of AI book cover" loading="lazy" />
                 </article>
 <article class="cover-hero__screen-card" data-tone="memoir">
                   <span>Memoir</span>
                   <strong>Lost Decency: The Gilded Cages and the Search for Home</strong>
                   <p>A memoir of Afghanistan, exile, family memory, and the dignity required to begin again.</p>
-                  <img src="images/lost-decency-gilded-cover.jpg" alt="Lost Decency: The Gilded Cages and the Search for Home book cover" />
+                  <img src="images/lost-decency-gilded-cover.jpg" alt="Lost Decency: The Gilded Cages and the Search for Home book cover" loading="lazy" />
                 </article>
 <article class="cover-hero__screen-card" data-tone="memory">
                   <span>Legacy edition</span>
                   <strong>Lost Decency: The Untold Afghan Story</strong>
                   <p>An earlier edition of Atta's memoir about memory, displacement, and the search for home.</p>
-                  <img src="images/lost-decency-cover.png" alt="Lost Decency: The Untold Afghan Story book cover" />
+                  <img src="images/lost-decency-cover.png" alt="Lost Decency: The Untold Afghan Story book cover" loading="lazy" />
                 </article>
 <article class="cover-hero__screen-card" data-tone="guide">
                   <span>Self-sufficiency guide</span>
                   <strong>The Self-Sufficient Global Citizen</strong>
                   <p>A guide for families and communities building stability through work, planning, citizenship, and responsibility.</p>
-                  <img src="images/global-citizen-cover.jpg" alt="The Self-Sufficient Global Citizen book cover" />
+                  <img src="images/global-citizen-cover.jpg" alt="The Self-Sufficient Global Citizen book cover" loading="lazy" />
                 </article>
 <article class="cover-hero__screen-card" data-tone="guide">
                   <span>Family planning tool</span>
                   <strong>Immigrant Success Planning</strong>
                   <p>A step-by-step workbook for documents, work, citizenship, and daily family planning.</p>
-                  <img src="images/immigrant-success-planning-cover.jpg" alt="Immigrant Success Planning book cover" />
+                  <img src="images/immigrant-success-planning-cover.jpg" alt="Immigrant Success Planning book cover" loading="lazy" />
                 </article>
               </div>
               <div class="cover-hero__screen-pips" aria-hidden="true">
@@ -135,14 +138,14 @@
         <div class="container home-featured-book__inner">
           <div class="home-featured-book__copy">
             <p class="eyebrow">Now Published</p>
-            <h2 id="home-featured-book-title">Use AI without giving up human judgment.</h2>
-            <p>In this newly published guide, Atta Arghandiwal and Sohrab Rasouli show how you can use AI for work, learning, and everyday decisions while protecting your privacy, values, and independence.</p>
+            <h2 id="home-featured-book-title" class="ai-book-title">The Self-Sufficient Immigrant in the Age of AI</h2>
+            <p>A practical guide to using AI without giving up human judgment. Atta Arghandiwal and Sohrab Rasouli show how you can use AI for work, learning, and everyday decisions while protecting your privacy, values, and independence.</p>
             <div class="home-featured-book__actions">
               <a class="btn btn--primary" href="https://bit.ly/4pr3TOU" target="_blank" rel="noopener noreferrer">Buy on Amazon ↗</a>
-              <a class="btn btn--ghost" href="books.html#self-sufficient-immigrant-age-of-ai">See all retailers</a>
+              <a class="btn btn--ghost" href="stand.html">Explore the book</a>
             </div>
           </div>
-          <a class="home-featured-book__cover" href="books.html#self-sufficient-immigrant-age-of-ai" aria-label="See buying options for The Self-Sufficient Immigrant in the Age of AI">
+          <a class="home-featured-book__cover" href="stand.html" aria-label="Explore The Self-Sufficient Immigrant in the Age of AI">
             <img src="images/self-sufficient-immigrant-age-ai-cover.png" alt="" loading="lazy" />
             <span>Now published</span>
           </a>
@@ -173,7 +176,7 @@
         </div>
         <article class="life-story__memory-feature">
           <figure>
-            <img src="images/merry-go-round-kabul.jpg" alt="Children on a merry-go-round in Kabul, a memory image connected to Atta's mission." width="920" height="615" />
+            <img src="images/merry-go-round-kabul.jpg" alt="Children on a merry-go-round in Kabul, a memory image connected to Atta's mission." width="920" height="615" loading="lazy" />
           </figure>
           <div>
             <span>Memory Into Mission</span>
@@ -184,25 +187,25 @@
         <div class="life-story__timeline" aria-label="Atta's story timeline">
           <article class="life-story__card" id="story-crossing">
             <figure>
-              <img src="images/story/01-crossing.jpg" alt="Atta Arghandiwal with siblings before his departure near the Oxus River." width="1100" height="760" />
+              <img src="images/story/01-crossing.jpg" alt="Atta Arghandiwal with siblings before his departure near the Oxus River." width="1100" height="760" loading="lazy" />
             </figure>
             <div class="life-story__card-copy">
               <span>01</span>
               <h3>The final portrait before the crossing</h3>
-              <p>A family bound by dignity on the edge of the Oxus River. This final portrait shows Atta with his siblings before he crossed into Russian soil with his father, the Security Commander of Imam Saheb.</p>
+              <p>This final portrait shows Atta with his siblings beside the Oxus River, before he crossed it with his father, the Security Commander of Imam Saheb.</p>
             </div>
           </article><article class="life-story__card" id="story-air-force">
             <figure>
-              <img src="images/story/02-air-force.jpg" alt="Young Atta Arghandiwal during his Air Force service." width="1100" height="760" />
+              <img src="images/story/02-air-force.jpg" alt="Young Atta Arghandiwal during his Air Force service." width="1100" height="760" loading="lazy" />
             </figure>
             <div class="life-story__card-copy">
               <span>02</span>
               <h3>A foundation of duty and discipline</h3>
-              <p>At 18, mandatory Air Force service shaped his understanding of accountability, structural discipline, and responsibility to protect and serve one's homeland.</p>
+              <p>At 18, mandatory Air Force service shaped his understanding of accountability, discipline, and responsibility to protect and serve one's homeland.</p>
             </div>
           </article><article class="life-story__card" id="story-intercontinental">
             <figure>
-              <img src="images/story/03-intercontinental.jpg" alt="Atta Arghandiwal with an international group at Hotel Inter-Continental in Kabul." width="1100" height="760" />
+              <img src="images/story/03-intercontinental.jpg" alt="Atta Arghandiwal with an international group at Hotel Inter-Continental in Kabul." width="1100" height="760" loading="lazy" />
             </figure>
             <div class="life-story__card-copy">
               <span>03</span>
@@ -211,16 +214,16 @@
             </div>
           </article><article class="life-story__card" id="story-dharmendra">
             <figure>
-              <img src="images/story/04-dharmendra.jpg" alt="Atta Arghandiwal with Dharmendra and others at Hotel Inter-Continental." width="1100" height="760" />
+              <img src="images/story/04-dharmendra.jpg" alt="Atta Arghandiwal with Dharmendra and others at Hotel Inter-Continental." width="1100" height="760" loading="lazy" />
             </figure>
             <div class="life-story__card-copy">
               <span>04</span>
               <h3>A bridge through arts and storytelling</h3>
-              <p>Welcoming Indian cinema icon Dharmendra reflected the deep admiration Afghans held for arts, music, and storytelling as a bridge between cultures.</p>
+              <p>Welcoming Indian cinema icon Dharmendra reflected the deep admiration Afghans held for the arts, music, and storytelling as a bridge between cultures.</p>
             </div>
           </article><article class="life-story__card" id="story-stoor-club">
             <figure>
-              <img src="images/story/05-stoor-club.jpg" alt="Atta Arghandiwal marching with Kabul football team directors at Ghazi Stadium." width="1100" height="760" />
+              <img src="images/story/05-stoor-club.jpg" alt="Atta Arghandiwal marching with Kabul football team directors at Ghazi Stadium." width="1100" height="760" loading="lazy" />
             </figure>
             <div class="life-story__card-copy">
               <span>05</span>
@@ -229,7 +232,7 @@
             </div>
           </article><article class="life-story__card" id="story-auaf">
             <figure>
-              <img src="images/story/06-auaf.jpg" alt="Atta Arghandiwal standing by the AUAF sign in Kabul." width="1100" height="760" />
+              <img src="images/story/06-auaf.jpg" alt="Atta Arghandiwal standing by the AUAF sign in Kabul." width="1100" height="760" loading="lazy" />
             </figure>
             <div class="life-story__card-copy">
               <span>06</span>
@@ -238,7 +241,7 @@
             </div>
           </article><article class="life-story__card" id="story-tracy-soccer">
             <figure>
-              <img src="images/story/07-tracy-soccer.png" alt="Atta Arghandiwal with the young women's soccer team he coached in Tracy." width="1100" height="760" />
+              <img src="images/story/07-tracy-soccer.png" alt="Atta Arghandiwal with the young women's soccer team he coached in Tracy." width="1100" height="760" loading="lazy" />
             </figure>
             <div class="life-story__card-copy">
               <span>07</span>
@@ -372,6 +375,16 @@
         };
         heroTabs.forEach((button) => {
           button.addEventListener('click', () => setHeroPath(button.getAttribute('data-hero-path')));
+        });
+      }
+      const bookReel = document.querySelector('.cover-hero__memory-screen');
+      const bookReelToggle = document.querySelector('.cover-hero__screen-toggle');
+      if (bookReel && bookReelToggle) {
+        bookReelToggle.addEventListener('click', () => {
+          const paused = bookReel.getAttribute('data-paused') === 'true';
+          bookReel.setAttribute('data-paused', paused ? 'false' : 'true');
+          bookReelToggle.setAttribute('aria-pressed', paused ? 'false' : 'true');
+          bookReelToggle.textContent = paused ? 'Pause reel' : 'Play reel';
         });
       }
     </script>
