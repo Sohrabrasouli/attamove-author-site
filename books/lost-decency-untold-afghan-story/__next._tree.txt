@@ -1,8 +1,8 @@
-:HL["/_next/static/chunks/093h616mq5xky.css","style"]
+:HL["/_next/static/chunks/1543j5s_1m0i6.css","style"]
 :HL["/_next/static/chunks/2k_6tayx-ecqb.css","style"]
 :HL["/_next/static/media/inter_latin_variable-s.p.0gsaq8ukbf34m.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/source_serif_4_latin_variable-s.p.3_g1pg7bqcyap.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/source_serif_4_latin_variable_italic-s.p.0fz9re8cehq9l.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/chunks/0rf49sjr9ucva.css","style"]
 :HL["/media/covers/lost-decency-untold-afghan-story-907.jpg","image",{"type":"image/avif","fetchPriority":"high","imageSrcSet":"/media/covers/lost-decency-untold-afghan-story-180.avif 180w, /media/covers/lost-decency-untold-afghan-story-260.avif 260w, /media/covers/lost-decency-untold-afghan-story-360.avif 360w, /media/covers/lost-decency-untold-afghan-story-520.avif 520w, /media/covers/lost-decency-untold-afghan-story-760.avif 760w, /media/covers/lost-decency-untold-afghan-story-907.avif 907w","imageSizes":"(min-width: 48rem) 272px, 60vw"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"books","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"lost-decency-untold-afghan-story","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"WhrIst2Jr-1cuCUndVk5a"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"books","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"lost-decency-untold-afghan-story","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"yFvW7Uahq8tisPoVLxwqR"}
